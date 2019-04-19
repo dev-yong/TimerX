@@ -9,11 +9,11 @@
 import Foundation
 
 // Repository Pattern
+// https://medium.com/@frederikjacques/repository-design-pattern-in-swift-952061485aa
 public protocol RepositoryProtocol {
     associatedtype Item
-    func add(_ item: Item) -> Item
-    func items() -> [Item]
-    func item(with identifier: String) -> Item?
-    func update(_ item: Item) -> Item
-    func delete(_ item: Item) -> Item?
+    func save(_ item: Item, update: Bool) throws
+    func items() throws -> [Item]
+    func item(with identifier: String) throws -> Item?
+    func delete(_ item: Item) throws
 }

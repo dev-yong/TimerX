@@ -8,6 +8,6 @@
 
 import Foundation
 
-public enum CountingType {
+public enum CountingType: Int {
     case up, down
 }
