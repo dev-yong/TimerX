@@ -9,7 +9,7 @@
 import Foundation
 
 // Repository Pattern
-public protocol Repository {
+public protocol RepositoryProtocol {
     associatedtype Item
     func add(_ item: Item) -> Item
     func items() -> [Item]
