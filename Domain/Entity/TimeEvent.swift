@@ -8,14 +8,19 @@
 
 import Foundation
 
-public protocol EventProtocol {
-    var title: String { get }
-    var countingType: CountingType { get }
-}
-
 public struct TimeEvent: EventProtocol {
     public let title: String
     public let seconds: TimeInterval
     public let countingType: CountingType
     public var alarms: [TimeInterval]
+}
+
+extension TimeEvent: Equatable {
+    public static func == (lhs: TimeEvent,
+                           rhs: TimeEvent) -> Bool {
+        return lhs.title == rhs.title &&
+        lhs.seconds == rhs.seconds &&
+        lhs.countingType == rhs.countingType &&
+        lhs.alarms == rhs.alarms
+    }
 }

@@ -29,6 +29,9 @@
 		FCCCCEBF22682F9E0075D042 /* TimeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCCCEB722682AA90075D042 /* TimeEvent.swift */; };
 		FCCCCEC1226830670075D042 /* EventCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCCCEC0226830670075D042 /* EventCombination.swift */; };
 		FCCCCEC3226831D20075D042 /* EventCombinationUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCCCEC2226831D20075D042 /* EventCombinationUsecaseProvider.swift */; };
+		FCCCCEC52268A1EE0075D042 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCCCEC42268A1EE0075D042 /* Repository.swift */; };
+		FCCCCEC7226950610075D042 /* EventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCCCEC6226950610075D042 /* EventProtocol.swift */; };
+		FCCCCECC226951700075D042 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FCCCCECB226951700075D042 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,14 +102,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FC1AD4C52268252800D57C0C /* FIMER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIMER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1AD4C52268252800D57C0C /* TIMER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIMER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1AD4C82268252800D57C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC1AD4CA2268252800D57C0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC1AD4CD2268252800D57C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC1AD4CF2268252900D57C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC1AD4D22268252900D57C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC1AD4D42268252900D57C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC1AD4D92268252900D57C0C /* FIMERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIMERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1AD4D92268252900D57C0C /* TIMERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TIMERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1AD4DD2268252900D57C0C /* FIMERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIMERTests.swift; sourceTree = "<group>"; };
 		FC1AD4DF2268252900D57C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1AD4ED2268260900D57C0C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +130,9 @@
 		FCCCCEBD22682ED80075D042 /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
 		FCCCCEC0226830670075D042 /* EventCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombination.swift; sourceTree = "<group>"; };
 		FCCCCEC2226831D20075D042 /* EventCombinationUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUsecaseProvider.swift; sourceTree = "<group>"; };
+		FCCCCEC42268A1EE0075D042 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		FCCCCEC6226950610075D042 /* EventProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProtocol.swift; sourceTree = "<group>"; };
+		FCCCCECB226951700075D042 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,12 +188,13 @@
 		FC1AD4BC2268252800D57C0C = {
 			isa = PBXGroup;
 			children = (
+				FCCCCECB226951700075D042 /* .swiftlint.yml */,
 				FC1AD4EE2268260A00D57C0C /* Domain */,
 				FC1AD4FB2268260A00D57C0C /* DomainTests */,
 				FC1AD5112268262F00D57C0C /* RealmPlatform */,
 				FC1AD51E2268262F00D57C0C /* RealmPlatformTests */,
-				FC1AD4C72268252800D57C0C /* FIMER */,
-				FC1AD4DC2268252900D57C0C /* FIMERTests */,
+				FC1AD4C72268252800D57C0C /* TIMER */,
+				FC1AD4DC2268252900D57C0C /* TIMERTests */,
 				FC1AD4C62268252800D57C0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -195,8 +202,8 @@
 		FC1AD4C62268252800D57C0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC1AD4C52268252800D57C0C /* FIMER.app */,
-				FC1AD4D92268252900D57C0C /* FIMERTests.xctest */,
+				FC1AD4C52268252800D57C0C /* TIMER.app */,
+				FC1AD4D92268252900D57C0C /* TIMERTests.xctest */,
 				FC1AD4ED2268260900D57C0C /* Domain.framework */,
 				FC1AD4F52268260A00D57C0C /* DomainTests.xctest */,
 				FC1AD5102268262F00D57C0C /* RealmPlatform.framework */,
@@ -205,7 +212,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC1AD4C72268252800D57C0C /* FIMER */ = {
+		FC1AD4C72268252800D57C0C /* TIMER */ = {
 			isa = PBXGroup;
 			children = (
 				FC1AD4C82268252800D57C0C /* AppDelegate.swift */,
@@ -215,16 +222,16 @@
 				FC1AD4D12268252900D57C0C /* LaunchScreen.storyboard */,
 				FC1AD4D42268252900D57C0C /* Info.plist */,
 			);
-			path = FIMER;
+			path = TIMER;
 			sourceTree = "<group>";
 		};
-		FC1AD4DC2268252900D57C0C /* FIMERTests */ = {
+		FC1AD4DC2268252900D57C0C /* TIMERTests */ = {
 			isa = PBXGroup;
 			children = (
 				FC1AD4DD2268252900D57C0C /* FIMERTests.swift */,
 				FC1AD4DF2268252900D57C0C /* Info.plist */,
 			);
-			path = FIMERTests;
+			path = TIMERTests;
 			sourceTree = "<group>";
 		};
 		FC1AD4EE2268260A00D57C0C /* Domain */ = {
@@ -269,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				FCCCCEB922682E5D0075D042 /* CountingType.swift */,
+				FCCCCEC6226950610075D042 /* EventProtocol.swift */,
 				FCCCCEB722682AA90075D042 /* TimeEvent.swift */,
 				FCCCCEBB22682E7F0075D042 /* CountingEvent.swift */,
 				FCCCCEC0226830670075D042 /* EventCombination.swift */,
@@ -279,6 +287,7 @@
 		FC1AD52F226826D400D57C0C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				FCCCCEC42268A1EE0075D042 /* Repository.swift */,
 				FCCCCEBD22682ED80075D042 /* EventCombinationUseCase.swift */,
 				FCCCCEC2226831D20075D042 /* EventCombinationUsecaseProvider.swift */,
 			);
@@ -307,14 +316,15 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FC1AD4C42268252800D57C0C /* FIMER */ = {
+		FC1AD4C42268252800D57C0C /* TIMER */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC1AD4E22268252900D57C0C /* Build configuration list for PBXNativeTarget "FIMER" */;
+			buildConfigurationList = FC1AD4E22268252900D57C0C /* Build configuration list for PBXNativeTarget "TIMER" */;
 			buildPhases = (
 				FC1AD4C12268252800D57C0C /* Sources */,
 				FC1AD4C22268252800D57C0C /* Frameworks */,
 				FC1AD4C32268252800D57C0C /* Resources */,
 				FC1AD5072268260A00D57C0C /* Embed Frameworks */,
+				FCCCCEC8226950C10075D042 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -322,14 +332,14 @@
 				FC1AD5012268260A00D57C0C /* PBXTargetDependency */,
 				FC1AD5242268262F00D57C0C /* PBXTargetDependency */,
 			);
-			name = FIMER;
+			name = TIMER;
 			productName = FIMER;
-			productReference = FC1AD4C52268252800D57C0C /* FIMER.app */;
+			productReference = FC1AD4C52268252800D57C0C /* TIMER.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC1AD4D82268252900D57C0C /* FIMERTests */ = {
+		FC1AD4D82268252900D57C0C /* TIMERTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC1AD4E52268252900D57C0C /* Build configuration list for PBXNativeTarget "FIMERTests" */;
+			buildConfigurationList = FC1AD4E52268252900D57C0C /* Build configuration list for PBXNativeTarget "TIMERTests" */;
 			buildPhases = (
 				FC1AD4D52268252900D57C0C /* Sources */,
 				FC1AD4D62268252900D57C0C /* Frameworks */,
@@ -340,9 +350,9 @@
 			dependencies = (
 				FC1AD4DB2268252900D57C0C /* PBXTargetDependency */,
 			);
-			name = FIMERTests;
+			name = TIMERTests;
 			productName = FIMERTests;
-			productReference = FC1AD4D92268252900D57C0C /* FIMERTests.xctest */;
+			productReference = FC1AD4D92268252900D57C0C /* TIMERTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FC1AD4EC2268260900D57C0C /* Domain */ = {
@@ -353,6 +363,7 @@
 				FC1AD4E92268260900D57C0C /* Sources */,
 				FC1AD4EA2268260900D57C0C /* Frameworks */,
 				FC1AD4EB2268260900D57C0C /* Resources */,
+				FCCCCEC9226951070075D042 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -390,6 +401,7 @@
 				FC1AD50C2268262F00D57C0C /* Sources */,
 				FC1AD50D2268262F00D57C0C /* Frameworks */,
 				FC1AD50E2268262F00D57C0C /* Resources */,
+				FCCCCECA226951150075D042 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -453,7 +465,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC1AD4C02268252800D57C0C /* Build configuration list for PBXProject "FIMER" */;
+			buildConfigurationList = FC1AD4C02268252800D57C0C /* Build configuration list for PBXProject "TIMER" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -466,8 +478,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC1AD4C42268252800D57C0C /* FIMER */,
-				FC1AD4D82268252900D57C0C /* FIMERTests */,
+				FC1AD4C42268252800D57C0C /* TIMER */,
+				FC1AD4D82268252900D57C0C /* TIMERTests */,
 				FC1AD4EC2268260900D57C0C /* Domain */,
 				FC1AD4F42268260A00D57C0C /* DomainTests */,
 				FC1AD50F2268262F00D57C0C /* RealmPlatform */,
@@ -498,6 +510,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCCCECC226951700075D042 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +537,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FCCCCEC8226950C10075D042 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run Script Phase\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		FCCCCEC9226951070075D042 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run Script Phase\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		FCCCCECA226951150075D042 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run Script Phase\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC1AD4C12268252800D57C0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -548,6 +615,8 @@
 			files = (
 				FCCCCEBE22682ED80075D042 /* EventCombinationUseCase.swift in Sources */,
 				FCCCCEC1226830670075D042 /* EventCombination.swift in Sources */,
+				FCCCCEC7226950610075D042 /* EventProtocol.swift in Sources */,
+				FCCCCEC52268A1EE0075D042 /* Repository.swift in Sources */,
 				FCCCCEBA22682E5D0075D042 /* CountingType.swift in Sources */,
 				FCCCCEBC22682E7F0075D042 /* CountingEvent.swift in Sources */,
 				FCCCCEBF22682F9E0075D042 /* TimeEvent.swift in Sources */,
@@ -583,7 +652,7 @@
 /* Begin PBXTargetDependency section */
 		FC1AD4DB2268252900D57C0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC1AD4C42268252800D57C0C /* FIMER */;
+			target = FC1AD4C42268252800D57C0C /* TIMER */;
 			targetProxy = FC1AD4DA2268252900D57C0C /* PBXContainerItemProxy */;
 		};
 		FC1AD4F82268260A00D57C0C /* PBXTargetDependency */ = {
@@ -593,7 +662,7 @@
 		};
 		FC1AD4FA2268260A00D57C0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC1AD4C42268252800D57C0C /* FIMER */;
+			target = FC1AD4C42268252800D57C0C /* TIMER */;
 			targetProxy = FC1AD4F92268260A00D57C0C /* PBXContainerItemProxy */;
 		};
 		FC1AD5012268260A00D57C0C /* PBXTargetDependency */ = {
@@ -608,7 +677,7 @@
 		};
 		FC1AD51D2268262F00D57C0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC1AD4C42268252800D57C0C /* FIMER */;
+			target = FC1AD4C42268252800D57C0C /* TIMER */;
 			targetProxy = FC1AD51C2268262F00D57C0C /* PBXContainerItemProxy */;
 		};
 		FC1AD5242268262F00D57C0C /* PBXTargetDependency */ = {
@@ -759,14 +828,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
-				INFOPLIST_FILE = FIMER/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TIMER/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.FIMER;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.TIMER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -778,14 +849,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
-				INFOPLIST_FILE = FIMER/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TIMER/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.FIMER;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.TIMER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -809,7 +882,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIMER.app/FIMER";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TIMER.app/TIMER";
 			};
 			name = Debug;
 		};
@@ -830,7 +903,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIMER.app/FIMER";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TIMER.app/TIMER";
 			};
 			name = Release;
 		};
@@ -909,7 +982,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIMER.app/FIMER";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TIMER.app/TIMER";
 			};
 			name = Debug;
 		};
@@ -929,7 +1002,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIMER.app/FIMER";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TIMER.app/TIMER";
 			};
 			name = Release;
 		};
@@ -1005,7 +1078,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIMER.app/FIMER";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TIMER.app/TIMER";
 			};
 			name = Debug;
 		};
@@ -1025,14 +1098,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIMER.app/FIMER";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TIMER.app/TIMER";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC1AD4C02268252800D57C0C /* Build configuration list for PBXProject "FIMER" */ = {
+		FC1AD4C02268252800D57C0C /* Build configuration list for PBXProject "TIMER" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC1AD4E02268252900D57C0C /* Debug */,
@@ -1041,7 +1114,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC1AD4E22268252900D57C0C /* Build configuration list for PBXNativeTarget "FIMER" */ = {
+		FC1AD4E22268252900D57C0C /* Build configuration list for PBXNativeTarget "TIMER" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC1AD4E32268252900D57C0C /* Debug */,
@@ -1050,7 +1123,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC1AD4E52268252900D57C0C /* Build configuration list for PBXNativeTarget "FIMERTests" */ = {
+		FC1AD4E52268252900D57C0C /* Build configuration list for PBXNativeTarget "TIMERTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC1AD4E62268252900D57C0C /* Debug */,

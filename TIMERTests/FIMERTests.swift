@@ -7,24 +7,24 @@
 //
 
 import XCTest
-@testable import FIMER
+@testable import TIMER
 
-class FIMERTests: XCTestCase {
+internal class TIMERTests: XCTestCase {
 
-    override func setUp() {
+    internal override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    override func tearDown() {
+    internal override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    internal func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testPerformanceExample() {
+    internal func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.

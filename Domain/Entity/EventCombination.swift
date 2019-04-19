@@ -9,6 +9,7 @@
 import Foundation
 
 public struct EventCombination {
+    public typealias Event = EventProtocol
     public let uuid: String
     public let title: String
     public var events: [EventProtocol]
@@ -18,5 +19,13 @@ public struct EventCombination {
         self.uuid = uuid
         self.title = title
         self.events = events
+    }
+}
+
+extension EventCombination {
+    public static func == (lhs: EventCombination,
+                           rhs: EventCombination) -> Bool {
+        return lhs.uuid == rhs.uuid &&
+            lhs.title == rhs.title
     }
 }

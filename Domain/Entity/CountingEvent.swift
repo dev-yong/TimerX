@@ -14,3 +14,13 @@ public struct CountingEvent: EventProtocol {
     public let countingType: CountingType
     public let goal: Int
 }
+
+extension CountingEvent: Equatable {
+    public static func == (lhs: CountingEvent,
+                           rhs: CountingEvent) -> Bool {
+        return lhs.title == rhs.title &&
+            lhs.interval == rhs.interval &&
+            lhs.countingType == rhs.countingType &&
+            lhs.goal == rhs.goal
+    }
+}

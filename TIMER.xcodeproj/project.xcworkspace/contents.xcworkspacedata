@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FIMER.xcodeproj">
+      location = "self:/Users/igwang-yong/iOS Development/PROJECT/FIMER/TIMER.xcodeproj">
    </FileRef>
 </Workspace>
