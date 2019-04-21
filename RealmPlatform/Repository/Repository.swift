@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-internal final class Repository<Item: RealmRepresentable>: RepositoryProtocol {
+internal final class Repository<Item: RealmRepresentable>: RepositoryProtocol where Item.RMObject.DomainObject == Item {
     private let configuration: Realm.Configuration
     private var realm: Realm {
         do {
@@ -27,19 +27,22 @@ internal final class Repository<Item: RealmRepresentable>: RepositoryProtocol {
         }
     }
     internal func items() throws -> [Item] {
-        try realm.write {
-            realm.objects(Item.RealmObject.self)
-        }
+        return realm.objects(Item.self)
     }
     internal func item(with identifier: String) throws -> Item? {
-        try realm.write {
-            realm.object(ofType: Item.RealmObject.self,
-                         forPrimaryKey: identifier)
-        }
+        return realm.object(ofType: Item.RMObject.self,
+                            forPrimaryKey: identifier)?.asDomain()
     }
     internal func delete(_ item: Item) throws {
         try realm.write {
             realm.delete(item.asRealm())
         }
+    }
+}
+
+extension Realm {
+    internal func objects<Element: RealmRepresentable>(_ type: Element.Type) -> [Element]
+        where Element.RMObject.DomainObject == Element {
+            return objects(type.RMObject.self).map { $0.asDomain() }
     }
 }
