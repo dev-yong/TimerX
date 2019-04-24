@@ -11,7 +11,6 @@ import Coordinator
 
 internal final class ApplicationCoordinator: Coordinator {
     internal var window: UIWindow
-    private let realmUseCase
     internal init(window: UIWindow) {
         self.window = window
     }
