@@ -8,7 +8,8 @@
 
 import Foundation
 import RealmSwift
-internal protocol DomainConvertible {
+
+public protocol DomainConvertible {
     associatedtype DomainObject
     func asDomain() -> DomainObject
 }
