@@ -38,6 +38,20 @@
 		FC74DAA4226C0EAB00AFDE25 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAA2226C0EAB00AFDE25 /* RealmSwift.framework */; };
 		FC74DAA5226C0EAB00AFDE25 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAA3226C0EAB00AFDE25 /* Realm.framework */; };
 		FC74DAAA226C0F9E00AFDE25 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */; };
+		FC74DADF226FCD9100AFDE25 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA43226C0E4A00AFDE25 /* Domain.framework */; };
+		FC74DAE2226FD48900AFDE25 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAE1226FD48900AFDE25 /* Application.swift */; };
+		FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */; };
+		FC74DAF1226FD7BC00AFDE25 /* TimeLog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */; };
+		FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */; };
+		FC74DB08226FDB9F00AFDE25 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; };
+		FC74DB0F226FDBA000AFDE25 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB0E226FDBA000AFDE25 /* CoordinatorTests.swift */; };
+		FC74DB11226FDBA000AFDE25 /* Coordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = FC74DB01226FDB9F00AFDE25 /* Coordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC74DB14226FDBA000AFDE25 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; };
+		FC74DB15226FDBA000AFDE25 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC74DB1E226FDBB400AFDE25 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB1D226FDBB400AFDE25 /* CoordinatorProtocol.swift */; };
+		FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */; };
+		FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */; };
+		FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +104,27 @@
 			remoteGlobalIDString = FC74DA65226C0E5800AFDE25;
 			remoteInfo = RealmPlatform;
 		};
+		FC74DB09226FDB9F00AFDE25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC74DA13226C0DBD00AFDE25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC74DAFE226FDB9F00AFDE25;
+			remoteInfo = Coordinator;
+		};
+		FC74DB0B226FDBA000AFDE25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC74DA13226C0DBD00AFDE25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC74DA1A226C0DBD00AFDE25;
+			remoteInfo = TimerX;
+		};
+		FC74DB12226FDBA000AFDE25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC74DA13226C0DBD00AFDE25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC74DAFE226FDB9F00AFDE25;
+			remoteInfo = Coordinator;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,6 +135,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FC74DA59226C0E4A00AFDE25 /* Domain.framework in Embed Frameworks */,
+				FC74DB15226FDBA000AFDE25 /* Coordinator.framework in Embed Frameworks */,
 				FC74DA7C226C0E5800AFDE25 /* RealmPlatform.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -145,6 +181,20 @@
 		FC74DAA2226C0EAB00AFDE25 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FC74DAA3226C0EAB00AFDE25 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		FC74DAE1226FD48900AFDE25 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Combination.storyboard; sourceTree = "<group>"; };
+		FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLog.storyboard; sourceTree = "<group>"; };
+		FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC74DB01226FDB9F00AFDE25 /* Coordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinator.h; sourceTree = "<group>"; };
+		FC74DB02226FDB9F00AFDE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC74DB07226FDB9F00AFDE25 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC74DB0E226FDBA000AFDE25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		FC74DB10226FDBA000AFDE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC74DB1D226FDBB400AFDE25 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
+		FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC74DA58226C0E4A00AFDE25 /* Domain.framework in Frameworks */,
+				FC74DB14226FDBA000AFDE25 /* Coordinator.framework in Frameworks */,
 				FC74DA7B226C0E5800AFDE25 /* RealmPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC74DADF226FCD9100AFDE25 /* Domain.framework in Frameworks */,
 				FC74DAA4226C0EAB00AFDE25 /* RealmSwift.framework in Frameworks */,
 				FC74DAA5226C0EAB00AFDE25 /* Realm.framework in Frameworks */,
 			);
@@ -196,6 +248,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC74DAFC226FDB9F00AFDE25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC74DB04226FDB9F00AFDE25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC74DB08226FDB9F00AFDE25 /* Coordinator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -203,12 +270,14 @@
 			isa = PBXGroup;
 			children = (
 				FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */,
-				FC74DA1D226C0DBD00AFDE25 /* TimerX */,
-				FC74DA32226C0DBF00AFDE25 /* TimerXTests */,
 				FC74DA44226C0E4A00AFDE25 /* Domain */,
 				FC74DA51226C0E4A00AFDE25 /* DomainTests */,
 				FC74DA67226C0E5800AFDE25 /* RealmPlatform */,
 				FC74DA74226C0E5800AFDE25 /* RealmPlatformTests */,
+				FC74DA1D226C0DBD00AFDE25 /* TimerX */,
+				FC74DA32226C0DBF00AFDE25 /* TimerXTests */,
+				FC74DB00226FDB9F00AFDE25 /* Coordinator */,
+				FC74DB0D226FDBA000AFDE25 /* CoordinatorTests */,
 				FC74DA1C226C0DBD00AFDE25 /* Products */,
 				FC74DAA1226C0EAB00AFDE25 /* Frameworks */,
 			);
@@ -223,6 +292,8 @@
 				FC74DA4B226C0E4A00AFDE25 /* DomainTests.xctest */,
 				FC74DA66226C0E5800AFDE25 /* RealmPlatform.framework */,
 				FC74DA6E226C0E5800AFDE25 /* RealmPlatformTests.xctest */,
+				FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */,
+				FC74DB07226FDB9F00AFDE25 /* CoordinatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,12 +301,11 @@
 		FC74DA1D226C0DBD00AFDE25 /* TimerX */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */,
-				FC74DA20226C0DBD00AFDE25 /* ViewController.swift */,
-				FC74DA22226C0DBD00AFDE25 /* Main.storyboard */,
-				FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */,
-				FC74DA27226C0DBF00AFDE25 /* LaunchScreen.storyboard */,
-				FC74DA2A226C0DBF00AFDE25 /* Info.plist */,
+				FC74DAE0226FD47B00AFDE25 /* Application */,
+				FC74DAF5226FDA4100AFDE25 /* Scene */,
+				FC74DAE7226FD57E00AFDE25 /* Storyboard */,
+				FC74DAF4226FD95300AFDE25 /* Utility */,
+				FC74DAE6226FD4AA00AFDE25 /* Support */,
 			);
 			path = TimerX;
 			sourceTree = "<group>";
@@ -354,6 +424,153 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC74DAE0226FD47B00AFDE25 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */,
+				FC74DAE1226FD48900AFDE25 /* Application.swift */,
+				FC74DAF3226FD8E500AFDE25 /* Coordinator */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FC74DAE6226FD4AA00AFDE25 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */,
+				FC74DA27226C0DBF00AFDE25 /* LaunchScreen.storyboard */,
+				FC74DA2A226C0DBF00AFDE25 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FC74DAE7226FD57E00AFDE25 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DA22226C0DBD00AFDE25 /* Main.storyboard */,
+				FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */,
+				FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FC74DAE8226FD59000AFDE25 /* Combinations */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DA20226C0DBD00AFDE25 /* ViewController.swift */,
+			);
+			path = Combinations;
+			sourceTree = "<group>";
+		};
+		FC74DAE9226FD5A900AFDE25 /* CreateCombination */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateCombination;
+			sourceTree = "<group>";
+		};
+		FC74DAEA226FD5C500AFDE25 /* EditCombination */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditCombination;
+			sourceTree = "<group>";
+		};
+		FC74DAEB226FD5FF00AFDE25 /* CombinationPlayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CombinationPlayer;
+			sourceTree = "<group>";
+		};
+		FC74DAEC226FD62000AFDE25 /* TimeLog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TimeLog;
+			sourceTree = "<group>";
+		};
+		FC74DAF3226FD8E500AFDE25 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FC74DAF4226FD95300AFDE25 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FC74DAF5226FDA4100AFDE25 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DAE8226FD59000AFDE25 /* Combinations */,
+				FC74DAE9226FD5A900AFDE25 /* CreateCombination */,
+				FC74DAEA226FD5C500AFDE25 /* EditCombination */,
+				FC74DAEB226FD5FF00AFDE25 /* CombinationPlayer */,
+				FC74DAEC226FD62000AFDE25 /* TimeLog */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		FC74DB00226FDB9F00AFDE25 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DB1F226FDBBB00AFDE25 /* Sources */,
+				FC74DB01226FDB9F00AFDE25 /* Coordinator.h */,
+				FC74DB02226FDB9F00AFDE25 /* Info.plist */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FC74DB0D226FDBA000AFDE25 /* CoordinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DB0E226FDBA000AFDE25 /* CoordinatorTests.swift */,
+				FC74DB10226FDBA000AFDE25 /* Info.plist */,
+			);
+			path = CoordinatorTests;
+			sourceTree = "<group>";
+		};
+		FC74DB1F226FDBBB00AFDE25 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DB24226FDEF700AFDE25 /* Reusable */,
+				FC74DB27226FDF2000AFDE25 /* Coordinator */,
+				FC74DB28226FDF2700AFDE25 /* Storyboard */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FC74DB24226FDEF700AFDE25 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */,
+				FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		FC74DB27226FDF2000AFDE25 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DB1D226FDBB400AFDE25 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FC74DB28226FDF2700AFDE25 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -370,6 +587,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC74DA78226C0E5800AFDE25 /* RealmPlatform.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC74DAFA226FDB9F00AFDE25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC74DB11226FDBA000AFDE25 /* Coordinator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +616,7 @@
 			dependencies = (
 				FC74DA57226C0E4A00AFDE25 /* PBXTargetDependency */,
 				FC74DA7A226C0E5800AFDE25 /* PBXTargetDependency */,
+				FC74DB13226FDBA000AFDE25 /* PBXTargetDependency */,
 			);
 			name = TimerX;
 			productName = TimerX;
@@ -491,6 +717,43 @@
 			productReference = FC74DA6E226C0E5800AFDE25 /* RealmPlatformTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FC74DAFE226FDB9F00AFDE25 /* Coordinator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC74DB16226FDBA000AFDE25 /* Build configuration list for PBXNativeTarget "Coordinator" */;
+			buildPhases = (
+				FC74DAFA226FDB9F00AFDE25 /* Headers */,
+				FC74DAFB226FDB9F00AFDE25 /* Sources */,
+				FC74DAFC226FDB9F00AFDE25 /* Frameworks */,
+				FC74DAFD226FDB9F00AFDE25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coordinator;
+			productName = Coordinator;
+			productReference = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FC74DB06226FDB9F00AFDE25 /* CoordinatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC74DB19226FDBA000AFDE25 /* Build configuration list for PBXNativeTarget "CoordinatorTests" */;
+			buildPhases = (
+				FC74DB03226FDB9F00AFDE25 /* Sources */,
+				FC74DB04226FDB9F00AFDE25 /* Frameworks */,
+				FC74DB05226FDB9F00AFDE25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC74DB0A226FDB9F00AFDE25 /* PBXTargetDependency */,
+				FC74DB0C226FDBA000AFDE25 /* PBXTargetDependency */,
+			);
+			name = CoordinatorTests;
+			productName = CoordinatorTests;
+			productReference = FC74DB07226FDB9F00AFDE25 /* CoordinatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -522,6 +785,14 @@
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = FC74DA1A226C0DBD00AFDE25;
 					};
+					FC74DAFE226FDB9F00AFDE25 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					FC74DB06226FDB9F00AFDE25 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FC74DA1A226C0DBD00AFDE25;
+					};
 				};
 			};
 			buildConfigurationList = FC74DA16226C0DBD00AFDE25 /* Build configuration list for PBXProject "TimerX" */;
@@ -537,12 +808,14 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC74DA1A226C0DBD00AFDE25 /* TimerX */,
-				FC74DA2E226C0DBF00AFDE25 /* TimerXTests */,
 				FC74DA42226C0E4A00AFDE25 /* Domain */,
 				FC74DA4A226C0E4A00AFDE25 /* DomainTests */,
 				FC74DA65226C0E5800AFDE25 /* RealmPlatform */,
 				FC74DA6D226C0E5800AFDE25 /* RealmPlatformTests */,
+				FC74DAFE226FDB9F00AFDE25 /* Coordinator */,
+				FC74DB06226FDB9F00AFDE25 /* CoordinatorTests */,
+				FC74DA1A226C0DBD00AFDE25 /* TimerX */,
+				FC74DA2E226C0DBF00AFDE25 /* TimerXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -552,9 +825,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */,
 				FC74DA29226C0DBF00AFDE25 /* LaunchScreen.storyboard in Resources */,
 				FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */,
 				FC74DA24226C0DBD00AFDE25 /* Main.storyboard in Resources */,
+				FC74DAF1226FD7BC00AFDE25 /* TimeLog.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +863,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FC74DA6C226C0E5800AFDE25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC74DAFD226FDB9F00AFDE25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC74DB05226FDB9F00AFDE25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -657,8 +946,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC74DAE2226FD48900AFDE25 /* Application.swift in Sources */,
 				FC74DA21226C0DBD00AFDE25 /* ViewController.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
+				FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +1003,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC74DAFB226FDB9F00AFDE25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */,
+				FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */,
+				FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */,
+				FC74DB1E226FDBB400AFDE25 /* CoordinatorProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC74DB03226FDB9F00AFDE25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC74DB0F226FDBA000AFDE25 /* CoordinatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -749,6 +1059,21 @@
 			isa = PBXTargetDependency;
 			target = FC74DA65226C0E5800AFDE25 /* RealmPlatform */;
 			targetProxy = FC74DA79226C0E5800AFDE25 /* PBXContainerItemProxy */;
+		};
+		FC74DB0A226FDB9F00AFDE25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC74DAFE226FDB9F00AFDE25 /* Coordinator */;
+			targetProxy = FC74DB09226FDB9F00AFDE25 /* PBXContainerItemProxy */;
+		};
+		FC74DB0C226FDBA000AFDE25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC74DA1A226C0DBD00AFDE25 /* TimerX */;
+			targetProxy = FC74DB0B226FDBA000AFDE25 /* PBXContainerItemProxy */;
+		};
+		FC74DB13226FDBA000AFDE25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC74DAFE226FDB9F00AFDE25 /* Coordinator */;
+			targetProxy = FC74DB12226FDBA000AFDE25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -895,7 +1220,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
-				INFOPLIST_FILE = TimerX/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TimerX/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -914,7 +1240,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
-				INFOPLIST_FILE = TimerX/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TimerX/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -981,6 +1308,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1009,6 +1337,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1081,6 +1410,7 @@
 				);
 				INFOPLIST_FILE = RealmPlatform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1113,6 +1443,7 @@
 				);
 				INFOPLIST_FILE = RealmPlatform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1161,6 +1492,107 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.RealmPlatformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerX.app/TimerX";
+			};
+			name = Release;
+		};
+		FC74DB17226FDBA000AFDE25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Coordinator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.Coordinator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC74DB18226FDBA000AFDE25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Coordinator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.Coordinator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FC74DB1A226FDBA000AFDE25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				INFOPLIST_FILE = CoordinatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.CoordinatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerX.app/TimerX";
+			};
+			name = Debug;
+		};
+		FC74DB1B226FDBA000AFDE25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				INFOPLIST_FILE = CoordinatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.CoordinatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1230,6 +1662,24 @@
 			buildConfigurations = (
 				FC74DA81226C0E5800AFDE25 /* Debug */,
 				FC74DA82226C0E5800AFDE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC74DB16226FDBA000AFDE25 /* Build configuration list for PBXNativeTarget "Coordinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC74DB17226FDBA000AFDE25 /* Debug */,
+				FC74DB18226FDBA000AFDE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC74DB19226FDBA000AFDE25 /* Build configuration list for PBXNativeTarget "CoordinatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC74DB1A226FDBA000AFDE25 /* Debug */,
+				FC74DB1B226FDBA000AFDE25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
