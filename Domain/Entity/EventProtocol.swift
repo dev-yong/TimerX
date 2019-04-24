@@ -9,6 +9,8 @@
 import Foundation
 
 public protocol EventProtocol {
+    var index: Int { get }
+    var uuid: String { get }
     var title: String { get }
     var countingType: CountingType { get }
 }
