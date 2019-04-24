@@ -28,7 +28,7 @@
 		FC74DA8E226C0E6E00AFDE25 /* TimeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA86226C0E6E00AFDE25 /* TimeEvent.swift */; };
 		FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA87226C0E6E00AFDE25 /* CountingType.swift */; };
 		FC74DA90226C0E6E00AFDE25 /* CountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */; };
-		FC74DA91226C0E6E00AFDE25 /* EventCombinationUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA8A226C0E6E00AFDE25 /* EventCombinationUsecaseProvider.swift */; };
+		FC74DA91226C0E6E00AFDE25 /* UsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA8A226C0E6E00AFDE25 /* UsecaseProvider.swift */; };
 		FC74DA92226C0E6E00AFDE25 /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA8B226C0E6E00AFDE25 /* EventCombinationUseCase.swift */; };
 		FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA94226C0E8100AFDE25 /* RepositoryProtocol.swift */; };
 		FC74DA9D226C0E8100AFDE25 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA95226C0E8100AFDE25 /* Repository.swift */; };
@@ -52,6 +52,9 @@
 		FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */; };
 		FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */; };
 		FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */; };
+		FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */; };
+		FC74DB2C227004C400AFDE25 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB2B227004C400AFDE25 /* Transition.swift */; };
+		FC74DB2E2270146E00AFDE25 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB2D2270146E00AFDE25 /* UseCaseProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,7 +174,7 @@
 		FC74DA86226C0E6E00AFDE25 /* TimeEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEvent.swift; sourceTree = "<group>"; };
 		FC74DA87226C0E6E00AFDE25 /* CountingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingType.swift; sourceTree = "<group>"; };
 		FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEvent.swift; sourceTree = "<group>"; };
-		FC74DA8A226C0E6E00AFDE25 /* EventCombinationUsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCombinationUsecaseProvider.swift; sourceTree = "<group>"; };
+		FC74DA8A226C0E6E00AFDE25 /* UsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsecaseProvider.swift; sourceTree = "<group>"; };
 		FC74DA8B226C0E6E00AFDE25 /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
 		FC74DA94226C0E8100AFDE25 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		FC74DA95226C0E8100AFDE25 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -195,6 +198,9 @@
 		FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reusable.swift"; sourceTree = "<group>"; };
+		FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FC74DB2B227004C400AFDE25 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		FC74DB2D2270146E00AFDE25 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,7 +381,7 @@
 		FC74DA89226C0E6E00AFDE25 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DA8A226C0E6E00AFDE25 /* EventCombinationUsecaseProvider.swift */,
+				FC74DA8A226C0E6E00AFDE25 /* UsecaseProvider.swift */,
 				FC74DA8B226C0E6E00AFDE25 /* EventCombinationUseCase.swift */,
 			);
 			path = UseCase;
@@ -411,6 +417,7 @@
 		FC74DA9B226C0E8100AFDE25 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				FC74DB2D2270146E00AFDE25 /* UseCaseProvider.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -494,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */,
+				FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -559,6 +567,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */,
+				FC74DB2B227004C400AFDE25 /* Transition.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -949,6 +958,7 @@
 				FC74DAE2226FD48900AFDE25 /* Application.swift in Sources */,
 				FC74DA21226C0DBD00AFDE25 /* ViewController.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
+				FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */,
 				FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -971,7 +981,7 @@
 				FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */,
 				FC74DA8E226C0E6E00AFDE25 /* TimeEvent.swift in Sources */,
 				FC74DA92226C0E6E00AFDE25 /* EventCombinationUseCase.swift in Sources */,
-				FC74DA91226C0E6E00AFDE25 /* EventCombinationUsecaseProvider.swift in Sources */,
+				FC74DA91226C0E6E00AFDE25 /* UsecaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1001,7 @@
 				FC74DAA0226C0E8100AFDE25 /* DomainConvertible.swift in Sources */,
 				FC74DA9E226C0E8100AFDE25 /* RMTimeEvent.swift in Sources */,
 				FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */,
+				FC74DB2E2270146E00AFDE25 /* UseCaseProvider.swift in Sources */,
 				FC74DA9D226C0E8100AFDE25 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1007,6 +1018,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC74DB2C227004C400AFDE25 /* Transition.swift in Sources */,
 				FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */,
 				FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */,
 				FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */,

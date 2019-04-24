@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 public protocol Reusable: AnyObject { }
 extension Reusable {
     public static var reuseIdentifier: String {
