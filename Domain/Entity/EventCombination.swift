@@ -22,8 +22,8 @@ public struct EventCombination {
     }
 }
 
-extension EventCombination {
-    public static func == (lhs: EventCombination,
+public extension EventCombination {
+    static func == (lhs: EventCombination,
                            rhs: EventCombination) -> Bool {
         return lhs.uuid == rhs.uuid &&
             lhs.title == rhs.title
