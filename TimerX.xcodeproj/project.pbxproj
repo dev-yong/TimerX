@@ -48,7 +48,7 @@
 		FC74DB11226FDBA000AFDE25 /* Coordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = FC74DB01226FDB9F00AFDE25 /* Coordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC74DB14226FDBA000AFDE25 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; };
 		FC74DB15226FDBA000AFDE25 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FC74DB1E226FDBB400AFDE25 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB1D226FDBB400AFDE25 /* CoordinatorProtocol.swift */; };
+		FC74DB1E226FDBB400AFDE25 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */; };
 		FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */; };
 		FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */; };
 		FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */; };
@@ -192,7 +192,7 @@
 		FC74DB07226FDB9F00AFDE25 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DB0E226FDBA000AFDE25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		FC74DB10226FDBA000AFDE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC74DB1D226FDBB400AFDE25 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -558,7 +558,7 @@
 		FC74DB27226FDF2000AFDE25 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DB1D226FDBB400AFDE25 /* CoordinatorProtocol.swift */,
+				FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1010,7 +1010,7 @@
 				FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */,
 				FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */,
 				FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */,
-				FC74DB1E226FDBB400AFDE25 /* CoordinatorProtocol.swift in Sources */,
+				FC74DB1E226FDBB400AFDE25 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

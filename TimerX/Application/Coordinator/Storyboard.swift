@@ -20,10 +20,4 @@ internal enum Storyboard: StoryboardProtocol {
     internal var bundle: Bundle? {
         return nil
     }
-    public func `init`() -> UIStoryboard {
-        return UIStoryboard.init(name: name, bundle: bundle)
-    }
-    public func instantiate(viewController: UIViewController.Type) {
-        `init`().instantiateViewController(withIdentifier: viewController.reuseIdentifier)
-    }
 }
