@@ -16,5 +16,6 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
         self.configuration = configuration
     }
     public func makeEventCombinationUseCase() -> EventCombinationUseCase {
+        
     }
 }

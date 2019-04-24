@@ -10,7 +10,7 @@ import Foundation
 
 // Repository Pattern
 // https://medium.com/@frederikjacques/repository-design-pattern-in-swift-952061485aa
-public protocol RepositoryProtocol {
+internal protocol RepositoryProtocol {
     associatedtype Item
     func save(_ item: Item, update: Bool) throws
     func items() throws -> [Item]

@@ -56,6 +56,9 @@
 		FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */; };
+		FCEDDAEE22711EEE00525F5C /* RMCountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */; };
+		FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF0227120D700525F5C /* Realm+.swift */; };
+		FCEDDAF32271268E00525F5C /* RMEventCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF22271268D00525F5C /* RMEventCombination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +206,9 @@
 		FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
+		FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCountingEvent.swift; sourceTree = "<group>"; };
+		FCEDDAF0227120D700525F5C /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
+		FCEDDAF22271268D00525F5C /* RMEventCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEventCombination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +356,7 @@
 		FC74DA67226C0E5800AFDE25 /* RealmPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				FCEDDAEF227120CF00525F5C /* Common */,
 				FC74DA96226C0E8100AFDE25 /* Entity */,
 				FC74DA93226C0E8100AFDE25 /* Repository */,
 				FC74DA9B226C0E8100AFDE25 /* UseCase */,
@@ -371,10 +378,10 @@
 		FC74DA83226C0E6E00AFDE25 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DA84226C0E6E00AFDE25 /* EventProtocol.swift */,
 				FC74DA85226C0E6E00AFDE25 /* EventCombination.swift */,
-				FC74DA86226C0E6E00AFDE25 /* TimeEvent.swift */,
 				FC74DA87226C0E6E00AFDE25 /* CountingType.swift */,
+				FC74DA84226C0E6E00AFDE25 /* EventProtocol.swift */,
+				FC74DA86226C0E6E00AFDE25 /* TimeEvent.swift */,
 				FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */,
 			);
 			path = Entity;
@@ -402,7 +409,9 @@
 			isa = PBXGroup;
 			children = (
 				FC74DA98226C0E8100AFDE25 /* Convert */,
+				FCEDDAF22271268D00525F5C /* RMEventCombination.swift */,
 				FC74DA97226C0E8100AFDE25 /* RMTimeEvent.swift */,
+				FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -581,6 +590,14 @@
 				FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FCEDDAEF227120CF00525F5C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FCEDDAF0227120D700525F5C /* Realm+.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1000,10 +1017,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEDDAEE22711EEE00525F5C /* RMCountingEvent.swift in Sources */,
+				FCEDDAF32271268E00525F5C /* RMEventCombination.swift in Sources */,
 				FC74DA9F226C0E8100AFDE25 /* RealmRepresentable.swift in Sources */,
 				FC74DAA0226C0E8100AFDE25 /* DomainConvertible.swift in Sources */,
 				FC74DA9E226C0E8100AFDE25 /* RMTimeEvent.swift in Sources */,
 				FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */,
+				FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */,
 				FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */,
 				FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */,
 				FC74DA9D226C0E8100AFDE25 /* Repository.swift in Sources */,
