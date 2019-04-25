@@ -9,9 +9,13 @@
 import Foundation
 
 public protocol EventCombinationUseCase {
-    func add(_ eventCombination: EventCombination) -> EventCombination
-    func eventCombinations() -> [EventCombination]
-    func eventCombination(of uuid: String) -> EventCombination?
-    func update(_ eventCombination: EventCombination) -> EventCombination
-    func delete(_ eventCombination: EventCombination) -> EventCombination
+    func add(_ eventCombination: EventCombination,
+             completion: @escaping (Result<Void, Error>) -> Void)
+    func eventCombinations(completion: @escaping (Result<[EventCombination], Error>) -> Void)
+    func eventCombination(of uuid: String,
+                          completion: @escaping (Result<EventCombination?, Error>) -> Void)
+    func update(_ eventCombination: EventCombination,
+                completion: @escaping (Result<Void, Error>) -> Void)
+    func delete(_ eventCombination: EventCombination,
+                completion: @escaping (Result<Void, Error>) -> Void )
 }
