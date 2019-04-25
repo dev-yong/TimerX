@@ -18,24 +18,39 @@ internal final class Repository<Item: RealmRepresentable>: RepositoryProtocol wh
             fatalError(error.localizedDescription)
         }
     }
-    public init(configuration: Realm.Configuration) {
+    internal init(configuration: Realm.Configuration) {
         self.configuration = configuration
     }
-    public func save(_ item: Item, update: Bool) throws {
-        try realm.write {
-            realm.add(item.asRealm(), update: update)
+    internal func save(_ item: Item,
+                       update: Bool,
+                       completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            try realm.write {
+                realm.add(item.asRealm(), update: update)
+            }
+            completion(.success(Void()))
+        } catch {
+            completion(.failure(error))
         }
     }
-    public func items() throws -> [Item] {
-        return realm.objects(Item.self)
+    internal func items(completion: @escaping (Result<[Item], Error>) -> Void) {
+        completion(.success(realm.objects(Item.self)))
     }
-    public func item(with identifier: String) throws -> Item? {
-        return realm.object(ofType: Item.RMObject.self,
-                            forPrimaryKey: identifier)?.asDomain()
+    internal func item<PrimaryKey>(with primaryKey: PrimaryKey,
+                                   completion: @escaping (Result<Item?, Error>) -> Void) {
+        let domain = realm.object(ofType: Item.RMObject.self,
+                                  forPrimaryKey: primaryKey)?.asDomain()
+        completion(.success(domain))
     }
-    public func delete(_ item: Item) throws {
-        try realm.write {
-            realm.delete(item.asRealm())
+    internal func delete(_ item: Item,
+                         completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            try realm.write {
+                realm.delete(item.asRealm())
+            }
+            completion(.success(Void()))
+        } catch {
+            completion(.failure(error))
         }
     }
 }

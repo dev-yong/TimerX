@@ -12,8 +12,12 @@ import Foundation
 // https://medium.com/@frederikjacques/repository-design-pattern-in-swift-952061485aa
 internal protocol RepositoryProtocol {
     associatedtype Item
-    func save(_ item: Item, update: Bool) throws
-    func items() throws -> [Item]
-    func item(with identifier: String) throws -> Item?
-    func delete(_ item: Item) throws
+    func save(_ item: Item,
+              update: Bool,
+              completion: @escaping (Result<Void, Error>) -> Void)
+    func items(completion: @escaping (Result<[Item], Error>) -> Void)
+    func item<PrimaryKey>(with primaryKey: PrimaryKey,
+                          completion: @escaping (Result<Item?, Error>) -> Void)
+    func delete(_ item: Item,
+                completion: @escaping (Result<Void, Error>) -> Void)
 }
