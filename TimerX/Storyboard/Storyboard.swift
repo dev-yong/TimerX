@@ -10,12 +10,13 @@ import UIKit
 import Coordinator
 
 internal enum Storyboard: StoryboardProtocol {
-    case home, combination, timeLog
+    case home, combination, timeLog, more
     internal var name: String {
         switch self {
         case .home: return "Home"
         case .combination: return "Combination"
         case .timeLog: return "TimeLog"
+        case .more: return "More"
         }
     }
     internal var bundle: Bundle? {

@@ -1,5 +1,5 @@
 //
-//  HomeTabBarViewController.swift
+//  CombinationCreateViewController.swift
 //  TimerX
 //
 //  Created by 이광용 on 28/04/2019.
@@ -8,4 +8,5 @@
 
 import UIKit
 
-class HomeTabBarViewController: UITabBarController {}
+internal class CombinationCreateViewController: UIViewController {
+}

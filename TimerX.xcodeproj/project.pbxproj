@@ -15,8 +15,14 @@
 		FC1911FF227662D300D60479 /* BasicCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911FE227662D300D60479 /* BasicCoordinator.swift */; };
 		FC191201227662EF00D60479 /* NavigationCooridnator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC191200227662EF00D60479 /* NavigationCooridnator.swift */; };
 		FC1912032276630400D60479 /* TabBarCoordiantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912022276630400D60479 /* TabBarCoordiantor.swift */; };
+		FC1912052276647B00D60479 /* CombinationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912042276647B00D60479 /* CombinationsViewController.swift */; };
+		FC1912072276656300D60479 /* CombinationPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912062276656300D60479 /* CombinationPlayerViewController.swift */; };
+		FC1912092276662500D60479 /* CombinationCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912082276662500D60479 /* CombinationCreateViewController.swift */; };
+		FC19120B2276663F00D60479 /* CombinationEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19120A2276663F00D60479 /* CombinationEditViewController.swift */; };
+		FC19120D2276670500D60479 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19120C2276670500D60479 /* MoreViewController.swift */; };
+		FC19120F2276671500D60479 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC19120E2276671500D60479 /* More.storyboard */; };
+		FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912102276677000D60479 /* MoreCoordinator.swift */; };
 		FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */; };
-		FC74DA21226C0DBD00AFDE25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA20226C0DBD00AFDE25 /* ViewController.swift */; };
 		FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA22226C0DBD00AFDE25 /* Home.storyboard */; };
 		FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */; };
 		FC74DA29226C0DBF00AFDE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA27226C0DBF00AFDE25 /* LaunchScreen.storyboard */; };
@@ -165,9 +171,15 @@
 		FC1911FE227662D300D60479 /* BasicCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoordinator.swift; sourceTree = "<group>"; };
 		FC191200227662EF00D60479 /* NavigationCooridnator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCooridnator.swift; sourceTree = "<group>"; };
 		FC1912022276630400D60479 /* TabBarCoordiantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordiantor.swift; sourceTree = "<group>"; };
+		FC1912042276647B00D60479 /* CombinationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationsViewController.swift; sourceTree = "<group>"; };
+		FC1912062276656300D60479 /* CombinationPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationPlayerViewController.swift; sourceTree = "<group>"; };
+		FC1912082276662500D60479 /* CombinationCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCreateViewController.swift; sourceTree = "<group>"; };
+		FC19120A2276663F00D60479 /* CombinationEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationEditViewController.swift; sourceTree = "<group>"; };
+		FC19120C2276670500D60479 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		FC19120E2276671500D60479 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		FC1912102276677000D60479 /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
 		FC74DA1B226C0DBD00AFDE25 /* TimerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC74DA20226C0DBD00AFDE25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC74DA23226C0DBD00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC74DA28226C0DBF00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -295,6 +307,7 @@
 		FC1911EC22762EAD00D60479 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				FC1912082276662500D60479 /* CombinationCreateViewController.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -302,6 +315,7 @@
 		FC1911ED22762EB000D60479 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				FC19120A2276663F00D60479 /* CombinationEditViewController.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -309,6 +323,7 @@
 		FC1911EE22762EB500D60479 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				FC1912042276647B00D60479 /* CombinationsViewController.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -316,6 +331,7 @@
 		FC1911EF22762EBD00D60479 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				FC1912062276656300D60479 /* CombinationPlayerViewController.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -323,6 +339,7 @@
 		FC1911F022762ECC00D60479 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				FC19120C2276670500D60479 /* MoreViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -524,6 +541,7 @@
 				FC74DA22226C0DBD00AFDE25 /* Home.storyboard */,
 				FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */,
 				FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */,
+				FC19120E2276671500D60479 /* More.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -531,10 +549,10 @@
 		FC74DAE8226FD59000AFDE25 /* Combinations */ = {
 			isa = PBXGroup;
 			children = (
-				FC1911EF22762EBD00D60479 /* Player */,
 				FC1911EE22762EB500D60479 /* List */,
-				FC1911ED22762EB000D60479 /* Edit */,
+				FC1911EF22762EBD00D60479 /* Player */,
 				FC1911EC22762EAD00D60479 /* Create */,
+				FC1911ED22762EB000D60479 /* Edit */,
 			);
 			path = Combinations;
 			sourceTree = "<group>";
@@ -552,6 +570,7 @@
 				FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */,
 				FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */,
 				FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */,
+				FC1912102276677000D60479 /* MoreCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -566,7 +585,6 @@
 		FC74DAF5226FDA4100AFDE25 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DA20226C0DBD00AFDE25 /* ViewController.swift */,
 				FC1911F72276611A00D60479 /* Home */,
 				FC74DAE8226FD59000AFDE25 /* Combinations */,
 				FC74DAEC226FD62000AFDE25 /* TimeLog */,
@@ -913,6 +931,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */,
+				FC19120F2276671500D60479 /* More.storyboard in Resources */,
 				FC74DA29226C0DBF00AFDE25 /* LaunchScreen.storyboard in Resources */,
 				FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */,
 				FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */,
@@ -1033,13 +1052,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1912052276647B00D60479 /* CombinationsViewController.swift in Sources */,
 				FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */,
 				FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */,
-				FC74DA21226C0DBD00AFDE25 /* ViewController.swift in Sources */,
 				FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */,
+				FC19120D2276670500D60479 /* MoreViewController.swift in Sources */,
+				FC1912092276662500D60479 /* CombinationCreateViewController.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
+				FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */,
 				FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */,
 				FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */,
+				FC19120B2276663F00D60479 /* CombinationEditViewController.swift in Sources */,
+				FC1912072276656300D60479 /* CombinationPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

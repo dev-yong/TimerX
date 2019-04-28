@@ -10,32 +10,80 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Combinations View Controller-->
         <scene sceneID="ucI-eS-gBh">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="vRy-f6-19Q" customClass="ViewController" customModule="TimerX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CombinationsViewController" id="vRy-f6-19Q" customClass="CombinationsViewController" customModule="TimerX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B6Q-Ak-7fH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usy-GT-7d7">
-                                <rect key="frame" x="179.5" y="442.5" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WJi-TQ-y2Y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="usy-GT-7d7" firstAttribute="centerX" secondItem="zLt-Hm-X0H" secondAttribute="centerX" id="H8K-oO-WZf"/>
-                            <constraint firstItem="usy-GT-7d7" firstAttribute="centerY" secondItem="zLt-Hm-X0H" secondAttribute="centerY" id="acB-zL-7iq"/>
+                            <constraint firstItem="WJi-TQ-y2Y" firstAttribute="top" secondItem="zLt-Hm-X0H" secondAttribute="top" id="4DN-ms-T62"/>
+                            <constraint firstItem="zLt-Hm-X0H" firstAttribute="trailing" secondItem="WJi-TQ-y2Y" secondAttribute="trailing" id="5xQ-dn-agA"/>
+                            <constraint firstItem="zLt-Hm-X0H" firstAttribute="bottom" secondItem="WJi-TQ-y2Y" secondAttribute="bottom" id="7gp-Oi-FHW"/>
+                            <constraint firstItem="WJi-TQ-y2Y" firstAttribute="leading" secondItem="zLt-Hm-X0H" secondAttribute="leading" id="pRJ-aK-mUg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zLt-Hm-X0H"/>
                     </view>
+                    <connections>
+                        <outlet property="combinationTableView" destination="WJi-TQ-y2Y" id="7b7-dx-tDl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHJ-9p-zXA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1655" y="-225"/>
+            <point key="canvasLocation" x="-1700" y="-238"/>
+        </scene>
+        <!--Combination Player View Controller-->
+        <scene sceneID="PqX-Mc-iSi">
+            <objects>
+                <viewController storyboardIdentifier="CombinationPlayerViewController" id="d15-UK-oQ7" customClass="CombinationPlayerViewController" customModule="TimerX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hhe-pr-is8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KYc-76-xte"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irK-B2-Ax5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="-984"/>
+        </scene>
+        <!--Combination Create View Controller-->
+        <scene sceneID="g6R-mN-1RY">
+            <objects>
+                <viewController storyboardIdentifier="CombinationCreateViewController" id="diD-b9-sQs" customClass="CombinationCreateViewController" customModule="TimerX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GzV-KO-hwT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Eyh-JU-PUf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTn-NW-nH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="-238"/>
+        </scene>
+        <!--Combination Edit View Controller-->
+        <scene sceneID="pbD-7z-Ymb">
+            <objects>
+                <viewController storyboardIdentifier="CombinationEditViewController" id="CP6-X7-flU" customClass="CombinationEditViewController" customModule="TimerX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QqV-2l-3jj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LKM-LY-Ioa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8IP-mP-JQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="463"/>
         </scene>
     </scenes>
 </document>
