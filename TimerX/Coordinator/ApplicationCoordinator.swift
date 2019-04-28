@@ -12,18 +12,18 @@ import Coordinator
 internal enum ApplicationRoute: Route {
     case homeTab
 }
-internal final class ApplicationCoordinator: Coordinator {
+internal final class ApplicationCoordinator: BaseCoordinator<ApplicationRoute> {
     internal var window: UIWindow
     internal init(window: UIWindow) {
         self.window = window
-        go(to: .homeTab)
+        super.init()
+        coordinate(.homeTab)
     }
-    internal func go(to route: ApplicationRoute) {
+    internal override func coordinate(_ route: ApplicationRoute) {
         switch route {
         case .homeTab:
-            // todo: Home Tab Coordinator로 변경해줘야함.
-            let viewController = Storyboard.main.instance.instantiate(viewController: ViewController.self)
-            window.rootViewController = viewController
+            let coordinator = HomeTabCoordinator()
+            window.rootViewController = coordinator.rootViewController
         }
     }
 }

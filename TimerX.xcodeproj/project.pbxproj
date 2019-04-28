@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */; };
+		FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */; };
+		FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */; };
+		FC1911FB227662A000D60479 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911FA227662A000D60479 /* CoordinatorProtocol.swift */; };
+		FC1911FD227662A800D60479 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911FC227662A800D60479 /* BaseCoordinator.swift */; };
+		FC1911FF227662D300D60479 /* BasicCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911FE227662D300D60479 /* BasicCoordinator.swift */; };
+		FC191201227662EF00D60479 /* NavigationCooridnator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC191200227662EF00D60479 /* NavigationCooridnator.swift */; };
+		FC1912032276630400D60479 /* TabBarCoordiantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912022276630400D60479 /* TabBarCoordiantor.swift */; };
 		FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */; };
 		FC74DA21226C0DBD00AFDE25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA20226C0DBD00AFDE25 /* ViewController.swift */; };
-		FC74DA24226C0DBD00AFDE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA22226C0DBD00AFDE25 /* Main.storyboard */; };
+		FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA22226C0DBD00AFDE25 /* Home.storyboard */; };
 		FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */; };
 		FC74DA29226C0DBF00AFDE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA27226C0DBF00AFDE25 /* LaunchScreen.storyboard */; };
 		FC74DA34226C0DBF00AFDE25 /* TimerXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA33226C0DBF00AFDE25 /* TimerXTests.swift */; };
@@ -38,7 +46,6 @@
 		FC74DAA5226C0EAB00AFDE25 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAA3226C0EAB00AFDE25 /* Realm.framework */; };
 		FC74DAAA226C0F9E00AFDE25 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */; };
 		FC74DADF226FCD9100AFDE25 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA43226C0E4A00AFDE25 /* Domain.framework */; };
-		FC74DAE2226FD48900AFDE25 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAE1226FD48900AFDE25 /* Application.swift */; };
 		FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */; };
 		FC74DAF1226FD7BC00AFDE25 /* TimeLog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */; };
 		FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */; };
@@ -47,12 +54,10 @@
 		FC74DB11226FDBA000AFDE25 /* Coordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = FC74DB01226FDB9F00AFDE25 /* Coordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC74DB14226FDBA000AFDE25 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; };
 		FC74DB15226FDBA000AFDE25 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FC74DB1E226FDBB400AFDE25 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */; };
 		FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */; };
 		FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */; };
 		FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */; };
 		FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */; };
-		FC74DB2C227004C400AFDE25 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB2B227004C400AFDE25 /* Transition.swift */; };
 		FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */; };
@@ -152,10 +157,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
+		FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCoordinator.swift; sourceTree = "<group>"; };
+		FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		FC1911FA227662A000D60479 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		FC1911FC227662A800D60479 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		FC1911FE227662D300D60479 /* BasicCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoordinator.swift; sourceTree = "<group>"; };
+		FC191200227662EF00D60479 /* NavigationCooridnator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCooridnator.swift; sourceTree = "<group>"; };
+		FC1912022276630400D60479 /* TabBarCoordiantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordiantor.swift; sourceTree = "<group>"; };
 		FC74DA1B226C0DBD00AFDE25 /* TimerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC74DA20226C0DBD00AFDE25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC74DA23226C0DBD00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC74DA23226C0DBD00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC74DA28226C0DBF00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC74DA2A226C0DBF00AFDE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,7 +201,6 @@
 		FC74DAA2226C0EAB00AFDE25 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FC74DAA3226C0EAB00AFDE25 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		FC74DAE1226FD48900AFDE25 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Combination.storyboard; sourceTree = "<group>"; };
 		FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLog.storyboard; sourceTree = "<group>"; };
 		FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -199,11 +211,9 @@
 		FC74DB07226FDB9F00AFDE25 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DB0E226FDBA000AFDE25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		FC74DB10226FDBA000AFDE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reusable.swift"; sourceTree = "<group>"; };
 		FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		FC74DB2B227004C400AFDE25 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
@@ -282,6 +292,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC1911EC22762EAD00D60479 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		FC1911ED22762EB000D60479 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		FC1911EE22762EB500D60479 /* List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		FC1911EF22762EBD00D60479 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		FC1911F022762ECC00D60479 /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		FC1911F72276611A00D60479 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		FC74DA12226C0DBD00AFDE25 = {
 			isa = PBXGroup;
 			children = (
@@ -450,7 +503,6 @@
 			isa = PBXGroup;
 			children = (
 				FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */,
-				FC74DAE1226FD48900AFDE25 /* Application.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -469,7 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */,
-				FC74DA22226C0DBD00AFDE25 /* Main.storyboard */,
+				FC74DA22226C0DBD00AFDE25 /* Home.storyboard */,
 				FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */,
 				FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */,
 			);
@@ -479,30 +531,12 @@
 		FC74DAE8226FD59000AFDE25 /* Combinations */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DA20226C0DBD00AFDE25 /* ViewController.swift */,
+				FC1911EF22762EBD00D60479 /* Player */,
+				FC1911EE22762EB500D60479 /* List */,
+				FC1911ED22762EB000D60479 /* Edit */,
+				FC1911EC22762EAD00D60479 /* Create */,
 			);
 			path = Combinations;
-			sourceTree = "<group>";
-		};
-		FC74DAE9226FD5A900AFDE25 /* CreateCombination */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CreateCombination;
-			sourceTree = "<group>";
-		};
-		FC74DAEA226FD5C500AFDE25 /* EditCombination */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EditCombination;
-			sourceTree = "<group>";
-		};
-		FC74DAEB226FD5FF00AFDE25 /* CombinationPlayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CombinationPlayer;
 			sourceTree = "<group>";
 		};
 		FC74DAEC226FD62000AFDE25 /* TimeLog */ = {
@@ -516,6 +550,8 @@
 			isa = PBXGroup;
 			children = (
 				FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */,
+				FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */,
+				FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -530,11 +566,11 @@
 		FC74DAF5226FDA4100AFDE25 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				FC74DA20226C0DBD00AFDE25 /* ViewController.swift */,
+				FC1911F72276611A00D60479 /* Home */,
 				FC74DAE8226FD59000AFDE25 /* Combinations */,
-				FC74DAE9226FD5A900AFDE25 /* CreateCombination */,
-				FC74DAEA226FD5C500AFDE25 /* EditCombination */,
-				FC74DAEB226FD5FF00AFDE25 /* CombinationPlayer */,
 				FC74DAEC226FD62000AFDE25 /* TimeLog */,
+				FC1911F022762ECC00D60479 /* More */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -581,8 +617,11 @@
 		FC74DB27226FDF2000AFDE25 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DB1D226FDBB400AFDE25 /* Coordinator.swift */,
-				FC74DB2B227004C400AFDE25 /* Transition.swift */,
+				FC1911FA227662A000D60479 /* CoordinatorProtocol.swift */,
+				FC1911FC227662A800D60479 /* BaseCoordinator.swift */,
+				FC1911FE227662D300D60479 /* BasicCoordinator.swift */,
+				FC191200227662EF00D60479 /* NavigationCooridnator.swift */,
+				FC1912022276630400D60479 /* TabBarCoordiantor.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -876,7 +915,7 @@
 				FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */,
 				FC74DA29226C0DBF00AFDE25 /* LaunchScreen.storyboard in Resources */,
 				FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */,
-				FC74DA24226C0DBD00AFDE25 /* Main.storyboard in Resources */,
+				FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */,
 				FC74DAF1226FD7BC00AFDE25 /* TimeLog.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -994,8 +1033,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC74DAE2226FD48900AFDE25 /* Application.swift in Sources */,
+				FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */,
+				FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */,
 				FC74DA21226C0DBD00AFDE25 /* ViewController.swift in Sources */,
+				FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
 				FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */,
 				FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */,
@@ -1061,12 +1102,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC74DB2C227004C400AFDE25 /* Transition.swift in Sources */,
 				FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */,
 				FCEDDAFA2271720B00525F5C /* UIStoryboard+.swift in Sources */,
+				FC1911FB227662A000D60479 /* CoordinatorProtocol.swift in Sources */,
 				FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */,
+				FC1911FD227662A800D60479 /* BaseCoordinator.swift in Sources */,
 				FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */,
-				FC74DB1E226FDBB400AFDE25 /* Coordinator.swift in Sources */,
+				FC1912032276630400D60479 /* TabBarCoordiantor.swift in Sources */,
+				FC191201227662EF00D60479 /* NavigationCooridnator.swift in Sources */,
+				FC1911FF227662D300D60479 /* BasicCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1134,12 +1178,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC74DA22226C0DBD00AFDE25 /* Main.storyboard */ = {
+		FC74DA22226C0DBD00AFDE25 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FC74DA23226C0DBD00AFDE25 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		FC74DA27226C0DBF00AFDE25 /* LaunchScreen.storyboard */ = {
