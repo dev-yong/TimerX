@@ -8,4 +8,9 @@
 
 import Foundation
 
-open class NaivgationCoordinator<RouteType: Route>: BasicCoordinator<UINavigationController, RouteType> { }
+open class NaivgationCoordinator<RouteType: Route>: BasicCoordinator<UINavigationController, RouteType> {
+    public init(root route: RouteType) {
+        super.init()
+        coordinate(route)
+    }
+}

@@ -6,11 +6,32 @@
 //  Copyright © 2019 GwangYongLee. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+public protocol TabBarItem {
+    var title: String { get }
+    var viewController: UIViewController? { get }
+}
+extension TabBarItem {
+    public func makeViewController<Coordinator: RootableCoordinatorProtocol>(of coordinator: Coordinator) -> UIViewController? {
+        let viewController = coordinator.rootViewController
+        viewController?.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
+        return viewController
+    }
+}
 
 open class TabBarCoordinator<RouteType: Route>: BasicCoordinator<UITabBarController, RouteType> {
+    public init(tabBarItems: [TabBarItem]) {
+        super.init()
+        rootViewController.setViewControllers(tabBarItems.map { $0.viewController }.compactMap { $0 },
+                                              animated: false)
+    }
+    public init(viewControllers: [UIViewController]?) {
+        super.init()
+        rootViewController.setViewControllers(viewControllers, animated: false)
+    }
     public func select<Coordiator>(tab coordinator: Coordiator) where Coordiator: RootableCoordinatorProtocol {
-        rootViewController?.selectedViewController = coordinator.rootViewController
+        select(tab: coordinator.rootViewController)
     }
     public func select(tab viewController: UIViewController?) {
         rootViewController?.selectedViewController = viewController
