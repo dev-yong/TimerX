@@ -10,7 +10,7 @@ import UIKit.UIStoryboard
 extension UIStoryboard {
     public func instantiate<V>(viewController type: V.Type = V.self) -> V where V: UIViewController {
         guard let viewController = instantiateViewController(withIdentifier: type.reuseIdentifier) as? V else {
-            fatalError()
+            fatalError("\(type.reuseIdentifier) does not exist.")
         }
         return viewController
     }
