@@ -59,6 +59,7 @@
 		FCEDDAEE22711EEE00525F5C /* RMCountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */; };
 		FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF0227120D700525F5C /* Realm+.swift */; };
 		FCEDDAF32271268E00525F5C /* RMEventCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF22271268D00525F5C /* RMEventCombination.swift */; };
+		FCEDDAFA2271720B00525F5C /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF92271720B00525F5C /* UIStoryboard+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,7 @@
 		FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCountingEvent.swift; sourceTree = "<group>"; };
 		FCEDDAF0227120D700525F5C /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		FCEDDAF22271268D00525F5C /* RMEventCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEventCombination.swift; sourceTree = "<group>"; };
+		FCEDDAF92271720B00525F5C /* UIStoryboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DAE0226FD47B00AFDE25 /* Application */,
+				FC74DAF3226FD8E500AFDE25 /* Coordinator */,
 				FC74DAF5226FDA4100AFDE25 /* Scene */,
 				FC74DAE7226FD57E00AFDE25 /* Storyboard */,
 				FC74DAF4226FD95300AFDE25 /* Utility */,
@@ -448,7 +451,6 @@
 			children = (
 				FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */,
 				FC74DAE1226FD48900AFDE25 /* Application.swift */,
-				FC74DAF3226FD8E500AFDE25 /* Coordinator */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -466,6 +468,7 @@
 		FC74DAE7226FD57E00AFDE25 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */,
 				FC74DA22226C0DBD00AFDE25 /* Main.storyboard */,
 				FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */,
 				FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */,
@@ -512,7 +515,6 @@
 		FC74DAF3226FD8E500AFDE25 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */,
 				FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -559,6 +561,7 @@
 		FC74DB1F226FDBBB00AFDE25 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FCEDDAF7227171FA00525F5C /* Extension */,
 				FC74DB24226FDEF700AFDE25 /* Reusable */,
 				FC74DB27226FDF2000AFDE25 /* Coordinator */,
 				FC74DB28226FDF2700AFDE25 /* Storyboard */,
@@ -598,6 +601,22 @@
 				FCEDDAF0227120D700525F5C /* Realm+.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FCEDDAF7227171FA00525F5C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FCEDDAF82271720300525F5C /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FCEDDAF82271720300525F5C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FCEDDAF92271720B00525F5C /* UIStoryboard+.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -932,7 +951,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n/usr/local/bin/carthage copy-frameworks\n";
 		};
 		FC74DAA7226C0F3A00AFDE25 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1044,6 +1063,7 @@
 			files = (
 				FC74DB2C227004C400AFDE25 /* Transition.swift in Sources */,
 				FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */,
+				FCEDDAFA2271720B00525F5C /* UIStoryboard+.swift in Sources */,
 				FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */,
 				FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */,
 				FC74DB1E226FDBB400AFDE25 /* Coordinator.swift in Sources */,

@@ -11,11 +11,14 @@ import UIKit
 @UIApplicationMain
 internal class AppDelegate: UIResponder, UIApplicationDelegate {
     internal var window: UIWindow?
+    private var coordinator: ApplicationCoordinator!
 
     internal func application(_ application: UIApplication,
                               didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-
+        //window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            coordinator = ApplicationCoordinator(window: window)
+        }
         return true
     }
 }
