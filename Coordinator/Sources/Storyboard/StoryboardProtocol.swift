@@ -6,7 +6,6 @@
 //  Copyright © 2019 GwangYongLee. All rights reserved.
 //
 import UIKit.UIStoryboard
-import UIKit.UIViewController
 public protocol StoryboardProtocol {
     var name: String { get }
     var bundle: Bundle? { get }
@@ -15,10 +14,5 @@ public protocol StoryboardProtocol {
 extension StoryboardProtocol {
     public var instance: UIStoryboard {
         return UIStoryboard.init(name: name, bundle: bundle)
-    }
-}
-extension UIStoryboard {
-    public func instantiate(viewController: UIViewController.Type) -> UIViewController {
-        return instantiateViewController(withIdentifier: viewController.reuseIdentifier)
     }
 }

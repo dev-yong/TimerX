@@ -12,4 +12,3 @@ public enum Transition {
     case present
     case push
 }
-

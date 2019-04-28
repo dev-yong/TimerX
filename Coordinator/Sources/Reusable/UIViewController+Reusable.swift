@@ -8,7 +8,7 @@
 
 import UIKit.UIViewController
 extension UIViewController: Reusable {
-    public static func instantiateNib<T: UIViewController>(bundle: Bundle?) -> T {
+    public static func instantiateNib<T>(bundle: Bundle?) -> T where T: UIViewController {
         return T(nibName: T.reuseIdentifier, bundle: bundle)
     }
 }
