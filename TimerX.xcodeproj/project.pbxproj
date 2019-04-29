@@ -65,6 +65,13 @@
 		FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */; };
 		FC775F5B2276A54600FE4007 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D982276A27C00F22FFC /* Realm.framework */; };
 		FC775F5C2276A54600FE4007 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D972276A27C00F22FFC /* RealmSwift.framework */; };
+		FCCC6F3D2276BC8F008FE51B /* Designable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F342276BC8E008FE51B /* Designable.framework */; };
+		FCCC6F442276BC8F008FE51B /* DesignableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F432276BC8F008FE51B /* DesignableTests.swift */; };
+		FCCC6F462276BC8F008FE51B /* Designable.h in Headers */ = {isa = PBXBuildFile; fileRef = FCCC6F362276BC8E008FE51B /* Designable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCCC6F492276BC8F008FE51B /* Designable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F342276BC8E008FE51B /* Designable.framework */; };
+		FCCC6F4A2276BC8F008FE51B /* Designable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F342276BC8E008FE51B /* Designable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCCC6F542276BCA4008FE51B /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F522276BCA4008FE51B /* Designable.swift */; };
+		FCCC6F552276BCA4008FE51B /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F532276BCA4008FE51B /* DesignableButton.swift */; };
 		FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */; };
@@ -145,6 +152,27 @@
 			remoteGlobalIDString = FC74DAFE226FDB9F00AFDE25;
 			remoteInfo = Coordinator;
 		};
+		FCCC6F3E2276BC8F008FE51B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC74DA13226C0DBD00AFDE25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCCC6F332276BC8E008FE51B;
+			remoteInfo = Designable;
+		};
+		FCCC6F402276BC8F008FE51B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC74DA13226C0DBD00AFDE25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC74DA1A226C0DBD00AFDE25;
+			remoteInfo = TimerX;
+		};
+		FCCC6F472276BC8F008FE51B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC74DA13226C0DBD00AFDE25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCCC6F332276BC8E008FE51B;
+			remoteInfo = Designable;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -156,6 +184,7 @@
 			files = (
 				FC74DA59226C0E4A00AFDE25 /* Domain.framework in Embed Frameworks */,
 				FC74DB15226FDBA000AFDE25 /* Coordinator.framework in Embed Frameworks */,
+				FCCC6F4A2276BC8F008FE51B /* Designable.framework in Embed Frameworks */,
 				FC74DA7C226C0E5800AFDE25 /* RealmPlatform.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -227,6 +256,14 @@
 		FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reusable.swift"; sourceTree = "<group>"; };
 		FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FCCC6F342276BC8E008FE51B /* Designable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Designable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCCC6F362276BC8E008FE51B /* Designable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Designable.h; sourceTree = "<group>"; };
+		FCCC6F372276BC8E008FE51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCCC6F3C2276BC8F008FE51B /* DesignableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCCC6F432276BC8F008FE51B /* DesignableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTests.swift; sourceTree = "<group>"; };
+		FCCC6F452276BC8F008FE51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCCC6F522276BCA4008FE51B /* Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
+		FCCC6F532276BCA4008FE51B /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
@@ -241,6 +278,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCC6F492276BC8F008FE51B /* Designable.framework in Frameworks */,
 				FC775F5B2276A54600FE4007 /* Realm.framework in Frameworks */,
 				FC775F5C2276A54600FE4007 /* RealmSwift.framework in Frameworks */,
 				FC74DB14226FDBA000AFDE25 /* Coordinator.framework in Frameworks */,
@@ -300,6 +338,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC74DB08226FDB9F00AFDE25 /* Coordinator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCCC6F312276BC8E008FE51B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCCC6F392276BC8F008FE51B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCCC6F3D2276BC8F008FE51B /* Designable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +426,8 @@
 				FC74DA32226C0DBF00AFDE25 /* TimerXTests */,
 				FC74DB00226FDB9F00AFDE25 /* Coordinator */,
 				FC74DB0D226FDBA000AFDE25 /* CoordinatorTests */,
+				FCCC6F352276BC8E008FE51B /* Designable */,
+				FCCC6F422276BC8F008FE51B /* DesignableTests */,
 				FC74DA1C226C0DBD00AFDE25 /* Products */,
 				FC74DAA1226C0EAB00AFDE25 /* Frameworks */,
 			);
@@ -389,6 +444,8 @@
 				FC74DA6E226C0E5800AFDE25 /* RealmPlatformTests.xctest */,
 				FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */,
 				FC74DB07226FDB9F00AFDE25 /* CoordinatorTests.xctest */,
+				FCCC6F342276BC8E008FE51B /* Designable.framework */,
+				FCCC6F3C2276BC8F008FE51B /* DesignableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -662,6 +719,34 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		FCCC6F352276BC8E008FE51B /* Designable */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F512276BC93008FE51B /* Source */,
+				FCCC6F362276BC8E008FE51B /* Designable.h */,
+				FCCC6F372276BC8E008FE51B /* Info.plist */,
+			);
+			path = Designable;
+			sourceTree = "<group>";
+		};
+		FCCC6F422276BC8F008FE51B /* DesignableTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F432276BC8F008FE51B /* DesignableTests.swift */,
+				FCCC6F452276BC8F008FE51B /* Info.plist */,
+			);
+			path = DesignableTests;
+			sourceTree = "<group>";
+		};
+		FCCC6F512276BC93008FE51B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F522276BCA4008FE51B /* Designable.swift */,
+				FCCC6F532276BCA4008FE51B /* DesignableButton.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		FCEDDAEF227120CF00525F5C /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +798,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCCC6F2F2276BC8E008FE51B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCCC6F462276BC8F008FE51B /* Designable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -732,6 +825,7 @@
 				FC74DA57226C0E4A00AFDE25 /* PBXTargetDependency */,
 				FC74DA7A226C0E5800AFDE25 /* PBXTargetDependency */,
 				FC74DB13226FDBA000AFDE25 /* PBXTargetDependency */,
+				FCCC6F482276BC8F008FE51B /* PBXTargetDependency */,
 			);
 			name = TimerX;
 			productName = TimerX;
@@ -869,6 +963,43 @@
 			productReference = FC74DB07226FDB9F00AFDE25 /* CoordinatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FCCC6F332276BC8E008FE51B /* Designable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCCC6F4F2276BC8F008FE51B /* Build configuration list for PBXNativeTarget "Designable" */;
+			buildPhases = (
+				FCCC6F2F2276BC8E008FE51B /* Headers */,
+				FCCC6F302276BC8E008FE51B /* Sources */,
+				FCCC6F312276BC8E008FE51B /* Frameworks */,
+				FCCC6F322276BC8E008FE51B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Designable;
+			productName = Designable;
+			productReference = FCCC6F342276BC8E008FE51B /* Designable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FCCC6F3B2276BC8F008FE51B /* DesignableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCCC6F502276BC8F008FE51B /* Build configuration list for PBXNativeTarget "DesignableTests" */;
+			buildPhases = (
+				FCCC6F382276BC8F008FE51B /* Sources */,
+				FCCC6F392276BC8F008FE51B /* Frameworks */,
+				FCCC6F3A2276BC8F008FE51B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCCC6F3F2276BC8F008FE51B /* PBXTargetDependency */,
+				FCCC6F412276BC8F008FE51B /* PBXTargetDependency */,
+			);
+			name = DesignableTests;
+			productName = DesignableTests;
+			productReference = FCCC6F3C2276BC8F008FE51B /* DesignableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -908,6 +1039,14 @@
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = FC74DA1A226C0DBD00AFDE25;
 					};
+					FCCC6F332276BC8E008FE51B = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					FCCC6F3B2276BC8F008FE51B = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FC74DA1A226C0DBD00AFDE25;
+					};
 				};
 			};
 			buildConfigurationList = FC74DA16226C0DBD00AFDE25 /* Build configuration list for PBXProject "TimerX" */;
@@ -931,6 +1070,8 @@
 				FC74DB06226FDB9F00AFDE25 /* CoordinatorTests */,
 				FC74DA1A226C0DBD00AFDE25 /* TimerX */,
 				FC74DA2E226C0DBF00AFDE25 /* TimerXTests */,
+				FCCC6F332276BC8E008FE51B /* Designable */,
+				FCCC6F3B2276BC8F008FE51B /* DesignableTests */,
 			);
 		};
 /* End PBXProject section */
@@ -993,6 +1134,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FC74DB05226FDB9F00AFDE25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCCC6F322276BC8E008FE51B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCCC6F3A2276BC8F008FE51B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1156,6 +1311,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCCC6F302276BC8E008FE51B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCCC6F542276BCA4008FE51B /* Designable.swift in Sources */,
+				FCCC6F552276BCA4008FE51B /* DesignableButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCCC6F382276BC8F008FE51B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCCC6F442276BC8F008FE51B /* DesignableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1208,6 +1380,21 @@
 			isa = PBXTargetDependency;
 			target = FC74DAFE226FDB9F00AFDE25 /* Coordinator */;
 			targetProxy = FC74DB12226FDBA000AFDE25 /* PBXContainerItemProxy */;
+		};
+		FCCC6F3F2276BC8F008FE51B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCCC6F332276BC8E008FE51B /* Designable */;
+			targetProxy = FCCC6F3E2276BC8F008FE51B /* PBXContainerItemProxy */;
+		};
+		FCCC6F412276BC8F008FE51B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC74DA1A226C0DBD00AFDE25 /* TimerX */;
+			targetProxy = FCCC6F402276BC8F008FE51B /* PBXContainerItemProxy */;
+		};
+		FCCC6F482276BC8F008FE51B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCCC6F332276BC8E008FE51B /* Designable */;
+			targetProxy = FCCC6F472276BC8F008FE51B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1742,6 +1929,105 @@
 			};
 			name = Release;
 		};
+		FCCC6F4B2276BC8F008FE51B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Designable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.Designable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FCCC6F4C2276BC8F008FE51B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Designable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.Designable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FCCC6F4D2276BC8F008FE51B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				INFOPLIST_FILE = DesignableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.DesignableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerX.app/TimerX";
+			};
+			name = Debug;
+		};
+		FCCC6F4E2276BC8F008FE51B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				INFOPLIST_FILE = DesignableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GwangYongLee.DesignableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerX.app/TimerX";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1822,6 +2108,24 @@
 			buildConfigurations = (
 				FC74DB1A226FDBA000AFDE25 /* Debug */,
 				FC74DB1B226FDBA000AFDE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCCC6F4F2276BC8F008FE51B /* Build configuration list for PBXNativeTarget "Designable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCCC6F4B2276BC8F008FE51B /* Debug */,
+				FCCC6F4C2276BC8F008FE51B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCCC6F502276BC8F008FE51B /* Build configuration list for PBXNativeTarget "DesignableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCCC6F4D2276BC8F008FE51B /* Debug */,
+				FCCC6F4E2276BC8F008FE51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
