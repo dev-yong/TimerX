@@ -6,6 +6,7 @@
 //  Copyright © 2019 GwangYongLee. All rights reserved.
 //
 import Foundation
+import Domain
 import RealmPlatform
 import Coordinator
 
@@ -14,15 +15,17 @@ internal enum ApplicationRoute: Route {
 }
 internal final class ApplicationCoordinator: BaseCoordinator<ApplicationRoute> {
     internal var window: UIWindow
+    private let useCaseProvider: Domain.UseCaseProvider
     internal init(window: UIWindow) {
         self.window = window
+        useCaseProvider = RealmPlatform.UseCaseProvider()
         super.init()
         coordinate(.homeTab)
     }
     internal override func coordinate(_ route: ApplicationRoute) {
         switch route {
         case .homeTab:
-            let coordinator = HomeTabCoordinator()
+            let coordinator = HomeTabCoordinator(useCaseProvider: useCaseProvider)
             window.rootViewController = coordinator.rootViewController
         }
     }

@@ -19,19 +19,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WJi-TQ-y2Y">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-i8-FGZ">
+                                <rect key="frame" x="344" y="743" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.2051192224" green="0.47214853759999997" blue="0.96560257670000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j0x-i8-FGZ" secondAttribute="height" multiplier="1:1" id="Y11-XQ-ZOd"/>
+                                    <constraint firstAttribute="height" constant="60" id="rnL-4T-cJF"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonTap:" destination="vRy-f6-19Q" eventType="touchUpInside" id="8sg-AZ-tlI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WJi-TQ-y2Y" firstAttribute="top" secondItem="zLt-Hm-X0H" secondAttribute="top" id="4DN-ms-T62"/>
                             <constraint firstItem="zLt-Hm-X0H" firstAttribute="trailing" secondItem="WJi-TQ-y2Y" secondAttribute="trailing" id="5xQ-dn-agA"/>
                             <constraint firstItem="zLt-Hm-X0H" firstAttribute="bottom" secondItem="WJi-TQ-y2Y" secondAttribute="bottom" id="7gp-Oi-FHW"/>
+                            <constraint firstItem="zLt-Hm-X0H" firstAttribute="bottom" secondItem="j0x-i8-FGZ" secondAttribute="bottom" constant="10" id="FwK-z1-MBu"/>
+                            <constraint firstAttribute="trailing" secondItem="j0x-i8-FGZ" secondAttribute="trailing" constant="10" id="VeO-C3-TqW"/>
                             <constraint firstItem="WJi-TQ-y2Y" firstAttribute="leading" secondItem="zLt-Hm-X0H" secondAttribute="leading" id="pRJ-aK-mUg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zLt-Hm-X0H"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="combinationTableView" destination="WJi-TQ-y2Y" id="7b7-dx-tDl"/>
                     </connections>
@@ -65,6 +92,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Eyh-JU-PUf"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTn-NW-nH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,6 +109,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LKM-LY-Ioa"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IP-mP-JQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

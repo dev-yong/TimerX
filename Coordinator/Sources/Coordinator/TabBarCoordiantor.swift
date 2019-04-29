@@ -9,13 +9,13 @@
 import UIKit
 
 public protocol TabBarItem {
-    var title: String { get }
+    var tabBarItem: UITabBarItem { get }
     var viewController: UIViewController? { get }
 }
 extension TabBarItem {
     public func makeViewController<Coordinator: RootableCoordinatorProtocol>(of coordinator: Coordinator) -> UIViewController? {
         let viewController = coordinator.rootViewController
-        viewController?.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
+        viewController?.tabBarItem = tabBarItem
         return viewController
     }
 }

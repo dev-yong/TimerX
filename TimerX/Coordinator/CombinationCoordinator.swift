@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Domain
 import Coordinator
 
 internal enum CombinationRoute: Route {
@@ -17,16 +18,19 @@ internal enum CombinationRoute: Route {
 }
 
 internal final class CombinationCoordinator: NaivgationCoordinator<CombinationRoute> {
+    private let useCaseProvider: Domain.UseCaseProvider
     private var storyboard: UIStoryboard {
         return Storyboard.combination.instance
     }
-    internal convenience init() {
-        self.init(root: .combinations)
+    internal init(useCaseProvider: Domain.UseCaseProvider) {
+        self.useCaseProvider = useCaseProvider
+        super.init(root: .combinations)
     }
     internal override func coordinate(_ route: CombinationRoute) {
         switch route {
         case .combinations:
             let viewController = storyboard.instantiate(viewController: CombinationsViewController.self)
+            viewController.coordinator = self
             rootViewController?.pushViewController(viewController, animated: true)
         case .create:
             let viewController = storyboard.instantiate(viewController: CombinationCreateViewController.self)

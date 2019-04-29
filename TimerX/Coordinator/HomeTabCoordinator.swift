@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Domain
 import Coordinator
 
 internal enum HomeTabRoute: Route {
@@ -15,11 +16,18 @@ internal enum HomeTabRoute: Route {
     case more
 }
 internal final class HomeTabCoordinator: TabBarCoordinator<HomeTabRoute> {
+    private let useCaseProvider: Domain.UseCaseProvider
     private let combinationCoordinator: CombinationCoordinator
     private let moreCoordinator: MoreCoordinator
-
-    internal init(combinationCoordinator: CombinationCoordinator = CombinationCoordinator(),
-                  moreCoordinator: MoreCoordinator = MoreCoordinator()) {
+    internal convenience init(useCaseProvider: Domain.UseCaseProvider) {
+        self.init(useCaseProvider: useCaseProvider,
+                  combinationCoordinator: CombinationCoordinator(useCaseProvider: useCaseProvider),
+                  moreCoordinator: MoreCoordinator())
+    }
+    internal init(useCaseProvider: Domain.UseCaseProvider,
+                  combinationCoordinator: CombinationCoordinator,
+                  moreCoordinator: MoreCoordinator) {
+        self.useCaseProvider = useCaseProvider
         self.combinationCoordinator = combinationCoordinator
         self.moreCoordinator = moreCoordinator
         super.init(tabBarItems: [HomeTabBarItem.combinations(self.combinationCoordinator),
@@ -43,6 +51,12 @@ extension HomeTabCoordinator {
             switch self {
             case .combinations: return "Combinations"
             case .more: return "More"
+            }
+        }
+        fileprivate var tabBarItem: UITabBarItem {
+            switch self {
+            case .combinations: return UITabBarItem(title: title, image: nil, selectedImage: nil)
+            case .more: return UITabBarItem(title: title, image: nil, selectedImage: nil)
             }
         }
         fileprivate var viewController: UIViewController? {

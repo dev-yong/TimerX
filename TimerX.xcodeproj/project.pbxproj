@@ -22,6 +22,8 @@
 		FC19120D2276670500D60479 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19120C2276670500D60479 /* MoreViewController.swift */; };
 		FC19120F2276671500D60479 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC19120E2276671500D60479 /* More.storyboard */; };
 		FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912102276677000D60479 /* MoreCoordinator.swift */; };
+		FC424D992276A27C00F22FFC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D972276A27C00F22FFC /* RealmSwift.framework */; };
+		FC424D9A2276A27C00F22FFC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D982276A27C00F22FFC /* Realm.framework */; };
 		FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */; };
 		FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA22226C0DBD00AFDE25 /* Home.storyboard */; };
 		FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */; };
@@ -30,7 +32,6 @@
 		FC74DA4C226C0E4A00AFDE25 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA43226C0E4A00AFDE25 /* Domain.framework */; };
 		FC74DA53226C0E4A00AFDE25 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA52226C0E4A00AFDE25 /* DomainTests.swift */; };
 		FC74DA55226C0E4A00AFDE25 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = FC74DA45226C0E4A00AFDE25 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC74DA58226C0E4A00AFDE25 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA43226C0E4A00AFDE25 /* Domain.framework */; };
 		FC74DA59226C0E4A00AFDE25 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA43226C0E4A00AFDE25 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC74DA6F226C0E5800AFDE25 /* RealmPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA66226C0E5800AFDE25 /* RealmPlatform.framework */; };
 		FC74DA76226C0E5800AFDE25 /* RealmPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA75226C0E5800AFDE25 /* RealmPlatformTests.swift */; };
@@ -48,8 +49,6 @@
 		FC74DA9E226C0E8100AFDE25 /* RMTimeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA97226C0E8100AFDE25 /* RMTimeEvent.swift */; };
 		FC74DA9F226C0E8100AFDE25 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA99226C0E8100AFDE25 /* RealmRepresentable.swift */; };
 		FC74DAA0226C0E8100AFDE25 /* DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA9A226C0E8100AFDE25 /* DomainConvertible.swift */; };
-		FC74DAA4226C0EAB00AFDE25 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAA2226C0EAB00AFDE25 /* RealmSwift.framework */; };
-		FC74DAA5226C0EAB00AFDE25 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAA3226C0EAB00AFDE25 /* Realm.framework */; };
 		FC74DAAA226C0F9E00AFDE25 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */; };
 		FC74DADF226FCD9100AFDE25 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA43226C0E4A00AFDE25 /* Domain.framework */; };
 		FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */; };
@@ -64,6 +63,8 @@
 		FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */; };
 		FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */; };
 		FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */; };
+		FC775F5B2276A54600FE4007 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D982276A27C00F22FFC /* Realm.framework */; };
+		FC775F5C2276A54600FE4007 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D972276A27C00F22FFC /* RealmSwift.framework */; };
 		FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */; };
@@ -178,6 +179,8 @@
 		FC19120C2276670500D60479 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		FC19120E2276671500D60479 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		FC1912102276677000D60479 /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
+		FC424D972276A27C00F22FFC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		FC424D982276A27C00F22FFC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		FC74DA1B226C0DBD00AFDE25 /* TimerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC74DA23226C0DBD00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -210,8 +213,6 @@
 		FC74DA97226C0E8100AFDE25 /* RMTimeEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMTimeEvent.swift; sourceTree = "<group>"; };
 		FC74DA99226C0E8100AFDE25 /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		FC74DA9A226C0E8100AFDE25 /* DomainConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertible.swift; sourceTree = "<group>"; };
-		FC74DAA2226C0EAB00AFDE25 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		FC74DAA3226C0EAB00AFDE25 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Combination.storyboard; sourceTree = "<group>"; };
 		FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLog.storyboard; sourceTree = "<group>"; };
@@ -240,7 +241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC74DA58226C0E4A00AFDE25 /* Domain.framework in Frameworks */,
+				FC775F5B2276A54600FE4007 /* Realm.framework in Frameworks */,
+				FC775F5C2276A54600FE4007 /* RealmSwift.framework in Frameworks */,
 				FC74DB14226FDBA000AFDE25 /* Coordinator.framework in Frameworks */,
 				FC74DA7B226C0E5800AFDE25 /* RealmPlatform.framework in Frameworks */,
 			);
@@ -272,9 +274,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC424D992276A27C00F22FFC /* RealmSwift.framework in Frameworks */,
+				FC424D9A2276A27C00F22FFC /* Realm.framework in Frameworks */,
 				FC74DADF226FCD9100AFDE25 /* Domain.framework in Frameworks */,
-				FC74DAA4226C0EAB00AFDE25 /* RealmSwift.framework in Frameworks */,
-				FC74DAA5226C0EAB00AFDE25 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +354,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		FC19123B22769A6A00D60479 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		FC74DA12226C0DBD00AFDE25 = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +396,7 @@
 		FC74DA1D226C0DBD00AFDE25 /* TimerX */ = {
 			isa = PBXGroup;
 			children = (
+				FC19123B22769A6A00D60479 /* Common */,
 				FC74DAE0226FD47B00AFDE25 /* Application */,
 				FC74DAF3226FD8E500AFDE25 /* Coordinator */,
 				FC74DAF5226FDA4100AFDE25 /* Scene */,
@@ -510,8 +520,8 @@
 		FC74DAA1226C0EAB00AFDE25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DAA3226C0EAB00AFDE25 /* Realm.framework */,
-				FC74DAA2226C0EAB00AFDE25 /* RealmSwift.framework */,
+				FC424D982276A27C00F22FFC /* Realm.framework */,
+				FC424D972276A27C00F22FFC /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1000,8 +1010,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -1026,7 +1036,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n/usr/local/bin/carthage copy-frameworks\n";
 		};
 		FC74DAA8226C0F4000AFDE25 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1258,6 +1268,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1319,6 +1333,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

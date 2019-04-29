@@ -10,7 +10,8 @@ import Foundation
 import Domain
 import RealmSwift
 
-final class EventCombinationUseCase<Repository>: Domain.EventCombinationUseCase where Repository: RepositoryProtocol, Repository.Item == Domain.EventCombination {
+final class EventCombinationUseCase<Repository>: Domain.EventCombinationUseCase
+    where Repository: RepositoryProtocol, Repository.Item == Domain.EventCombination {
     private let repository: Repository
     internal init(repository: Repository) {
         self.repository = repository

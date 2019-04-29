@@ -9,5 +9,9 @@
 import UIKit
 
 internal class CombinationsViewController: UIViewController {
+    var coordinator: CombinationCoordinator!
     @IBOutlet private weak var combinationTableView: UITableView!
+    @IBAction func addButtonTap(_ sender: UIButton) {
+        coordinator.coordinate(.create)
+    }
 }
