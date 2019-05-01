@@ -8,16 +8,16 @@
 
 import UIKit
 
-enum TimeUnit: CustomStringConvertible {
+public enum TimeUnit: CustomStringConvertible {
     case hour, miniute, second
-    var description: String {
+    public var description: String {
         switch self {
         case .hour: return "hour"
         case .miniute: return "miniute"
         case .second: return "second"
         }
     }
-    var datas: [Int] {
+    public var datas: [Int] {
         switch self {
         case .hour: return [Int](0..<24)
         case .miniute: return [Int](0..<60)
@@ -26,8 +26,8 @@ enum TimeUnit: CustomStringConvertible {
     }
 }
 
-class TimePickerView: UIPickerView {
-    enum Mode {
+open class TimePickerView: UIPickerView {
+    public enum Mode {
         case h, m, s, hm, ms, hms
         var datas: [TimeUnit] {
             switch self {
@@ -40,7 +40,7 @@ class TimePickerView: UIPickerView {
             }
         }
     }
-    var mode: Mode = .hms {
+    public var mode: Mode = .hms {
         didSet {
             reloadAllComponents()
         }
@@ -48,11 +48,11 @@ class TimePickerView: UIPickerView {
     private var modeDataSource: [TimeUnit] {
         return mode.datas
     }
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialize()
     }
@@ -63,15 +63,15 @@ class TimePickerView: UIPickerView {
 }
 
 extension TimePickerView: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return modeDataSource.count
     }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return modeDataSource[component].datas.count
     }
 }
 extension TimePickerView: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return String(describing: modeDataSource[component].datas[row])
     }
 }
