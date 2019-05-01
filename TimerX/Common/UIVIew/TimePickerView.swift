@@ -9,18 +9,18 @@
 import UIKit
 
 public enum TimeUnit: CustomStringConvertible {
-    case hour, miniute, second
+    case hour, minute, second
     public var description: String {
         switch self {
         case .hour: return "hour"
-        case .miniute: return "miniute"
+        case .minute: return "minute"
         case .second: return "second"
         }
     }
     public var datas: [Int] {
         switch self {
         case .hour: return [Int](0..<24)
-        case .miniute: return [Int](0..<60)
+        case .minute: return [Int](0..<60)
         case .second: return [Int](0..<60)
         }
     }
@@ -32,11 +32,11 @@ open class TimePickerView: UIPickerView {
         var datas: [TimeUnit] {
             switch self {
             case .h: return [.hour]
-            case .m: return [.miniute]
+            case .m: return [.minute]
             case .s: return [.second]
-            case .hm: return [.hour, .miniute]
-            case .ms: return [.miniute, .second]
-            case .hms: return [.hour, .miniute, .second]
+            case .hm: return [.hour, .minute]
+            case .ms: return [.minute, .second]
+            case .hms: return [.hour, .minute, .second]
             }
         }
     }
