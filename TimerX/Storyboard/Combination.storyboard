@@ -21,15 +21,18 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WJi-TQ-y2Y">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <pickerView key="tableFooterView" contentMode="scaleToFill" id="cyH-ln-7M8" customClass="TimePickerView" customModule="TimerX" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                </pickerView>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-i8-FGZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-i8-FGZ" customClass="DesignableButton" customModule="Designable">
                                 <rect key="frame" x="344" y="743" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.2051192224" green="0.47214853759999997" blue="0.96560257670000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j0x-i8-FGZ" secondAttribute="height" multiplier="1:1" id="Y11-XQ-ZOd"/>
                                     <constraint firstAttribute="height" constant="60" id="rnL-4T-cJF"/>
                                 </constraints>
-                                <state key="normal" title="+"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="30"/>
@@ -41,9 +44,6 @@
                                         <size key="value" width="2" height="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addButtonTap:" destination="vRy-f6-19Q" eventType="touchUpInside" id="8sg-AZ-tlI"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,11 +61,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="combinationTableView" destination="WJi-TQ-y2Y" id="7b7-dx-tDl"/>
+                        <outlet property="createButton" destination="j0x-i8-FGZ" id="J7g-8K-Gda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHJ-9p-zXA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1700" y="-238"/>
+            <point key="canvasLocation" x="-1700.0000000000002" y="-238.39285714285714"/>
         </scene>
         <!--Combination Player View Controller-->
         <scene sceneID="PqX-Mc-iSi">
@@ -89,9 +90,24 @@
                     <view key="view" contentMode="scaleToFill" id="GzV-KO-hwT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zSd-qb-2Gh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zSd-qb-2Gh" firstAttribute="leading" secondItem="Eyh-JU-PUf" secondAttribute="leading" id="8XF-Q8-bBv"/>
+                            <constraint firstItem="zSd-qb-2Gh" firstAttribute="top" secondItem="Eyh-JU-PUf" secondAttribute="top" id="Cbe-Qi-0iD"/>
+                            <constraint firstItem="Eyh-JU-PUf" firstAttribute="bottom" secondItem="zSd-qb-2Gh" secondAttribute="bottom" id="Qra-AS-XYs"/>
+                            <constraint firstItem="Eyh-JU-PUf" firstAttribute="trailing" secondItem="zSd-qb-2Gh" secondAttribute="trailing" id="Wue-sW-QGW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eyh-JU-PUf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5Mb-xY-79K">
+                        <nil key="title"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>

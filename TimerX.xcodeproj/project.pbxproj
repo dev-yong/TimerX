@@ -72,6 +72,15 @@
 		FCCC6F4A2276BC8F008FE51B /* Designable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F342276BC8E008FE51B /* Designable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCCC6F542276BCA4008FE51B /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F522276BCA4008FE51B /* Designable.swift */; };
 		FCCC6F552276BCA4008FE51B /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F532276BCA4008FE51B /* DesignableButton.swift */; };
+		FCCC6F5922772229008FE51B /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F5622772229008FE51B /* RxAtomic.framework */; };
+		FCCC6F5A22772229008FE51B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F5722772229008FE51B /* RxCocoa.framework */; };
+		FCCC6F5B22772229008FE51B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F5822772229008FE51B /* RxSwift.framework */; };
+		FCCC6F5E227722C0008FE51B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F5D227722C0008FE51B /* ViewModel.swift */; };
+		FCCC6F6022777255008FE51B /* CombinationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */; };
+		FCCC6F642277D7F1008FE51B /* CombinationCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */; };
+		FCCC6F662277D8B2008FE51B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F652277D8B2008FE51B /* View.swift */; };
+		FCCC6F6A2277DC78008FE51B /* RxSwift+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F692277DC78008FE51B /* RxSwift+.swift */; };
+		FCCC6F7C2279452D008FE51B /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F7B2279452D008FE51B /* TimePickerView.swift */; };
 		FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */; };
@@ -264,6 +273,15 @@
 		FCCC6F452276BC8F008FE51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCC6F522276BCA4008FE51B /* Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
 		FCCC6F532276BCA4008FE51B /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		FCCC6F5622772229008FE51B /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
+		FCCC6F5722772229008FE51B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		FCCC6F5822772229008FE51B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		FCCC6F5D227722C0008FE51B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationListViewModel.swift; sourceTree = "<group>"; };
+		FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCreateViewModel.swift; sourceTree = "<group>"; };
+		FCCC6F652277D8B2008FE51B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		FCCC6F692277DC78008FE51B /* RxSwift+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+.swift"; sourceTree = "<group>"; };
+		FCCC6F7B2279452D008FE51B /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
@@ -278,6 +296,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCC6F5922772229008FE51B /* RxAtomic.framework in Frameworks */,
+				FCCC6F5A22772229008FE51B /* RxCocoa.framework in Frameworks */,
+				FCCC6F5B22772229008FE51B /* RxSwift.framework in Frameworks */,
 				FCCC6F492276BC8F008FE51B /* Designable.framework in Frameworks */,
 				FC775F5B2276A54600FE4007 /* Realm.framework in Frameworks */,
 				FC775F5C2276A54600FE4007 /* RealmSwift.framework in Frameworks */,
@@ -362,7 +383,8 @@
 		FC1911EC22762EAD00D60479 /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				FC1912082276662500D60479 /* CombinationCreateViewController.swift */,
+				FCCC6F7422793FC1008FE51B /* ViewMode */,
+				FCCC6F7322793FC0008FE51B /* View */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -370,7 +392,8 @@
 		FC1911ED22762EB000D60479 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
-				FC19120A2276663F00D60479 /* CombinationEditViewController.swift */,
+				FCCC6F7622793FCC008FE51B /* ViewModel */,
+				FCCC6F7522793FCB008FE51B /* View */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -378,7 +401,8 @@
 		FC1911EE22762EB500D60479 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				FC1912042276647B00D60479 /* CombinationsViewController.swift */,
+				FCCC6F7022793FA9008FE51B /* ViewMode */,
+				FCCC6F6F22793FA8008FE51B /* View */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -386,7 +410,8 @@
 		FC1911EF22762EBD00D60479 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				FC1912062276656300D60479 /* CombinationPlayerViewController.swift */,
+				FCCC6F7222793FB7008FE51B /* ViewModel */,
+				FCCC6F7122793FB4008FE51B /* View */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -402,7 +427,7 @@
 		FC1911F72276611A00D60479 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */,
+				FCCC6F6E22793FA3008FE51B /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -410,6 +435,8 @@
 		FC19123B22769A6A00D60479 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FCCC6F7A22794518008FE51B /* UIVIew */,
+				FCCC6F5C227722B8008FE51B /* MVVM */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -453,6 +480,7 @@
 		FC74DA1D226C0DBD00AFDE25 /* TimerX */ = {
 			isa = PBXGroup;
 			children = (
+				FCCC6F672277DC6E008FE51B /* Extension */,
 				FC19123B22769A6A00D60479 /* Common */,
 				FC74DAE0226FD47B00AFDE25 /* Application */,
 				FC74DAF3226FD8E500AFDE25 /* Coordinator */,
@@ -577,6 +605,9 @@
 		FC74DAA1226C0EAB00AFDE25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCCC6F5622772229008FE51B /* RxAtomic.framework */,
+				FCCC6F5722772229008FE51B /* RxCocoa.framework */,
+				FCCC6F5822772229008FE51B /* RxSwift.framework */,
 				FC424D982276A27C00F22FFC /* Realm.framework */,
 				FC424D972276A27C00F22FFC /* RealmSwift.framework */,
 			);
@@ -747,6 +778,117 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		FCCC6F5C227722B8008FE51B /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F5D227722C0008FE51B /* ViewModel.swift */,
+				FCCC6F652277D8B2008FE51B /* View.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		FCCC6F672277DC6E008FE51B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F682277DC72008FE51B /* Rx */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FCCC6F682277DC72008FE51B /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F692277DC78008FE51B /* RxSwift+.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		FCCC6F6E22793FA3008FE51B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCCC6F6F22793FA8008FE51B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCCC6F7022793FA9008FE51B /* ViewMode */ = {
+			isa = PBXGroup;
+			children = (
+				FC1912042276647B00D60479 /* CombinationsViewController.swift */,
+			);
+			path = ViewMode;
+			sourceTree = "<group>";
+		};
+		FCCC6F7122793FB4008FE51B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC1912062276656300D60479 /* CombinationPlayerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCCC6F7222793FB7008FE51B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCCC6F7322793FC0008FE51B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC1912082276662500D60479 /* CombinationCreateViewController.swift */,
+				FCCC6F7722794027008FE51B /* EventTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCCC6F7422793FC1008FE51B /* ViewMode */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */,
+			);
+			path = ViewMode;
+			sourceTree = "<group>";
+		};
+		FCCC6F7522793FCB008FE51B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC19120A2276663F00D60479 /* CombinationEditViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCCC6F7622793FCC008FE51B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCCC6F7722794027008FE51B /* EventTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EventTableViewCell;
+			sourceTree = "<group>";
+		};
+		FCCC6F7A22794518008FE51B /* UIVIew */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC6F7B2279452D008FE51B /* TimePickerView.swift */,
+			);
+			path = UIVIew;
+			sourceTree = "<group>";
+		};
 		FCEDDAEF227120CF00525F5C /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -817,7 +959,7 @@
 				FC74DA18226C0DBD00AFDE25 /* Frameworks */,
 				FC74DA19226C0DBD00AFDE25 /* Resources */,
 				FC74DA5F226C0E4A00AFDE25 /* Embed Frameworks */,
-				FC74DAA7226C0F3A00AFDE25 /* ShellScript */,
+				FC74DAA7226C0F3A00AFDE25 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -1068,10 +1210,10 @@
 				FC74DA6D226C0E5800AFDE25 /* RealmPlatformTests */,
 				FC74DAFE226FDB9F00AFDE25 /* Coordinator */,
 				FC74DB06226FDB9F00AFDE25 /* CoordinatorTests */,
-				FC74DA1A226C0DBD00AFDE25 /* TimerX */,
-				FC74DA2E226C0DBF00AFDE25 /* TimerXTests */,
 				FCCC6F332276BC8E008FE51B /* Designable */,
 				FCCC6F3B2276BC8F008FE51B /* DesignableTests */,
+				FC74DA1A226C0DBD00AFDE25 /* TimerX */,
+				FC74DA2E226C0DBF00AFDE25 /* TimerXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1176,7 +1318,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n/usr/local/bin/carthage copy-frameworks\n";
 		};
-		FC74DAA7226C0F3A00AFDE25 /* ShellScript */ = {
+		FC74DAA7226C0F3A00AFDE25 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1184,7 +1326,13 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -1217,15 +1365,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCC6F662277D8B2008FE51B /* View.swift in Sources */,
+				FCCC6F7C2279452D008FE51B /* TimePickerView.swift in Sources */,
 				FC1912052276647B00D60479 /* CombinationsViewController.swift in Sources */,
 				FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */,
 				FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */,
 				FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */,
+				FCCC6F5E227722C0008FE51B /* ViewModel.swift in Sources */,
 				FC19120D2276670500D60479 /* MoreViewController.swift in Sources */,
 				FC1912092276662500D60479 /* CombinationCreateViewController.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
 				FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */,
 				FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */,
+				FCCC6F6A2277DC78008FE51B /* RxSwift+.swift in Sources */,
+				FCCC6F6022777255008FE51B /* CombinationListViewModel.swift in Sources */,
+				FCCC6F642277D7F1008FE51B /* CombinationCreateViewModel.swift in Sources */,
 				FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */,
 				FC19120B2276663F00D60479 /* CombinationEditViewController.swift in Sources */,
 				FC1912072276656300D60479 /* CombinationPlayerViewController.swift in Sources */,
@@ -1943,6 +2097,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Designable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1973,6 +2128,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Designable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
