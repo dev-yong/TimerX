@@ -27,13 +27,18 @@ internal final class CombinationCoordinator: NaivgationCoordinator<CombinationRo
         super.init(root: .combinations)
     }
     internal override func coordinate(_ route: CombinationRoute) {
+        let combinationUseCase = useCaseProvider.makeEventCombinationUseCase()
         switch route {
         case .combinations:
             let viewController = storyboard.instantiate(viewController: CombinationsViewController.self)
-            viewController.coordinator = self
+            let viewModel = CombinationListViewModel(useCase: combinationUseCase,
+                                                     coordinator: self)
+            viewController.viewModel = viewModel
             rootViewController?.pushViewController(viewController, animated: true)
         case .create:
             let viewController = storyboard.instantiate(viewController: CombinationCreateViewController.self)
+            viewController.viewModel = CombinationCreateViewModel(useCase: combinationUseCase,
+                                                                  coordinator: self)
             rootViewController?.pushViewController(viewController, animated: true)
         case .edit:
             let viewController = storyboard.instantiate(viewController: CombinationEditViewController.self)
