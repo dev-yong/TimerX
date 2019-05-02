@@ -11,18 +11,18 @@ import Foundation
 extension UICollectionViewCell: Reusable {}
 
 extension UICollectionView {
-    func register<ReusableCell>(nib: ReusableCell.Type = ReusableCell.self, bundle: Bundle?)
+    public func register<ReusableCell>(nib: ReusableCell.Type = ReusableCell.self, bundle: Bundle?)
         where ReusableCell: UICollectionViewCell {
         register(UINib(nibName: nib.reuseIdentifier,
                             bundle: bundle),
                       forCellWithReuseIdentifier: nib.reuseIdentifier)
     }
-    func register<ReusableCell>(class: ReusableCell.Type = ReusableCell.self)
+    public func register<ReusableCell>(class: ReusableCell.Type = ReusableCell.self)
         where ReusableCell: UICollectionViewCell {
         register(`class`, forCellWithReuseIdentifier: `class`.reuseIdentifier)
     }
-    func dequeReusableCell<ReusableCell>(with cell: ReusableCell.Type = ReusableCell.self,
-                                         for indexPath: IndexPath) -> ReusableCell
+    public func dequeueReusableCell<ReusableCell>(with cell: ReusableCell.Type = ReusableCell.self,
+                                                  for indexPath: IndexPath) -> ReusableCell
         where ReusableCell: UICollectionViewCell {
             guard let reusableCell =  dequeueReusableCell(withReuseIdentifier: cell.reuseIdentifier,
                                                   for: indexPath) as? ReusableCell else {
