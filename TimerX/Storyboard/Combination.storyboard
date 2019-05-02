@@ -21,10 +21,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WJi-TQ-y2Y">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <pickerView key="tableFooterView" contentMode="scaleToFill" id="cyH-ln-7M8" customClass="TimePickerView" customModule="TimerX" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                </pickerView>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-i8-FGZ" customClass="DesignableButton" customModule="Designable">
                                 <rect key="frame" x="344" y="743" width="60" height="60"/>

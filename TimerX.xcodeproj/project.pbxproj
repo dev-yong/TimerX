@@ -22,6 +22,12 @@
 		FC19120D2276670500D60479 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19120C2276670500D60479 /* MoreViewController.swift */; };
 		FC19120F2276671500D60479 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC19120E2276671500D60479 /* More.storyboard */; };
 		FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912102276677000D60479 /* MoreCoordinator.swift */; };
+		FC1AC020227A856600A76DC7 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC01E227A856600A76DC7 /* EventTableViewCell.swift */; };
+		FC1AC021227A856600A76DC7 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1AC01F227A856600A76DC7 /* EventTableViewCell.xib */; };
+		FC1AC023227A870200A76DC7 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC022227A870200A76DC7 /* DesignableView.swift */; };
+		FC1AC026227A883B00A76DC7 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC025227A883B00A76DC7 /* SwitchTableViewCell.swift */; };
+		FC1AC028227A90DC00A76DC7 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC027227A90DC00A76DC7 /* UICollectionView+Reusable.swift */; };
+		FC1AC02A227AA10200A76DC7 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC029227AA10200A76DC7 /* UITableView+Reusable.swift */; };
 		FC424D992276A27C00F22FFC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D972276A27C00F22FFC /* RealmSwift.framework */; };
 		FC424D9A2276A27C00F22FFC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D982276A27C00F22FFC /* Realm.framework */; };
 		FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */; };
@@ -217,6 +223,12 @@
 		FC19120C2276670500D60479 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		FC19120E2276671500D60479 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		FC1912102276677000D60479 /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
+		FC1AC01E227A856600A76DC7 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		FC1AC01F227A856600A76DC7 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		FC1AC022227A870200A76DC7 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		FC1AC025227A883B00A76DC7 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		FC1AC027227A90DC00A76DC7 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		FC1AC029227AA10200A76DC7 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		FC424D972276A27C00F22FFC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FC424D982276A27C00F22FFC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		FC74DA1B226C0DBD00AFDE25 /* TimerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,7 +413,7 @@
 		FC1911EE22762EB500D60479 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				FCCC6F7022793FA9008FE51B /* ViewMode */,
+				FCCC6F7022793FA9008FE51B /* ViewModel */,
 				FCCC6F6F22793FA8008FE51B /* View */,
 			);
 			path = List;
@@ -439,6 +451,14 @@
 				FCCC6F5C227722B8008FE51B /* MVVM */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FC1AC024227A882500A76DC7 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AC025227A883B00A76DC7 /* SwitchTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		FC74DA12226C0DBD00AFDE25 = {
@@ -726,6 +746,8 @@
 			children = (
 				FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */,
 				FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */,
+				FC1AC027227A90DC00A76DC7 /* UICollectionView+Reusable.swift */,
+				FC1AC029227AA10200A76DC7 /* UITableView+Reusable.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -773,6 +795,7 @@
 			isa = PBXGroup;
 			children = (
 				FCCC6F522276BCA4008FE51B /* Designable.swift */,
+				FC1AC022227A870200A76DC7 /* DesignableView.swift */,
 				FCCC6F532276BCA4008FE51B /* DesignableButton.swift */,
 			);
 			path = Source;
@@ -814,17 +837,17 @@
 		FCCC6F6F22793FA8008FE51B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */,
+				FC1912042276647B00D60479 /* CombinationsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		FCCC6F7022793FA9008FE51B /* ViewMode */ = {
+		FCCC6F7022793FA9008FE51B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FC1912042276647B00D60479 /* CombinationsViewController.swift */,
+				FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */,
 			);
-			path = ViewMode;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FCCC6F7122793FB4008FE51B /* View */ = {
@@ -846,6 +869,7 @@
 			isa = PBXGroup;
 			children = (
 				FC1912082276662500D60479 /* CombinationCreateViewController.swift */,
+				FC1AC024227A882500A76DC7 /* TableViewCell */,
 				FCCC6F7722794027008FE51B /* EventTableViewCell */,
 			);
 			path = View;
@@ -877,6 +901,8 @@
 		FCCC6F7722794027008FE51B /* EventTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				FC1AC01E227A856600A76DC7 /* EventTableViewCell.swift */,
+				FC1AC01F227A856600A76DC7 /* EventTableViewCell.xib */,
 			);
 			path = EventTableViewCell;
 			sourceTree = "<group>";
@@ -1229,6 +1255,7 @@
 				FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */,
 				FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */,
 				FC74DAF1226FD7BC00AFDE25 /* TimeLog.storyboard in Resources */,
+				FC1AC021227A856600A76DC7 /* EventTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1376,11 +1403,13 @@
 				FC1912092276662500D60479 /* CombinationCreateViewController.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
 				FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */,
+				FC1AC020227A856600A76DC7 /* EventTableViewCell.swift in Sources */,
 				FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */,
 				FCCC6F6A2277DC78008FE51B /* RxSwift+.swift in Sources */,
 				FCCC6F6022777255008FE51B /* CombinationListViewModel.swift in Sources */,
 				FCCC6F642277D7F1008FE51B /* CombinationCreateViewModel.swift in Sources */,
 				FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */,
+				FC1AC026227A883B00A76DC7 /* SwitchTableViewCell.swift in Sources */,
 				FC19120B2276663F00D60479 /* CombinationEditViewController.swift in Sources */,
 				FC1912072276656300D60479 /* CombinationPlayerViewController.swift in Sources */,
 			);
@@ -1445,9 +1474,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1AC028227A90DC00A76DC7 /* UICollectionView+Reusable.swift in Sources */,
 				FC74DB22226FDD0E00AFDE25 /* Reusable.swift in Sources */,
 				FCEDDAFA2271720B00525F5C /* UIStoryboard+.swift in Sources */,
 				FC1911FB227662A000D60479 /* CoordinatorProtocol.swift in Sources */,
+				FC1AC02A227AA10200A76DC7 /* UITableView+Reusable.swift in Sources */,
 				FC74DB26226FDF0A00AFDE25 /* UIViewController+Reusable.swift in Sources */,
 				FC1911FD227662A800D60479 /* BaseCoordinator.swift in Sources */,
 				FC74DB21226FDBDB00AFDE25 /* StoryboardProtocol.swift in Sources */,
@@ -1471,6 +1502,7 @@
 			files = (
 				FCCC6F542276BCA4008FE51B /* Designable.swift in Sources */,
 				FCCC6F552276BCA4008FE51B /* DesignableButton.swift in Sources */,
+				FC1AC023227A870200A76DC7 /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
