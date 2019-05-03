@@ -8,6 +8,15 @@
 
 import Foundation
 
-public enum CountingType: Int {
+public enum CountingType: Int, CaseIterable {
     case up, down
+}
+
+extension CountingType: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .up: return "Up"
+        case .down: return "Down"
+        }
+    }
 }
