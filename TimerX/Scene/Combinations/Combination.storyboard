@@ -106,6 +106,9 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="eventTableView" destination="zSd-qb-2Gh" id="BIx-od-1vd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTn-NW-nH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
