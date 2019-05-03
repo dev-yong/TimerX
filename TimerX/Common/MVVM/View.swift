@@ -13,3 +13,7 @@ internal protocol ViewProtocol {
     var viewModel: ViewModel! { get set }
     func bind(_ viewModel: ViewModel)
 }
+
+protocol CellViewProtocol {
+    func bind<CellViewModel>(_ cellViewModel: CellViewModel)
+}
