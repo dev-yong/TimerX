@@ -15,5 +15,6 @@ internal protocol ViewProtocol {
 }
 
 protocol CellViewProtocol {
-    func bind<CellViewModel>(_ cellViewModel: CellViewModel)
+    associatedtype CellViewModel
+    func bind(_ cellViewModel: CellViewModel)
 }
