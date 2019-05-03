@@ -9,15 +9,13 @@
 import UIKit
 
 class EventTableViewCell: UITableViewCell {
+    @IBOutlet private weak var tableView: UITableView!
+    
+    
+}
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+extension EventTableViewCell: CellViewProtocol {
+    func bind(_ cellViewModel: EventCellViewModel) {
+        
     }
 }

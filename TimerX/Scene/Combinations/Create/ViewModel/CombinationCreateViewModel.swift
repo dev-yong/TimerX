@@ -11,7 +11,7 @@ import Domain
 import RxSwift
 import RxCocoa
 
-internal class CombinationCreateViewModel: ViewModelProtocol {
+internal final class CombinationCreateViewModel: ViewModelProtocol {
     internal struct Input {
 //        internal let title: Driver<String>
         internal let saveTrigger: Driver<Void>

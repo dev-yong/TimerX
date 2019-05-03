@@ -18,7 +18,7 @@ class SegmentTableViewCell: TableViewCell {
         super.init(coder: aDecoder)
         initialize()
     }
-    private func initialize() {
+    func initialize() {
         self.accessoryView = segmentControl
     }
 }
