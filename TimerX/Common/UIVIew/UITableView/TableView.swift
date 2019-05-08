@@ -6,4 +6,20 @@
 //  Copyright © 2019 GwangYongLee. All rights reserved.
 //
 
-import Foundation
+import UIKit.UITableView
+
+class TableView: UITableView {
+    override init(frame: CGRect, style: UITableView.Style) {
+        super.init(frame: frame, style: style)
+        initialze()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialze()
+    }
+    func initialze() {
+        rowHeight = UITableView.automaticDimension
+        estimatedRowHeight = 54
+        separatorStyle = .none
+    }
+}

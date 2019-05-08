@@ -15,4 +15,15 @@ class TableViewCell: UITableViewCell {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        initialize()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+    func initialize() {
+        textLabel?.font = Configuration.Font.cellTitle
+    }
 }

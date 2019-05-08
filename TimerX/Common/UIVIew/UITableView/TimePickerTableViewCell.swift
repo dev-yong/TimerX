@@ -18,27 +18,20 @@ class TimePickerTableViewCell: TableViewCell {
         let pickerView = TimePickerView()
         return pickerView
     }()
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        initialize()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initialize()
-    }
-    private func initialize() {
-        addSubview(containerView)
+    override func initialize() {
+        super.initialize()
+        contentView.addSubview(containerView)
         containerView.addSubview(timePickerView)
         setNeedsUpdateConstraints()
     }
     override func updateConstraints() {
         super.updateConstraints()
-        containerView.addConstraints([NSLayoutConstraint(item: self,
-                                                         attribute: .top,
-                                                         relatedBy: .equal,
-                                                         toItem: containerView,
-                                                         attribute: .top,
-                                                         multiplier: 1.0,
-                                                         constant: 0.0)])
+        containerView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.height.equalTo(150).priority(999)
+        }
+        timePickerView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }
