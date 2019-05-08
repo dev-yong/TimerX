@@ -9,12 +9,12 @@
 import Foundation
 
 public enum EventType: Int, CaseIterable {
-    case timer, counting
+    case simple, counting
 }
 extension EventType: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .timer: return "Timer"
+        case .simple: return "Simple"
         case .counting: return "Counting"
         }
     }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+@objc
 public enum CountingType: Int, CaseIterable {
     case up, down
 }

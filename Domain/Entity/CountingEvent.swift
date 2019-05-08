@@ -9,33 +9,25 @@
 import Foundation
 
 public struct CountingEvent: EventProtocol {
-    public let index: Int
     public let uuid: String
-    public let title: String
+    public let goal: Int
     public let interval: TimeInterval
     public let countingType: CountingType
-    public let goal: Int
-    public init(index: Int,
-                uuid: String = UUID().uuidString,
-                title: String,
+    public init(uuid: String = UUID().uuidString,
+                goal: Int,
                 interval: TimeInterval,
-                countingType: CountingType,
-                goal: Int) {
-        self.index = index
+                countingType: CountingType) {
         self.uuid = uuid
-        self.title = title
+        self.goal = goal
         self.interval = interval
         self.countingType = countingType
-        self.goal = goal
     }
 }
 
 extension CountingEvent: Equatable {
     public static func == (lhs: CountingEvent,
                            rhs: CountingEvent) -> Bool {
-        return lhs.index == rhs.index &&
-            lhs.uuid == rhs.uuid &&
-            lhs.title == rhs.title &&
+        return lhs.uuid == rhs.uuid &&
             lhs.interval == rhs.interval &&
             lhs.countingType == rhs.countingType &&
             lhs.goal == rhs.goal
