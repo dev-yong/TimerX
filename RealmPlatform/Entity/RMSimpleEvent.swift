@@ -11,7 +11,7 @@ import Domain
 import RealmSwift
 
 @objcMembers
-internal final class RMTimeEvent: Object, Domain.EventProtocol {
+internal final class RMSimpleEvent: Object, Domain.EventProtocol {
     internal dynamic var index: Int = 0
     internal dynamic var uuid: String = ""
     internal dynamic var title: String = ""
@@ -24,25 +24,19 @@ internal final class RMTimeEvent: Object, Domain.EventProtocol {
     internal var alarms = List<TimeInterval>()
 }
 
-extension RMTimeEvent: DomainConvertible {
-    internal func asDomain() -> Domain.TimeEvent {
-        return Domain.TimeEvent(index: index,
-                                uuid: uuid,
-                                title: title,
+extension RMSimpleEvent: DomainConvertible {
+    internal func asDomain() -> Domain.SimpleEvent {
+        return Domain.SimpleEvent(uuid: uuid,
                                 seconds: seconds,
-                                countingType: countingType,
-                                alarms: alarms.asArray())
+                                countingType: countingType)
     }
 }
-extension Domain.TimeEvent: RealmRepresentable {
-    internal func asRealm() -> RMTimeEvent {
-        return RMTimeEvent.build {
-            $0.index = index
+extension Domain.SimpleEvent: RealmRepresentable {
+    internal func asRealm() -> RMSimpleEvent {
+        return RMSimpleEvent.build {
             $0.uuid = uuid
-            $0.title = title
             $0.seconds = seconds
             $0.countingType = countingType
-            $0.alarms = alarms.asList()
         }
     }
 }

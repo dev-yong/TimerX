@@ -18,7 +18,7 @@ internal final class RMEventCombination: Object {
 extension RMEventCombination: DomainConvertible {
     internal func asDomain() -> Domain.EventCombination {
         let eventArray = events.asArray().map { object -> Domain.EventProtocol? in
-            if let timeEvent = (object as? RMTimeEvent)?.asDomain() {
+            if let timeEvent = (object as? RMSimpleEvent)?.asDomain() {
                 return timeEvent
             } else if let countingEvent = (object as? RMCountingEvent)?.asDomain() {
                 return countingEvent
@@ -26,7 +26,6 @@ extension RMEventCombination: DomainConvertible {
                 return nil
             }
         }.compactMap { $0 }
-        .sorted { $0.index < $1.index }
         return Domain.EventCombination(uuid: uuid,
                                        title: title,
                                        events: eventArray)
@@ -35,7 +34,7 @@ extension RMEventCombination: DomainConvertible {
 extension Domain.EventCombination: RealmRepresentable {
     internal func asRealm() -> RMEventCombination {
         let eventList = events.map { event -> Object? in
-            if let rmTimeEvent = (event as? TimeEvent)?.asRealm() {
+            if let rmTimeEvent = (event as? SimpleEvent)?.asRealm() {
                 return rmTimeEvent
             } else if let rmCountingEvent = (event as? CountingEvent)?.asRealm() {
                 return rmCountingEvent
