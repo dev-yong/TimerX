@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 internal class CombinationsViewController: UIViewController, ViewProtocol {
-    @IBOutlet private weak var combinationTableView: UITableView!
+    @IBOutlet private weak var combinationTableView: TableView!
     @IBOutlet private weak var createButton: DesignableButton!
     private let disposeBag = DisposeBag()
     internal var viewModel: CombinationListViewModel!
@@ -27,8 +27,7 @@ internal class CombinationsViewController: UIViewController, ViewProtocol {
         let input = CombinationListViewModel.Input(trigger: viewWillAppear,
                                                    createCombiationTrigger: createButton.rx.tap.asDriver())
         let output = viewModel.transform(input)
-        output.createCombination
-            .drive()
-        .disposed(by: disposeBag)
+        output.createCombination.drive()
+            .disposed(by: disposeBag)
     }
 }

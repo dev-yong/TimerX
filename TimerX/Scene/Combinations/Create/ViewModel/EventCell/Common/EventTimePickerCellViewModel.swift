@@ -1,4 +1,3 @@
-
 //
 //  EventTimePickerCellViewModel.swift
 //  TimerX
@@ -8,11 +7,10 @@
 //
 
 import Foundation
+import Domain
 import RxCocoa
 
 final class EventTimePickerCellViewModel {
-    let time: Driver<Time>
-    init(time: Driver<Time>) {
-        self.time = time
+    init() {
     }
 }

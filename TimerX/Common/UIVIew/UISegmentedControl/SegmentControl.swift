@@ -22,7 +22,7 @@ class SegmentedControl: UISegmentedControl {
 extension Reactive where Base: SegmentedControl {
     var items: Binder<[String?]> {
         return Binder(self.base) { segmentedControl, items in
-            segmentedControl.set(items: items, animated: true)
+            segmentedControl.set(items: items, animated: false)
         }
     }
 }

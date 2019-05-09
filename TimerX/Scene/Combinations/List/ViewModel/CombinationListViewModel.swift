@@ -25,8 +25,9 @@ internal final class CombinationListViewModel: ViewModelProtocol {
         self.coordinator = coordinator
     }
     internal func transform(_ input: CombinationListViewModel.Input) -> CombinationListViewModel.Output {
-        let createCombination = input.createCombiationTrigger
-            .do(onNext: { self.coordinator.coordinate(.create) })
+        let createCombination = input.createCombiationTrigger.do(onNext: { [weak self] in
+            self?.coordinator.coordinate(.create)
+        })
         return Output(createCombination: createCombination)
     }
 }
