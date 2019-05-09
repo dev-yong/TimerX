@@ -16,9 +16,17 @@ internal extension SharedSequenceConvertibleType {
 }
 
 internal extension ObservableType {
+    func unwrap<T>() -> Observable<T> where Element == T? {
+        return self.filter { $0 != nil }.map { $0! }
+    }
     func catchErrorJustComplete() -> Observable<Element> {
         return catchError { _ in
             return Observable.empty()
+        }
+    }
+    func asDriverOnErrorJustNever() -> Driver<Element> {
+        return asDriver { _ in
+            return Driver.never()
         }
     }
     func asDriverOnErrorJustComplete() -> Driver<Element> {
@@ -27,6 +35,15 @@ internal extension ObservableType {
         }
     }
     func mapToVoid() -> Observable<Void> {
+        return map { _ in }
+    }
+}
+
+extension SharedSequence {
+    func unwrap<T>() -> SharedSequence<SharingStrategy, T> where Element == T? {
+        return self.filter { $0 != nil }.map { $0! }
+    }
+    func mapToVoid() -> SharedSequence<SharingStrategy, Void> {
         return map { _ in }
     }
 }
