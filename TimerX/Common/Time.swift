@@ -8,49 +8,77 @@
 
 import Foundation
 
-struct Time {
-    private var _hour: Int = 0
-    private var _minute: Int = 0
-    private var _second: Int = 0
-    var hour: Int {
-        get { return _hour }
+public typealias MilliSeconds = Int
+public typealias Seconds = Int
+public typealias Minutes = Int
+public typealias Hours = Int
+
+public struct Time {
+    private var _hours: Hours = 0
+    private var _minutes: Minutes = 0
+    private var _seconds: Seconds = 0
+    private var _milliSeconds: MilliSeconds = 0
+    public var hours: Hours {
+        get { return _hours }
         set {
             assert(newValue < 24)
-            _hour = newValue
+            _hours = newValue
         }
     }
-    var minute: Int {
-        get { return _minute }
+    public var minutes: Minutes {
+        get { return _minutes }
         set {
             assert(newValue < 60)
-            _minute = newValue
+            _minutes = newValue
         }
     }
-    var second: Int {
-        get { return _second }
+    public var seconds: Seconds {
+        get { return _seconds }
         set {
             assert(newValue < 60)
-            _second = newValue
+            _seconds = newValue
         }
     }
-    init(hour: Int = 0,
-         minute: Int = 0,
-         second: Int = 0) {
-        self.hour = hour
-        self.minute = minute
-        self.second = second
+    public var milliSeconds: MilliSeconds {
+        get { return _milliSeconds }
+        set {
+            assert(newValue < 1000)
+            _milliSeconds = newValue
+        }
     }
-    init(second: TimeInterval) {
-        let interval = Int(second)
-        self.second = interval % 60
-        minute = (interval / 60) % 60
-        hour = (interval / 3600)
+    public init(milliSeconds: MilliSeconds,
+                seconds: Seconds,
+                minutes: Minutes,
+                hours: Hours) {
+        self.milliSeconds = milliSeconds
+        self.seconds = seconds
+        self.minutes = minutes
+        self.hours = hours
+    }
+    public init(timeInterval: TimeInterval) {
+        let seconds = Seconds(timeInterval)
+        self.init(milliSeconds: MilliSeconds(timeInterval.truncatingRemainder(dividingBy: 1) * 1000),
+                  seconds: seconds % 60,
+                  minutes: (seconds / 60) % 60,
+                  hours: (seconds / (60 * 60)))
+    }
+    public func asTimeInterval() -> TimeInterval {
+        
+        return TimeInterval((hours * 60 * 60) + (minutes * 60) + seconds) + TimeInterval(milliSeconds) / 1000
     }
 }
-
 extension Time: CustomStringConvertible {
-    var description: String {
-        return String(format: "%0.2d:%0.2d:%0.2d",
-                      hour, minute, second)
+    public var description: String {
+        return String(format: "%0.2d:%0.2d:%0.2d.%0.3d",
+                      hours, minutes, seconds, milliSeconds)
+    }
+}
+extension Time: Equatable {
+    public static func == (lhs: Time,
+                           rhs: Time) -> Bool {
+        return lhs.hours == rhs.hours &&
+            lhs.minutes == rhs.minutes &&
+            lhs.seconds == rhs.seconds &&
+            lhs.milliSeconds == rhs.milliSeconds
     }
 }
