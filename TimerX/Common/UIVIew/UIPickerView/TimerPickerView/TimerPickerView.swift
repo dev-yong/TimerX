@@ -66,7 +66,7 @@ open class TimerPickerView: UIPickerView {
         return CGSize(width: 70 * 4 + 5 * 3, height: 30 * 5 + 20)
     }
     public weak var timerPickerViewDelegate: TimerPickerViewDelegate?
-    public var mode: Mode = .hms_ms {
+    public var mode: Mode = .hms {
         didSet {
             reloadAllComponents()
             updateTimeUnitLabels()
@@ -89,8 +89,10 @@ open class TimerPickerView: UIPickerView {
     }
     private var time: Time = Time(timeInterval: 0) {
         didSet {
-            timerPickerViewDelegate?.timerPickerView(self,
-                                                   selectedTime: time.asTimeInterval())
+            timerPickerViewDelegate?.timerPickerView?(self,
+                                                      selectedTime: time.asTimeInterval())
+//            timerPickerViewDelegate?.timerPickerView(self,
+//                                                   selectedTime: time.asTimeInterval())
         }
     }
     public var countDownDuration: TimeInterval = 0 {
@@ -127,14 +129,16 @@ open class TimerPickerView: UIPickerView {
         return stackView
     }()
     private func updateTimeUnitLabels() {
-        timeUnitLabelStackView.arrangedSubviews.forEach {
-            timeUnitLabelStackView.removeArrangedSubview($0)
-        }
-        mode.datas
-            .map { TimeUnitCell(timeUnit: $0) }
-            .forEach {
-                timeUnitLabelStackView.addArrangedSubview($0)
+        DispatchQueue.main.async {
+            self.timeUnitLabelStackView.arrangedSubviews.forEach {
+                $0.removeFromSuperview()
             }
+            self.mode.datas
+                .map { TimeUnitCell(timeUnit: $0) }
+                .forEach {
+                    self.timeUnitLabelStackView.addArrangedSubview($0)
+                }
+        }
     }
     private func set(time: Time, about mode: Mode) {
         let closestMinute = minuteRows.closest(of: time.minutes) ?? (0, 0)
@@ -165,10 +169,10 @@ open class TimerPickerView: UIPickerView {
                 self.selectRow(closestSecond.1, inComponent: 2, animated: true)
                 self.selectRow(time.milliSeconds, inComponent: 3, animated: true)
             }
-            self.time = Time(milliSeconds: time.milliSeconds,
-                             seconds: closestSecond.0,
-                             minutes: closestMinute.0,
-                             hours: time.hours)
+//            self.time = Time(milliSeconds: time.milliSeconds,
+//                             seconds: closestSecond.0,
+//                             minutes: closestMinute.0,
+//                             hours: time.hours)
         }
     }
 }
