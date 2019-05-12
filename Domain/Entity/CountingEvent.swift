@@ -12,7 +12,7 @@ public struct CountingEvent: EventProtocol {
     public let uuid: String
     public let goal: Int
     public let interval: TimeInterval
-    public let countingType: CountingType
+    public var countingType: CountingType
     public init(uuid: String = UUID().uuidString,
                 goal: Int,
                 interval: TimeInterval,

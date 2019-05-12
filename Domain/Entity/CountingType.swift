@@ -10,7 +10,7 @@ import Foundation
 
 @objc
 public enum CountingType: Int, CaseIterable {
-    case up, down
+    case up = 0, down = 1
 }
 
 extension CountingType: CustomStringConvertible {

@@ -11,7 +11,7 @@ import Foundation
 public struct SimpleEvent: EventProtocol {
     public let uuid: String
     public let seconds: TimeInterval
-    public let countingType: CountingType
+    public var countingType: CountingType
     public init(uuid: String = UUID().uuidString,
                 seconds: TimeInterval,
                 countingType: CountingType) {
