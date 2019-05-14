@@ -7,22 +7,34 @@
 //
 
 import UIKit
+import RxCocoa
 
 class DynamicHeightTableView: TableView {
-    var maxHeight: CGFloat?
+    var maxHeight: CGFloat = UIScreen.main.bounds.height
     override var contentSize: CGSize {
         didSet {
-            self.invalidateIntrinsicContentSize()
+            layoutIfNeeded()
         }
     }
     override func reloadData() {
         super.reloadData()
-        self.invalidateIntrinsicContentSize()
-        self.layoutIfNeeded()
+        layoutIfNeeded()
     }
     override var intrinsicContentSize: CGSize {
-        let height = min(contentSize.height, maxHeight ?? UIScreen.main.bounds.height)
         return CGSize(width: contentSize.width,
-                      height: height)
+                      height: min(contentSize.height, maxHeight))
+    }
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        invalidateIntrinsicContentSize()
+    }
+}
+
+extension TableView {
+    var rx_contentSize: Driver<CGSize> {
+        return rx.observeWeakly(CGSize.self,
+                                "contentSize")
+            .unwrap()
+            .asDriverOnErrorJustComplete()
     }
 }
