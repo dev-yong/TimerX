@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 private extension Array where Element == Int {
     func closest(of element: Element) -> (Int, Int)? {
         if isEmpty { return nil }
@@ -87,14 +88,8 @@ open class TimerPickerView: UIPickerView {
     private var timeUnits: [TimeUnit] {
         return mode.datas
     }
-    private var time: Time = Time(timeInterval: 0) {
-        didSet {
-            timerPickerViewDelegate?.timerPickerView?(self,
-                                                      selectedTime: time.asTimeInterval())
-//            timerPickerViewDelegate?.timerPickerView(self,
-//                                                   selectedTime: time.asTimeInterval())
-        }
-    }
+    private var time: Time = Time(timeInterval: 0)
+    
     public var countDownDuration: TimeInterval = 0 {
         didSet {
             set(time: Time(timeInterval: countDownDuration),
@@ -169,10 +164,10 @@ open class TimerPickerView: UIPickerView {
                 self.selectRow(closestSecond.1, inComponent: 2, animated: true)
                 self.selectRow(time.milliSeconds, inComponent: 3, animated: true)
             }
-//            self.time = Time(milliSeconds: time.milliSeconds,
-//                             seconds: closestSecond.0,
-//                             minutes: closestMinute.0,
-//                             hours: time.hours)
+            self.time = Time(milliSeconds: time.milliSeconds,
+                             seconds: closestSecond.0,
+                             minutes: closestMinute.0,
+                             hours: time.hours)
         }
     }
 }
@@ -192,6 +187,8 @@ extension TimerPickerView: UIPickerViewDataSource {
         case .second: time.seconds = value
         case .milliSecond: time.milliSeconds = value
         }
+        timerPickerViewDelegate?.timerPickerView?(self,
+                                                  selectedTime: time.asTimeInterval())
     }
 }
 extension TimerPickerView: UIPickerViewDelegate {
