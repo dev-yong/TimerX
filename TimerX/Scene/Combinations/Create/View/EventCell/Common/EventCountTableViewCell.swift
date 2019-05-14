@@ -13,14 +13,14 @@ import RxCocoa
 class EventCountTableViewCell: SegmentTableViewCell {
 }
 
-extension EventCountTableViewCell: CellViewProtocol {
+extension EventCountTableViewCell {
     func bind(_ cellViewModel: EventCountTypeCellViewModel) {
         guard let textLabel = textLabel else { return }
-        cellViewModel.title.drive(textLabel.rx.text)
-            .disposed(by: disposeBag)
-        cellViewModel.countSegments.drive(segmentControl.rx.items)
-            .disposed(by: disposeBag)
-        cellViewModel.selectedCountingType.drive(segmentControl.rx.selectedSegmentIndex)
-            .disposed(by: disposeBag)
+        // todo: two-way binding
+        [cellViewModel.title.drive(textLabel.rx.text),
+         cellViewModel.countingSegemnts.drive(segmentControl.rx.items),
+         cellViewModel.selectedCountType.drive(segmentControl.rx.selectedSegmentIndex)].forEach {
+            $0.disposed(by: disposeBag)
+        }
     }
 }

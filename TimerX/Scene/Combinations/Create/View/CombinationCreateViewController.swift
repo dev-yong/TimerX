@@ -21,7 +21,7 @@ internal class CombinationCreateViewController: UIViewController, CellHeightCach
                                                                     target: nil,
                                                                     action: nil)
     fileprivate let saveBarButtonitem = UIBarButtonItem(barButtonSystemItem: .save, target: nil, action: nil)
-    @IBOutlet fileprivate weak var eventTableView: DynamicHeightTableView!
+    @IBOutlet fileprivate weak var eventTableView: TableView!
     var viewModel: CombinationCreateViewModel!
     var cellHeightsDictionary = [String: CGFloat]()
     fileprivate var disposeBag = DisposeBag()
@@ -55,28 +55,18 @@ extension CombinationCreateViewController: ViewProtocol {
     }
     private func makeDataSource() -> RxTableViewSectionedAnimatedDataSource<CombinationSection> {
         return RxTableViewSectionedAnimatedDataSource<CombinationSection>(
-            animationConfiguration: AnimationConfiguration(insertAnimation: .bottom,
+            animationConfiguration: AnimationConfiguration(insertAnimation: .automatic,
                                                            reloadAnimation: .automatic,
-                                                           deleteAnimation: .fade) ,
+                                                           deleteAnimation: .automatic) ,
             configureCell: { (dataSource, tableView, indexPath, _) -> UITableViewCell in
                 switch dataSource[indexPath] {
                 case let .simple(_, viewModel):
                     let cell = tableView.dequeueReusableCell(with: SimpleEventTableVeiwCell.self, for: indexPath)
                     cell.bind(viewModel)
-                    cell.tableView.rx.itemSelected.asDriver()
-                        .mapToVoid()
-                        .drive(onNext: { _ in
-                            tableView.reloadData()
-                        }).disposed(by: cell.disposeBag)
                     return cell
                 case let .counting(_, viewModel):
                     let cell = tableView.dequeueReusableCell(with: CountingEventTableVeiwCell.self, for: indexPath)
                     cell.bind(viewModel)
-                    cell.tableView.rx.itemSelected.asDriver()
-                        .mapToVoid()
-                        .drive(onNext: { _ in
-                            tableView.reloadData()
-                        }).disposed(by: cell.disposeBag)
                     return cell
                 }
             })
@@ -93,5 +83,13 @@ extension CombinationCreateViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeightsDictionary[indexPath.cacheKey] ?? UITableView.automaticDimension
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // todo
+        guard let row = dataSource?[indexPath] else { return 0.0 }
+        switch row {
+        case .simple: return 44 * 3 + 170 + 20
+        case .counting: return 44 * 4 + 170 + 20
+        }
     }
 }

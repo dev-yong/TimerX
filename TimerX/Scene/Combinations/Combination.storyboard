@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-i8-FGZ" customClass="DesignableButton" customModule="Designable">
-                                <rect key="frame" x="344" y="743" width="60" height="60"/>
+                                <rect key="frame" x="334" y="733" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.2051192224" green="0.47214853759999997" blue="0.96560257670000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j0x-i8-FGZ" secondAttribute="height" multiplier="1:1" id="Y11-XQ-ZOd"/>
@@ -44,11 +44,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WJi-TQ-y2Y" firstAttribute="top" secondItem="zLt-Hm-X0H" secondAttribute="top" id="4DN-ms-T62"/>
+                            <constraint firstItem="zLt-Hm-X0H" firstAttribute="bottom" secondItem="j0x-i8-FGZ" secondAttribute="bottom" constant="20" id="4LW-3L-lnk"/>
                             <constraint firstItem="zLt-Hm-X0H" firstAttribute="trailing" secondItem="WJi-TQ-y2Y" secondAttribute="trailing" id="5xQ-dn-agA"/>
                             <constraint firstItem="zLt-Hm-X0H" firstAttribute="bottom" secondItem="WJi-TQ-y2Y" secondAttribute="bottom" id="7gp-Oi-FHW"/>
-                            <constraint firstItem="zLt-Hm-X0H" firstAttribute="bottom" secondItem="j0x-i8-FGZ" secondAttribute="bottom" constant="10" id="FwK-z1-MBu"/>
-                            <constraint firstAttribute="trailing" secondItem="j0x-i8-FGZ" secondAttribute="trailing" constant="10" id="VeO-C3-TqW"/>
+                            <constraint firstItem="WJi-TQ-y2Y" firstAttribute="top" secondItem="zLt-Hm-X0H" secondAttribute="top" id="Jvm-Rf-JcY"/>
+                            <constraint firstItem="zLt-Hm-X0H" firstAttribute="trailing" secondItem="j0x-i8-FGZ" secondAttribute="trailing" constant="20" id="X1h-ej-1BU"/>
                             <constraint firstItem="WJi-TQ-y2Y" firstAttribute="leading" secondItem="zLt-Hm-X0H" secondAttribute="leading" id="pRJ-aK-mUg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zLt-Hm-X0H"/>
@@ -87,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zSd-qb-2Gh" customClass="DynamicHeightTableView" customModule="TimerX" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zSd-qb-2Gh" customClass="TableView" customModule="TimerX" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>

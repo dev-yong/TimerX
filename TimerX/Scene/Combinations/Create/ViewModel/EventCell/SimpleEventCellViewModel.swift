@@ -11,31 +11,28 @@ import Domain
 import RxSwift
 import RxCocoa
 
-final class SimpleEventCellViewModel: EventCellViewMdoel {
-    struct Input {
-        let rowSelection: Driver<SimpleEventRow>
-        let countSelectionTrigger: Driver<Int>
+final class SimpleEventCellViewModel: EventCellViewMdoelProtocol {
+    struct Input: EventCellViewModelInputProtocol {
+        let rowSelectionTrigger: Driver<SimpleEventRow>
+        let timeIntervalSelectionTrigger: Driver<TimeInterval>
+        let countSegmentSelectionTrigger: Driver<Int>
     }
-    struct Output {
+    struct Output: EventCellViewModelOutputProtocool {
         let title: Driver<String>
         let sections: Driver<[SimpleEventSection]>
         let timeRowSelection: Driver<Void>
+        let showTimePicker: Driver<Void>
+        let timeIntervalSelection: Driver<Void>
+        let countSegmentSelection: Driver<Void>
     }
-    private var disposeBag = DisposeBag()
     private let simpleEvent: NSSimpleEvent
     private let sections = BehaviorRelay(value: [SimpleEventSection]())
-    private let selectedCountSegment = BehaviorRelay<CountingType>(value: .up)
     private let showTimePicker = BehaviorRelay(value: false)
     init(simpleEvent: NSSimpleEvent) {
         self.simpleEvent = simpleEvent
     }
     func transform(_ input: Input) -> Output {
-        let countSelectionTrigger = input.countSelectionTrigger.asDriver()
-            .map { CountingType(rawValue: $0) ?? .up }
-        countSelectionTrigger.drive(onNext: { [weak self] in
-            self?.simpleEvent.countingType = $0
-        }).disposed(by: disposeBag)
-        let timeRowSelecionTrigger = input.rowSelection.asDriver()
+        let timeRowSelecionTrigger = input.rowSelectionTrigger.asDriver()
         .filter {
             switch $0 {
             case .time: return true
@@ -45,35 +42,56 @@ final class SimpleEventCellViewModel: EventCellViewMdoel {
             guard let self = self else { return }
             self.showTimePicker.accept(!self.showTimePicker.value)
         }).mapToVoid()
-        showTimePicker.asDriver()
+        let showTimePicker = self.showTimePicker.asDriver()
             .map { [weak self] in
                 self?.makeEventCellSections(showTimePicker: $0) ?? []
-            }
-            .drive(sections)
-            .disposed(by: disposeBag)
-        return Output(title: Driver.just("Simple event timer"),
+            }.do(onNext: { [weak self] in
+                self?.sections.accept($0)
+            }).mapToVoid()
+        let timeIntervalSelection = input.timeIntervalSelectionTrigger
+            .do(onNext: { [weak self] in
+                self?.simpleEvent.seconds = $0
+            }).mapToVoid()
+        let countSegmentSelection = input.countSegmentSelectionTrigger
+            .map { CountingType(rawValue: $0) ?? .up }
+            .do(onNext: { [weak self] in
+                self?.simpleEvent.countingType = $0
+            }).mapToVoid()
+        return Output(title: Driver.just("Simple"),
                       sections: sections.asDriver(),
-                      timeRowSelection: timeRowSelecionTrigger)
+                      timeRowSelection: timeRowSelecionTrigger,
+                      showTimePicker: showTimePicker,
+                      timeIntervalSelection: timeIntervalSelection,
+                      countSegmentSelection: countSegmentSelection)
     }
     private func makeEventCellSections(showTimePicker: Bool) -> [SimpleEventSection] {
         // Time or Interval
-        let seconds = simpleEvent.rx.observe(TimeInterval.self, "seconds").unwrap()
+        let seconds = simpleEvent.rx.observeWeakly(TimeInterval.self, "seconds")
             .asDriverOnErrorJustComplete()
+            .unwrap()
+        let description = seconds
+            .map { Time(timeInterval: $0) }
+            .map { $0.description }
         let eventTimeCellViewModel = EventTimeCellViewModel(title: "Time",
-                                                            second: seconds)
-        let timeRow: SimpleEventRow = .time(viewModel: eventTimeCellViewModel)
+                                                            description: description)
+        let timeRow: SimpleEventRow = .time(uuid: simpleEvent.uuid,
+                                            viewModel: eventTimeCellViewModel)
         // TimePicker
-        let eventTimePickerCellViewModel = EventTimePickerCellViewModel()
-        let timePickerRow: SimpleEventRow = .timePicker(viewModel: eventTimePickerCellViewModel)
+        let eventTimePickerCellViewModel = EventTimePickerCellViewModel(timeInterval: seconds)
+        let timePickerRow: SimpleEventRow = .timePicker(uuid: simpleEvent.uuid,
+                                                        viewModel: eventTimePickerCellViewModel)
         // Count Up/Down Segment
-        let countingType = simpleEvent.rx.observe(CountingType.self, "countingType").unwrap()
+        let countingType = simpleEvent.rx.observeWeakly(CountingType.self, "countingType")
             .asDriverOnErrorJustComplete()
-        let eventCountTypeCellViewModel = EventCountTypeCellViewModel(selectedCountingType: countingType)
-        let countTypeRow: SimpleEventRow = .countType(viewModel: eventCountTypeCellViewModel)
-        var rows = [timeRow, countTypeRow]
-        if showTimePicker {
-            rows.insert(timePickerRow, after: timeRow)
-        }
-        return [SimpleEventSection(items: rows)]
+            .unwrap()
+        let eventCountTypeCellViewModel = EventCountTypeCellViewModel(selectedCountType: countingType)
+        let countTypeRow: SimpleEventRow = .countType(uuid: simpleEvent.uuid,
+                                                      viewModel: eventCountTypeCellViewModel)
+        var rows = [timeRow, timePickerRow, countTypeRow]
+//        if showTimePicker {
+//            rows.insert(timePickerRow, after: timeRow)
+//        }
+        return [SimpleEventSection(uuid: simpleEvent.uuid,
+                                   items: rows)]
     }
 }

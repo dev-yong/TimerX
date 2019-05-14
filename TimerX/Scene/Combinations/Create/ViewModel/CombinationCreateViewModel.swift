@@ -27,32 +27,29 @@ final class CombinationCreateViewModel: ViewModelProtocol {
     private var disposeBag = DisposeBag()
     private var useCase: EventCombinationUseCase
     private var coordinator: CombinationCoordinator
-    private let combinationRow = BehaviorRelay(value: [CombinationRow]())
     init(useCase: EventCombinationUseCase, coordinator: CombinationCoordinator) {
         self.useCase = useCase
         self.coordinator = coordinator
     }
     func transform(_ input: CombinationCreateViewModel.Input) -> CombinationCreateViewModel.Output {
-        let sections = BehaviorRelay(value: [CombinationSection]())
+        let combinationRow = BehaviorRelay(value: [CombinationRow]())
+        let sections = combinationRow.asDriver()
+            .map { [CombinationSection(items: $0)] }
         let addSimpleEvent = input.addSimpleEventTrigger.map { _ in
             return NSSimpleEvent(seconds: 60, countingType: .up)
         }.map {
             return CombinationRow.simple(uuid: $0.uuid,
                                          viewModel: SimpleEventCellViewModel(simpleEvent: $0))
         }
-        .do(onNext: { [weak self] in  self?.combinationRow.append($0) })
+        .do(onNext: { combinationRow.append($0) })
         let addCountingEvent = input.addCountingEventTrigger.map { _ in
             return NSCountingEvent(goal: 10, interval: 1, countingType: .up)
         }.map {
             return CombinationRow.counting(uuid: $0.uuid,
                                            viewModel: CountingEventCellViewModel(countingEvent: $0))
         }
-        .do(onNext: { [weak self] in  self?.combinationRow.append($0) })
-        combinationRow.asDriver()
-            .map { [CombinationSection(items: $0)] }
-            .drive(sections)
-            .disposed(by: disposeBag)
-        return Output(sections: sections.asDriver(),
+        .do(onNext: { combinationRow.append($0) })
+        return Output(sections: sections,
                       addSimpleEvent: addSimpleEvent.asDriver(),
                       addCountingEvent: addCountingEvent.asDriver())
     }

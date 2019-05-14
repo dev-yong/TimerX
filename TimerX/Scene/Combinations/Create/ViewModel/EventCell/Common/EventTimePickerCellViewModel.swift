@@ -11,6 +11,8 @@ import Domain
 import RxCocoa
 
 final class EventTimePickerCellViewModel {
-    init() {
+    let timeInterval: Driver<TimeInterval>
+    init(timeInterval: Driver<TimeInterval>) {
+        self.timeInterval = timeInterval
     }
 }

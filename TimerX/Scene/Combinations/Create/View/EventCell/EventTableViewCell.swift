@@ -49,12 +49,13 @@ class EventTableViewCell: TableViewCell {
 //        button.backgroundColor = .red
 //        return button
 //    }()
-    lazy var tableView: DynamicHeightTableView = {
-        let tableView = DynamicHeightTableView()
+    lazy var tableView: TableView = {
+        let tableView = TableView()
         tableView.rx.setDelegate(self)
             .disposed(by: disposeBag)
         return tableView
     }()
+    var cellHeightsDictionary = [String: CGFloat]()
     override func initialize() {
         super.initialize()
         contentView.addSubview(containerView)
@@ -66,6 +67,8 @@ class EventTableViewCell: TableViewCell {
 //        titleStackView.addArrangedSubview(closeButton)
         roundContainerView.addSubview(tableView)
         setNeedsUpdateConstraints()
+
+        selectionStyle = .none
     }
     override func updateConstraints() {
         super.updateConstraints()
@@ -94,7 +97,6 @@ class EventTableViewCell: TableViewCell {
             $0.bottom.leading.trailing.equalToSuperview()
         }
     }
-    var cellHeightsDictionary = [String: CGFloat]()
 }
 
 extension EventTableViewCell: CellHeightCachable, UITableViewDelegate {

@@ -8,18 +8,17 @@
 
 import Foundation
 import Domain
+import RxSwift
 import RxCocoa
 
 final class EventCountTypeCellViewModel {
     let title: Driver<String>
-    let selectedCountingType: Driver<Int>
-    let countSegments: Driver<[String?]>
-    init(selectedCountingType: Driver<CountingType>) {
+    private let countingTypes = CountingType.allCases
+    let countingSegemnts: Driver<[String?]>
+    let selectedCountType: Driver<Int>
+    init(selectedCountType: Driver<CountingType>) {
         title = Driver.just("Count")
-        countSegments = Driver.just(CountingType.allCases.map { $0.description })
-        self.selectedCountingType = selectedCountingType.map { $0.rawValue }
+        countingSegemnts = Driver.just(countingTypes.map { $0.description })
+        self.selectedCountType = selectedCountType.map { $0.rawValue }
     }
 }
-
-//let timeEventCountingType = timeEvent.rx.observe(CountingType.self, "countingType").unwrap()
-//let countingEventCountingType = countingEvent.rx.observe(CountingType.self, "countingType").unwrap()

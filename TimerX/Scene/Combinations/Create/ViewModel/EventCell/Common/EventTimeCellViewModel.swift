@@ -14,10 +14,9 @@ final class EventTimeCellViewModel {
     let title: Driver<String>
     let description: Driver<String>
     init(title: String,
-         second: Driver<TimeInterval>) {
+         description: Driver<String>) {
         self.title = Driver.just(title)
-        description = second.map { Time(second: $0) }
-            .map { $0.description }
+        self.description = description
     }
 }
 //let timeEventTimeInterval = timeEvent.rx.observe(TimeInterval.self, "seconds").unwrap()

@@ -11,15 +11,10 @@ import RxCocoa
 import Domain
 
 final class EventGoalCellViewModel {
-    let countingEvent: NSCountingEvent
     let title: Driver<String>
     let goal: Driver<String>
-    init(countingEvent: NSCountingEvent) {
-        self.countingEvent = countingEvent
+    init(goal: Driver<Int>) {
         title = Driver.just("Goal")
-        goal = countingEvent.rx.observe(TimeInterval.self, "goal").unwrap()
-            .map { Int($0) }
-            .map { String(describing: $0) }
-            .asDriverOnErrorJustComplete()
+        self.goal = goal.map { String(describing: $0) }
     }
 }

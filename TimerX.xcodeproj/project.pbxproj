@@ -50,7 +50,6 @@
 		FC1AC02A227AA10200A76DC7 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC029227AA10200A76DC7 /* UITableView+Reusable.swift */; };
 		FC1AC02E227AA8EA00A76DC7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC02D227AA8EA00A76DC7 /* TableViewCell.swift */; };
 		FC1AC030227AA95400A76DC7 /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC02F227AA95400A76DC7 /* SegmentTableViewCell.swift */; };
-		FC1AC034227B114500A76DC7 /* TimePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC033227B114500A76DC7 /* TimePickerTableViewCell.swift */; };
 		FC1AC036227BC89800A76DC7 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1AC035227BC89800A76DC7 /* RxRelay.framework */; };
 		FC1AC039227BD6F800A76DC7 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC038227BD6F800A76DC7 /* SegmentControl.swift */; };
 		FC1AC03B227BD8ED00A76DC7 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC03A227BD8ED00A76DC7 /* EventType.swift */; };
@@ -115,16 +114,24 @@
 		FCCC6F642277D7F1008FE51B /* CombinationCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */; };
 		FCCC6F662277D8B2008FE51B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F652277D8B2008FE51B /* View.swift */; };
 		FCCC6F6A2277DC78008FE51B /* RxSwift+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F692277DC78008FE51B /* RxSwift+.swift */; };
-		FCCC6F7C2279452D008FE51B /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F7B2279452D008FE51B /* TimePickerView.swift */; };
 		FCD44DF32281209E00EEB745 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF22281209E00EEB745 /* EventTableViewCell.swift */; };
 		FCD44DF72281243E00EEB745 /* SimpleEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF62281243E00EEB745 /* SimpleEventTableViewCell.swift */; };
-		FCD44DF92281278300EEB745 /* EventCellViewMdoel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF82281278300EEB745 /* EventCellViewMdoel.swift */; };
+		FCD44DF92281278300EEB745 /* EventCellViewMdoelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF82281278300EEB745 /* EventCellViewMdoelProtocol.swift */; };
 		FCD44DFB22826CDD00EEB745 /* CountingEventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFA22826CDD00EEB745 /* CountingEventCellViewModel.swift */; };
 		FCD44DFD22826DC500EEB745 /* CountingEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFC22826DC500EEB745 /* CountingEventTableViewCell.swift */; };
 		FCD44DFF228288C100EEB745 /* CellHeightCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFE228288C100EEB745 /* CellHeightCachable.swift */; };
+		FCD44E042286442300EEB745 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44E032286442300EEB745 /* TimerPickerView.swift */; };
+		FCD44E062286444200EEB745 /* TimerPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44E052286444200EEB745 /* TimerPickerTableViewCell.swift */; };
+		FCD44E0922866AD700EEB745 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44E0822866AD700EEB745 /* TimeUnit.swift */; };
 		FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */; };
 		FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */; };
+		FCDED2252286749C00CAB0F5 /* TimeValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED2242286749C00CAB0F5 /* TimeValueCell.swift */; };
+		FCDED227228674B100CAB0F5 /* TimeUnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED226228674B100CAB0F5 /* TimeUnitCell.swift */; };
+		FCDED229228674E100CAB0F5 /* TimerPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED228228674E100CAB0F5 /* TimerPickerViewDelegate.swift */; };
+		FCDED22B22874D9300CAB0F5 /* TwoWayBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED22A22874D9300CAB0F5 /* TwoWayBinding.swift */; };
+		FCDED22D228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED22C228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift */; };
+		FCDED22F2287706200CAB0F5 /* TimerPickerView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED22E2287706200CAB0F5 /* TimerPickerView+Rx.swift */; };
 		FCEDDAEE22711EEE00525F5C /* RMCountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */; };
 		FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF0227120D700525F5C /* Realm+.swift */; };
 		FCEDDAF32271268E00525F5C /* RMEventCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF22271268D00525F5C /* RMEventCombination.swift */; };
@@ -280,18 +287,15 @@
 		FC19120C2276670500D60479 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		FC19120E2276671500D60479 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		FC1912102276677000D60479 /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
-		FC1AC01E227A856600A76DC7 /* EventTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell2.swift; sourceTree = "<group>"; };
 		FC1AC022227A870200A76DC7 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		FC1AC025227A883B00A76DC7 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		FC1AC027227A90DC00A76DC7 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		FC1AC029227AA10200A76DC7 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		FC1AC02D227AA8EA00A76DC7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		FC1AC02F227AA95400A76DC7 /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
-		FC1AC033227B114500A76DC7 /* TimePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerTableViewCell.swift; sourceTree = "<group>"; };
 		FC1AC035227BC89800A76DC7 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		FC1AC038227BD6F800A76DC7 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		FC1AC03A227BD8ED00A76DC7 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
-		FC1AC03D227BDB7B00A76DC7 /* EventCellViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel2.swift; sourceTree = "<group>"; };
 		FC1AC03F227BDF7600A76DC7 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		FC1AC044227BE9AB00A76DC7 /* EventTimeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimeCellViewModel.swift; sourceTree = "<group>"; };
 		FC1AC046227BEA4D00A76DC7 /* EventTimePickerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimePickerCellViewModel.swift; sourceTree = "<group>"; };
@@ -359,16 +363,24 @@
 		FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCreateViewModel.swift; sourceTree = "<group>"; };
 		FCCC6F652277D8B2008FE51B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		FCCC6F692277DC78008FE51B /* RxSwift+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+.swift"; sourceTree = "<group>"; };
-		FCCC6F7B2279452D008FE51B /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		FCD44DF22281209E00EEB745 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		FCD44DF62281243E00EEB745 /* SimpleEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEventTableViewCell.swift; sourceTree = "<group>"; };
-		FCD44DF82281278300EEB745 /* EventCellViewMdoel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewMdoel.swift; sourceTree = "<group>"; };
+		FCD44DF82281278300EEB745 /* EventCellViewMdoelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewMdoelProtocol.swift; sourceTree = "<group>"; };
 		FCD44DFA22826CDD00EEB745 /* CountingEventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingEventCellViewModel.swift; sourceTree = "<group>"; };
 		FCD44DFC22826DC500EEB745 /* CountingEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingEventTableViewCell.swift; sourceTree = "<group>"; };
 		FCD44DFE228288C100EEB745 /* CellHeightCachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeightCachable.swift; sourceTree = "<group>"; };
+		FCD44E032286442300EEB745 /* TimerPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
+		FCD44E052286444200EEB745 /* TimerPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPickerTableViewCell.swift; sourceTree = "<group>"; };
+		FCD44E0822866AD700EEB745 /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
 		FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
+		FCDED2242286749C00CAB0F5 /* TimeValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValueCell.swift; sourceTree = "<group>"; };
+		FCDED226228674B100CAB0F5 /* TimeUnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnitCell.swift; sourceTree = "<group>"; };
+		FCDED228228674E100CAB0F5 /* TimerPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerViewDelegate.swift; sourceTree = "<group>"; };
+		FCDED22A22874D9300CAB0F5 /* TwoWayBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayBinding.swift; sourceTree = "<group>"; };
+		FCDED22C228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTimePickerViewDelegateProxy.swift; sourceTree = "<group>"; };
+		FCDED22E2287706200CAB0F5 /* TimerPickerView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerPickerView+Rx.swift"; sourceTree = "<group>"; };
 		FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCountingEvent.swift; sourceTree = "<group>"; };
 		FCEDDAF0227120D700525F5C /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		FCEDDAF22271268D00525F5C /* RMEventCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEventCombination.swift; sourceTree = "<group>"; };
@@ -582,7 +594,7 @@
 		FC1AC02B227AA8D900A76DC7 /* UIPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				FCCC6F7B2279452D008FE51B /* TimePickerView.swift */,
+				FCD44E0722866AC900EEB745 /* TimerPickerView */,
 			);
 			path = UIPickerView;
 			sourceTree = "<group>";
@@ -595,7 +607,7 @@
 				FC1AC02D227AA8EA00A76DC7 /* TableViewCell.swift */,
 				FC1AC025227A883B00A76DC7 /* SwitchTableViewCell.swift */,
 				FC1AC02F227AA95400A76DC7 /* SegmentTableViewCell.swift */,
-				FC1AC033227B114500A76DC7 /* TimePickerTableViewCell.swift */,
+				FCD44E052286444200EEB745 /* TimerPickerTableViewCell.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -967,6 +979,7 @@
 			children = (
 				FCCC6F692277DC78008FE51B /* RxSwift+.swift */,
 				FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */,
+				FCDED22A22874D9300CAB0F5 /* TwoWayBinding.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -1015,7 +1028,6 @@
 			children = (
 				FC1912082276662500D60479 /* CombinationCreateViewController.swift */,
 				FCD44DF4228123EA00EEB745 /* EventCell */,
-				FCCC6F7722794027008FE51B /* EventTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1025,7 +1037,6 @@
 			children = (
 				FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */,
 				FCD44DF022811FCA00EEB745 /* EventCell */,
-				FC1AC03D227BDB7B00A76DC7 /* EventCellViewModel2.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1043,14 +1054,6 @@
 			children = (
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		FCCC6F7722794027008FE51B /* EventTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				FC1AC01E227A856600A76DC7 /* EventTableViewCell2.swift */,
-			);
-			path = EventTableViewCell;
 			sourceTree = "<group>";
 		};
 		FCCC6F7A22794518008FE51B /* UIVIew */ = {
@@ -1077,7 +1080,7 @@
 		FCD44DF022811FCA00EEB745 /* EventCell */ = {
 			isa = PBXGroup;
 			children = (
-				FCD44DF82281278300EEB745 /* EventCellViewMdoel.swift */,
+				FCD44DF82281278300EEB745 /* EventCellViewMdoelProtocol.swift */,
 				FC169EC62281166500AECA24 /* SimpleEventCellViewModel.swift */,
 				FCD44DFA22826CDD00EEB745 /* CountingEventCellViewModel.swift */,
 				FCD44DEE22811F6900EEB745 /* Common */,
@@ -1105,6 +1108,20 @@
 				FC188780227C045300D78D48 /* EventCountTableViewCell.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FCD44E0722866AC900EEB745 /* TimerPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				FCD44E0822866AD700EEB745 /* TimeUnit.swift */,
+				FCDED228228674E100CAB0F5 /* TimerPickerViewDelegate.swift */,
+				FCDED2242286749C00CAB0F5 /* TimeValueCell.swift */,
+				FCDED226228674B100CAB0F5 /* TimeUnitCell.swift */,
+				FCD44E032286442300EEB745 /* TimerPickerView.swift */,
+				FCDED22C228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift */,
+				FCDED22E2287706200CAB0F5 /* TimerPickerView+Rx.swift */,
+			);
+			path = TimerPickerView;
 			sourceTree = "<group>";
 		};
 		FCEDDAEF227120CF00525F5C /* Common */ = {
@@ -1586,10 +1603,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1AC034227B114500A76DC7 /* TimePickerTableViewCell.swift in Sources */,
 				FCCC6F662277D8B2008FE51B /* View.swift in Sources */,
+				FCDED22F2287706200CAB0F5 /* TimerPickerView+Rx.swift in Sources */,
 				FC169EB4227F797400AECA24 /* NSCountingEvent.swift in Sources */,
-				FCCC6F7C2279452D008FE51B /* TimePickerView.swift in Sources */,
+				FCD44E062286444200EEB745 /* TimerPickerTableViewCell.swift in Sources */,
 				FC1AC039227BD6F800A76DC7 /* SegmentControl.swift in Sources */,
 				FCD44DFD22826DC500EEB745 /* CountingEventTableViewCell.swift in Sources */,
 				FC1912052276647B00D60479 /* CombinationsViewController.swift in Sources */,
@@ -1601,10 +1618,13 @@
 				FCD44DF32281209E00EEB745 /* EventTableViewCell.swift in Sources */,
 				FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */,
 				FC219268227E762900B12EC4 /* IndexPath+.swift in Sources */,
+				FCD44E0922866AD700EEB745 /* TimeUnit.swift in Sources */,
 				FCCC6F5E227722C0008FE51B /* ViewModel.swift in Sources */,
 				FC18877F227C042D00D78D48 /* EventTimeTableViewCell.swift in Sources */,
 				FC1AC030227AA95400A76DC7 /* SegmentTableViewCell.swift in Sources */,
-				FCD44DF92281278300EEB745 /* EventCellViewMdoel.swift in Sources */,
+				FCDED227228674B100CAB0F5 /* TimeUnitCell.swift in Sources */,
+				FCDED22D228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift in Sources */,
+				FCD44DF92281278300EEB745 /* EventCellViewMdoelProtocol.swift in Sources */,
 				FC169EA8227F558500AECA24 /* Array+.swift in Sources */,
 				FC19120D2276670500D60479 /* MoreViewController.swift in Sources */,
 				FC18879E227D38CB00D78D48 /* CombinationSection.swift in Sources */,
@@ -1613,14 +1633,17 @@
 				FC1AC047227BEA4D00A76DC7 /* EventTimePickerCellViewModel.swift in Sources */,
 				FC169EBD22804E8C00AECA24 /* EventGoalTableViewCell.swift in Sources */,
 				FC169EB9227F79EB00AECA24 /* DomainConvertible.swift in Sources */,
+				FCDED229228674E100CAB0F5 /* TimerPickerViewDelegate.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
 				FC1AC045227BE9AB00A76DC7 /* EventTimeCellViewModel.swift in Sources */,
 				FC169EB1227F788900AECA24 /* NSSimpleEvent.swift in Sources */,
+				FCDED2252286749C00CAB0F5 /* TimeValueCell.swift in Sources */,
 				FC1AC041227BE78400A76DC7 /* Time.swift in Sources */,
 				FC1AC02E227AA8EA00A76DC7 /* TableViewCell.swift in Sources */,
 				FC169EC5228115B800AECA24 /* CountingEventSection.swift in Sources */,
 				FC1887A0227D3D8200D78D48 /* BehaviorRelay+.swift in Sources */,
 				FC219265227E6E2B00B12EC4 /* DynamicHeightTableView.swift in Sources */,
+				FCD44E042286442300EEB745 /* TimerPickerView.swift in Sources */,
 				FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */,
 				FC169EAC227F6D5000AECA24 /* Configuration.swift in Sources */,
 				FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */,
@@ -1630,6 +1653,7 @@
 				FC188785227C084500D78D48 /* EventTimePickerTableViewCell.swift in Sources */,
 				FC169EBF22804EC300AECA24 /* EventGoalCellViewModel.swift in Sources */,
 				FCD44DF72281243E00EEB745 /* SimpleEventTableViewCell.swift in Sources */,
+				FCDED22B22874D9300CAB0F5 /* TwoWayBinding.swift in Sources */,
 				FC188781227C045300D78D48 /* EventCountTableViewCell.swift in Sources */,
 				FCCC6F642277D7F1008FE51B /* CombinationCreateViewModel.swift in Sources */,
 				FCD44DFB22826CDD00EEB745 /* CountingEventCellViewModel.swift in Sources */,

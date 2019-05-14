@@ -11,10 +11,13 @@ import RxDataSources
 
 struct SimpleEventSection {
     var identity: String {
-        return String(describing: self)
+        return uuid
     }
+    let uuid: String
     var items: [SimpleEventRow]
-    init(items: [SimpleEventRow]) {
+    init(uuid: String,
+         items: [SimpleEventRow]) {
+        self.uuid = uuid
         self.items = items
     }
 }
@@ -27,16 +30,16 @@ extension SimpleEventSection: AnimatableSectionModelType {
 }
 
 enum SimpleEventRow {
-    case time(viewModel: EventTimeCellViewModel)
-    case timePicker(viewModel: EventTimePickerCellViewModel)
-    case countType(viewModel: EventCountTypeCellViewModel)
+    case time(uuid: String, viewModel: EventTimeCellViewModel)
+    case timePicker(uuid: String, viewModel: EventTimePickerCellViewModel)
+    case countType(uuid: String, viewModel: EventCountTypeCellViewModel)
 }
 extension SimpleEventRow: IdentifiableType, Equatable {
     var identity: String {
         switch self {
-        case .time: return "Time"
-        case .timePicker: return "TimePicker"
-        case .countType: return "CountType"
+        case let .time(uuid, _): return uuid + "Time"
+        case let .timePicker(uuid, _): return uuid + "TimePicker"
+        case let .countType(uuid, _): return uuid + "CountType"
         }
     }
     static func == (lhs: SimpleEventRow,
