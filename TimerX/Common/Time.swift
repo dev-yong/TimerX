@@ -63,7 +63,6 @@ public struct Time {
                   hours: (seconds / (60 * 60)))
     }
     public func asTimeInterval() -> TimeInterval {
-        
         return TimeInterval((hours * 60 * 60) + (minutes * 60) + seconds) + TimeInterval(milliSeconds) / 1000
     }
 }
@@ -80,5 +79,11 @@ extension Time: Equatable {
             lhs.minutes == rhs.minutes &&
             lhs.seconds == rhs.seconds &&
             lhs.milliSeconds == rhs.milliSeconds
+    }
+}
+extension Time: Comparable {
+    public static func < (lhs: Time,
+                          rhs: Time) -> Bool {
+        return lhs.asTimeInterval() < rhs.asTimeInterval()
     }
 }
