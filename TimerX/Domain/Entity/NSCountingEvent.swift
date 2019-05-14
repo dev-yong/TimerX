@@ -10,7 +10,7 @@ import Foundation
 import Domain
 
 @objcMembers
-class NSCountingEvent: NSObject, EventProtocol {
+class NSCountingEvent: NSEventProtocol {
     let uuid: String
     dynamic var goal: Int
     dynamic var interval: TimeInterval

@@ -1,5 +1,5 @@
 //
-//  NSTimeEvent.swift
+//  NSSimpleEvent.swift
 //  TimerX
 //
 //  Created by 이광용 on 05/05/2019.
@@ -9,8 +9,10 @@
 import Foundation
 import Domain
 
+typealias NSEventProtocol = NSObject
+
 @objcMembers
-class NSSimpleEvent: NSObject, EventProtocol {
+class NSSimpleEvent: NSEventProtocol {
     let uuid: String
     dynamic var seconds: TimeInterval
     dynamic var countingType: CountingType
