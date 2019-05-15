@@ -9,19 +9,22 @@
 import Foundation
 import Domain
 
-typealias NSEventProtocol = NSObject
-
 @objcMembers
-class NSSimpleEvent: NSEventProtocol {
-    let uuid: String
+class NSSimpleEvent: NSEvent {
     dynamic var seconds: TimeInterval
     dynamic var countingType: CountingType
     init(uuid: String = UUID().uuidString,
          seconds: TimeInterval,
          countingType: CountingType) {
-        self.uuid = uuid
         self.seconds = seconds
         self.countingType = countingType
+        super.init(uuid: uuid)
+    }
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let object = object as? NSSimpleEvent else { return false }
+       return self.uuid == object.uuid &&
+        self.seconds == object.seconds &&
+        self.countingType == object.countingType
     }
 }
 extension NSSimpleEvent: DomainConvertible {

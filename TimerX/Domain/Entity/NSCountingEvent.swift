@@ -10,8 +10,7 @@ import Foundation
 import Domain
 
 @objcMembers
-class NSCountingEvent: NSEventProtocol {
-    let uuid: String
+class NSCountingEvent: NSEvent {
     dynamic var goal: Int
     dynamic var interval: TimeInterval
     dynamic var countingType: CountingType
@@ -19,10 +18,17 @@ class NSCountingEvent: NSEventProtocol {
          goal: Int,
          interval: TimeInterval,
          countingType: CountingType) {
-        self.uuid = uuid
         self.goal = goal
         self.interval = interval
         self.countingType = countingType
+        super.init(uuid: uuid)
+    }
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let object = object as? NSCountingEvent else { return false }
+        return self.uuid == object.uuid &&
+            self.goal == object.goal &&
+            self.interval == object.interval &&
+            self.countingType == object.countingType
     }
 }
 extension NSCountingEvent: DomainConvertible {
