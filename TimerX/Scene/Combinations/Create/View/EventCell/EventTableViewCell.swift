@@ -10,6 +10,8 @@ import UIKit
 import Designable
 
 class EventTableViewCell: TableViewCell {
+    let inset = Configuration.Dimension.inset
+    let titleHeight = Configuration.Dimension.TableView.titleHeight
     private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
@@ -26,29 +28,21 @@ class EventTableViewCell: TableViewCell {
         view.backgroundColor = UIColor(red: 240/255, green: 241/255, blue: 246/255, alpha: 1.0)
         return view
     }()
-    private lazy var titleStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [])
-        stackView.axis = .horizontal
-        stackView.alignment = .fill
-        stackView.distribution = UIStackView.Distribution.fill
-        stackView.spacing = 10
-        return stackView
+    lazy var iconImageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
     }()
-//    lazy var iconImageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.backgroundColor = .blue
-//        return imageView
-//    }()
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         return label
     }()
-//    lazy var closeButton: DesignableButton = {
-//        let button = DesignableButton()
-//        button.backgroundColor = .red
-//        return button
-//    }()
+    lazy var closeButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(#imageLiteral(resourceName: "iconClose"), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
+        return button
+    }()
     lazy var tableView: TableView = {
         let tableView = TableView()
         tableView.rx.setDelegate(self)
@@ -61,14 +55,11 @@ class EventTableViewCell: TableViewCell {
         contentView.addSubview(containerView)
         containerView.addSubview(roundContainerView)
         roundContainerView.addSubview(titleContainerView)
-        titleContainerView.addSubview(titleStackView)
-//        titleStackView.addArrangedSubview(iconImageView)
-        titleStackView.addArrangedSubview(titleLabel)
-//        titleStackView.addArrangedSubview(closeButton)
+        titleContainerView.addSubview(iconImageView)
+        titleContainerView.addSubview(titleLabel)
+        titleContainerView.addSubview(closeButton)
         roundContainerView.addSubview(tableView)
         setNeedsUpdateConstraints()
-
-        selectionStyle = .none
     }
     override func updateConstraints() {
         super.updateConstraints()
@@ -76,23 +67,29 @@ class EventTableViewCell: TableViewCell {
             $0.edges.equalToSuperview()
         }
         roundContainerView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(10)
+            $0.edges.equalToSuperview().inset(inset)
         }
         titleContainerView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(tableView.snp.top)
-            $0.height.equalTo(44).priority(999)
+            $0.height.equalTo(titleHeight).priority(999)
         }
-        titleStackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(10)
-            $0.top.bottom.equalToSuperview()
+        iconImageView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().inset(inset)
+            $0.trailing.equalTo(titleLabel.snp.leading).inset(-inset/2)
+            $0.height.width.equalTo(40)
         }
-//        iconImageView.snp.makeConstraints {
-//            $0.width.height.equalTo(30).priority(999)
-//        }
-//        closeButton.snp.makeConstraints {
-//            $0.width.height.equalTo(44-20).priority(999)
-//        }
+        titleLabel.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalTo(closeButton.snp.leading).inset(inset)
+        }
+        closeButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.height.equalToSuperview()
+            $0.width.equalTo(closeButton.snp.height)
+        }
         tableView.snp.makeConstraints {
             $0.bottom.leading.trailing.equalToSuperview()
         }

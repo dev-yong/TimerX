@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Domain
 import RxDataSources
 
 struct CombinationSection: AnimatableSectionModelType {
@@ -24,14 +25,17 @@ struct CombinationSection: AnimatableSectionModelType {
 }
 
 enum CombinationRow: IdentifiableType, Equatable {
-    case simple(uuid: String,
-        viewModel: SimpleEventCellViewModel)
-    case counting(uuid: String,
-        viewModel: CountingEventCellViewModel)
+    case simple(viewModel: SimpleEventCellViewModel)
+    case counting(viewModel: CountingEventCellViewModel)
     var identity: String {
+        return event.uuid
+    }
+    var event: NSEvent {
         switch self {
-        case let .simple(uuid, _): return uuid
-        case let .counting(uuid, _): return uuid
+        case .simple(let viewModel):
+            return viewModel.event
+        case .counting(let viewModel):
+            return viewModel.event
         }
     }
     static func == (lhs: CombinationRow, rhs: CombinationRow) -> Bool {

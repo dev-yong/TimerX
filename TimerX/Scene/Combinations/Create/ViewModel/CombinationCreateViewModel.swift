@@ -16,12 +16,14 @@ final class CombinationCreateViewModel: ViewModelProtocol {
 //        let title: Driver<String>
         let addSimpleEventTrigger: Driver<Void>
         let addCountingEventTrigger: Driver<Void>
+        let deleteEventTrigger: Driver<CombinationRow>
         let saveCombinationTrigger: Driver<Void>
     }
     struct Output {
         let sections: Driver<[CombinationSection]>
-        let addSimpleEvent: Driver<CombinationRow>
-        let addCountingEvent: Driver<CombinationRow>
+        let addSimpleEvent: Driver<NSSimpleEvent>
+        let addCountingEvent: Driver<NSCountingEvent>
+        let deleteEvent: Driver<Void>
 //        let dismiss: Driver<Void>
     }
     private var disposeBag = DisposeBag()
@@ -32,25 +34,32 @@ final class CombinationCreateViewModel: ViewModelProtocol {
         self.coordinator = coordinator
     }
     func transform(_ input: CombinationCreateViewModel.Input) -> CombinationCreateViewModel.Output {
-        let combinationRow = BehaviorRelay(value: [CombinationRow]())
-        let sections = combinationRow.asDriver()
-            .map { [CombinationSection(items: $0)] }
+        let events = BehaviorRelay(value: [NSEvent]())
         let addSimpleEvent = input.addSimpleEventTrigger.map { _ in
             return NSSimpleEvent(seconds: 60, countingType: .up)
-        }.map {
-            return CombinationRow.simple(uuid: $0.uuid,
-                                         viewModel: SimpleEventCellViewModel(simpleEvent: $0))
-        }
-        .do(onNext: { combinationRow.append($0) })
+        }.do(onNext: { events.append($0) })
         let addCountingEvent = input.addCountingEventTrigger.map { _ in
             return NSCountingEvent(goal: 10, interval: 1, countingType: .up)
+        }.do(onNext: { events.append($0) })
+        let sections = events.asDriver().map {
+            $0.map { event -> CombinationRow in
+                if let simpleEvent = event as? NSSimpleEvent {
+                    return .simple(viewModel: SimpleEventCellViewModel(event: simpleEvent))
+                } else if let countingEvent = event as? NSCountingEvent {
+                    return .counting(viewModel: CountingEventCellViewModel(event: countingEvent))
+                } else {
+                    fatalError("Event converting error")
+                }
+            }
         }.map {
-            return CombinationRow.counting(uuid: $0.uuid,
-                                           viewModel: CountingEventCellViewModel(countingEvent: $0))
+            [CombinationSection(items: $0)]
         }
-        .do(onNext: { combinationRow.append($0) })
+        let deleteEvent = input.deleteEventTrigger.do(onNext: {
+            events.remove($0.event)
+        }).mapToVoid()
         return Output(sections: sections,
                       addSimpleEvent: addSimpleEvent.asDriver(),
-                      addCountingEvent: addCountingEvent.asDriver())
+                      addCountingEvent: addCountingEvent.asDriver(),
+                      deleteEvent: deleteEvent)
     }
 }

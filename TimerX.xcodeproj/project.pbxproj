@@ -29,6 +29,7 @@
 		FC18879E227D38CB00D78D48 /* CombinationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18879D227D38CB00D78D48 /* CombinationSection.swift */; };
 		FC1887A0227D3D8200D78D48 /* BehaviorRelay+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */; };
 		FC1887A2227D54CC00D78D48 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1887A1227D54CC00D78D48 /* TableView.swift */; };
+		FC190F88228BC14000860A03 /* NSEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F87228BC14000860A03 /* NSEvent.swift */; };
 		FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */; };
 		FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */; };
 		FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */; };
@@ -272,6 +273,7 @@
 		FC18879D227D38CB00D78D48 /* CombinationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationSection.swift; sourceTree = "<group>"; };
 		FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BehaviorRelay+.swift"; sourceTree = "<group>"; };
 		FC1887A1227D54CC00D78D48 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		FC190F87228BC14000860A03 /* NSEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEvent.swift; sourceTree = "<group>"; };
 		FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				FC169EB5227F799800AECA24 /* Convert */,
+				FC190F87228BC14000860A03 /* NSEvent.swift */,
 				FC169EB0227F788900AECA24 /* NSSimpleEvent.swift */,
 				FC169EB3227F797400AECA24 /* NSCountingEvent.swift */,
 			);
@@ -1624,6 +1627,7 @@
 				FC1AC030227AA95400A76DC7 /* SegmentTableViewCell.swift in Sources */,
 				FCDED227228674B100CAB0F5 /* TimeUnitCell.swift in Sources */,
 				FCDED22D228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift in Sources */,
+				FC190F88228BC14000860A03 /* NSEvent.swift in Sources */,
 				FCD44DF92281278300EEB745 /* EventCellViewMdoelProtocol.swift in Sources */,
 				FC169EA8227F558500AECA24 /* Array+.swift in Sources */,
 				FC19120D2276670500D60479 /* MoreViewController.swift in Sources */,

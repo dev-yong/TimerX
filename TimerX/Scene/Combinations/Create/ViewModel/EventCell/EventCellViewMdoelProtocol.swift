@@ -14,14 +14,17 @@ protocol EventCellViewMdoelProtocol: ViewModelProtocol
     where Input: EventCellViewModelInputProtocol,
         Output: EventCellViewModelOutputProtocool,
         Input.Row == Output.Section.Item {
+    associatedtype Event: NSEvent
+    var event: Event { get }
+    init(event: Event)
 }
 
 protocol EventCellViewModelInputProtocol {
-    associatedtype Row: IdentifiableType & Equatable
+    associatedtype Row
     var rowSelectionTrigger: Driver<Row> { get }
 }
 protocol EventCellViewModelOutputProtocool {
-    associatedtype Section: AnimatableSectionModelType
+    associatedtype Section: SectionModelType
     var title: Driver<String> { get }
     var sections: Driver<[Section]> { get }
 }
