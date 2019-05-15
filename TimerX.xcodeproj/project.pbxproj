@@ -30,6 +30,7 @@
 		FC1887A0227D3D8200D78D48 /* BehaviorRelay+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */; };
 		FC1887A2227D54CC00D78D48 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1887A1227D54CC00D78D48 /* TableView.swift */; };
 		FC190F88228BC14000860A03 /* NSEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F87228BC14000860A03 /* NSEvent.swift */; };
+		FC190F8C228BC46D00860A03 /* RxEventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F8B228BC46D00860A03 /* RxEventCombinationUseCase.swift */; };
 		FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */; };
 		FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */; };
 		FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */; };
@@ -274,6 +275,7 @@
 		FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BehaviorRelay+.swift"; sourceTree = "<group>"; };
 		FC1887A1227D54CC00D78D48 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		FC190F87228BC14000860A03 /* NSEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEvent.swift; sourceTree = "<group>"; };
+		FC190F8B228BC46D00860A03 /* RxEventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxEventCombinationUseCase.swift; sourceTree = "<group>"; };
 		FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -752,6 +754,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DA8B226C0E6E00AFDE25 /* EventCombinationUseCase.swift */,
+				FC190F8B228BC46D00860A03 /* RxEventCombinationUseCase.swift */,
 				FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */,
 			);
 			path = UseCase;
@@ -1689,6 +1692,7 @@
 				FC74DA92226C0E6E00AFDE25 /* EventCombinationUseCase.swift in Sources */,
 				FC1AC03B227BD8ED00A76DC7 /* EventType.swift in Sources */,
 				FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */,
+				FC190F8C228BC46D00860A03 /* RxEventCombinationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
