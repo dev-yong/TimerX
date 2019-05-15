@@ -13,6 +13,10 @@ enum Configuration {
         static let cellTitle = UIFont.boldSystemFont(ofSize: 16.0)
     }
     enum Dimension {
-        static let inset: CGFloat = 10
+        static let inset: CGFloat = 10.0
+        enum TableView {
+            static let titleHeight: CGFloat = 44.0
+            static let rowHeight: CGFloat = 44.0
+        }
     }
 }
