@@ -89,7 +89,6 @@ open class TimerPickerView: UIPickerView {
         return mode.datas
     }
     private var time: Time = Time(timeInterval: 0)
-    
     public var countDownDuration: TimeInterval = 0 {
         didSet {
             set(time: Time(timeInterval: countDownDuration),

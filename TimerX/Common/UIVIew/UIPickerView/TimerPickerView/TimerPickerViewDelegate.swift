@@ -9,6 +9,7 @@
 import Foundation
 @objc
 public protocol TimerPickerViewDelegate: AnyObject {
-    @objc optional func timerPickerView(_ pickerView: TimerPickerView,
-                                        selectedTime timeInterval: TimeInterval)
+    @objc optional
+    func timerPickerView(_ pickerView: TimerPickerView,
+                         selectedTime timeInterval: TimeInterval)
 }
