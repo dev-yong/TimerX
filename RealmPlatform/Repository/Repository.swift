@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 import RealmSwift
+import RxRealm
 
-internal final class Repository<Item: RealmRepresentable>: RepositoryProtocol where Item.RMObject.DomainObject == Item {
+internal final class Repository<Item: RealmRepresentable>: RxRepositoryProtocol where Item.RMObject.DomainObject == Item {
     private let configuration: Realm.Configuration
     private var realm: Realm {
         do {
@@ -21,36 +23,34 @@ internal final class Repository<Item: RealmRepresentable>: RepositoryProtocol wh
     internal init(configuration: Realm.Configuration) {
         self.configuration = configuration
     }
-    internal func save(_ item: Item,
-                       update: Bool,
-                       completion: @escaping (Result<Void, Error>) -> Void) {
-        do {
-            try realm.write {
-                realm.add(item.asRealm(), update: update)
-            }
-            completion(.success(Void()))
-        } catch {
-            completion(.failure(error))
+    func save(_ item: Item, update: Bool = true) -> Observable<Void> {
+        return Observable.deferred {
+            return self.realm.rx.add(item, update: update)
         }
     }
-    internal func items(completion: @escaping (Result<[Item], Error>) -> Void) {
-        completion(.success(realm.objects(Item.self)))
+    func items() -> Observable<[Item]> {
+        return Observable.deferred {
+            let itemObjects = self.realm.objects(Item.RMObject.self)
+            return Observable.array(from: itemObjects)
+                .map { $0.map { $0.asDomain() } }
+        }
     }
-    internal func item<PrimaryKey>(with primaryKey: PrimaryKey,
-                                   completion: @escaping (Result<Item?, Error>) -> Void) {
-        let domain = realm.object(ofType: Item.RMObject.self,
-                                  forPrimaryKey: primaryKey)?.asDomain()
-        completion(.success(domain))
-    }
-    internal func delete(_ item: Item,
-                         completion: @escaping (Result<Void, Error>) -> Void) {
-        do {
-            try realm.write {
-                realm.delete(item.asRealm())
+    func item<PrimaryKey>(with primaryKey: PrimaryKey) -> Observable<Item?> {
+        return Observable.deferred {
+            guard let itemObejct = self.realm.object(ofType: Item.RMObject.self,
+                                                     forPrimaryKey: primaryKey) else {
+                                                        return Observable.just(nil)
             }
-            completion(.success(Void()))
-        } catch {
-            completion(.failure(error))
+            return Observable.from(object: itemObejct)
+                .map { $0.asDomain() }
+        }
+    }
+    func delete(_ item: Item) -> Observable<Void> {
+        return realm.rx.delete(item)
+    }
+    func delete(contentsOf items: [Item]) -> Observable<Void> {
+        return Observable.deferred {
+            return self.realm.rx.delete(contentsOf: items)
         }
     }
 }

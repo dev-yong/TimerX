@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol UseCaseProvider {
-    func makeEventCombinationUseCase() -> RxEventCombinationUseCase
+    func makeEventCombinationUseCase() -> EventCombinationUseCase
 }

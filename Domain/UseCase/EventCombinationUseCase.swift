@@ -1,21 +1,18 @@
 //
-//  CountingEventUseCase.swift
+//  EventCombinationUseCase.swift
 //  Domain
 //
-//  Created by 이광용 on 18/04/2019.
+//  Created by 이광용 on 14/05/2019.
 //  Copyright © 2019 GwangYongLee. All rights reserved.
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 public protocol EventCombinationUseCase {
-    func add(_ eventCombination: EventCombination,
-             completion: @escaping (Result<Void, Error>) -> Void)
-    func eventCombinations(completion: @escaping (Result<[EventCombination], Error>) -> Void)
-    func eventCombination(of uuid: String,
-                          completion: @escaping (Result<EventCombination?, Error>) -> Void)
-    func update(_ eventCombination: EventCombination,
-                completion: @escaping (Result<Void, Error>) -> Void)
-    func delete(_ eventCombination: EventCombination,
-                completion: @escaping (Result<Void, Error>) -> Void )
+    func add(_ eventCombination: EventCombination, update: Bool) -> Observable<Void>
+    func eventCombinations() -> Observable<[EventCombination]>
+    func eventCombination(of uuid: String) -> Observable<EventCombination?>
+    func delete(_ eventCombination: EventCombination) -> Observable<Void>
 }

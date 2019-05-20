@@ -21,3 +21,4 @@ internal protocol RepositoryProtocol {
     func delete(_ item: Item,
                 completion: @escaping (Result<Void, Error>) -> Void)
 }
+

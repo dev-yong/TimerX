@@ -3,3 +3,4 @@ github "realm/realm-cocoa"
 github "ReactiveX/RxSwift" ~> 5.0
 github "RxSwiftCommunity/RxDataSources"
 github "SnapKit/SnapKit" ~> 5.0.0
+github "RxSwiftCommunity/RxRealm" ~> 1.0.0

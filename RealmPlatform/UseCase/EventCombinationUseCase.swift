@@ -8,40 +8,23 @@
 
 import Foundation
 import Domain
-import RealmSwift
+import RxSwift
 
 final class EventCombinationUseCase<Repository>: Domain.EventCombinationUseCase
-    where Repository: RepositoryProtocol, Repository.Item == Domain.EventCombination {
+where Repository: RxRepositoryProtocol, Repository.Item == Domain.EventCombination {
     private let repository: Repository
     internal init(repository: Repository) {
         self.repository = repository
     }
-    internal func add(_ eventCombination: EventCombination,
-                      completion: @escaping (Result<Void, Error>) -> Void) {
-        repository.save(eventCombination,
-                        update: true) {
-                            completion($0)
-        }
+    func add(_ eventCombination: EventCombination, update: Bool = true) -> Observable<Void> {
+        return repository.save(eventCombination, update: update)
     }
-    internal func eventCombinations(completion: @escaping (Result<[EventCombination], Error>) -> Void) {
-        repository.items {
-            completion($0)
-        }
+    func eventCombinations() -> Observable<[EventCombination]> {
+        return repository.items()
     }
-    internal func eventCombination(of uuid: String, completion: @escaping (Result<EventCombination?, Error>) -> Void) {
-        repository.item(with: uuid) {
-            completion($0)
-        }
+    func eventCombination(of uuid: String) -> Observable<EventCombination?> {
+        return repository.item(with: uuid)
     }
-    internal func update(_ eventCombination: EventCombination, completion: @escaping (Result<Void, Error>) -> Void) {
-        repository.save(eventCombination,
-                        update: true) {
-                            completion($0)
-        }
-    }
-    internal func delete(_ eventCombination: EventCombination, completion: @escaping (Result<Void, Error>) -> Void) {
-        repository.delete(eventCombination) {
-            completion($0)
-        }
-    }
-}
+    func delete(_ eventCombination: EventCombination) -> Observable<Void> {
+        return repository.delete(eventCombination)
+    }}
