@@ -23,7 +23,7 @@ internal final class Repository<Item: RealmRepresentable>: RxRepositoryProtocol 
     internal init(configuration: Realm.Configuration) {
         self.configuration = configuration
     }
-    func save(_ item: Item, update: Bool = true) -> Observable<Void> {
+    func save(_ item: Item, update: Bool) -> Observable<Void> {
         return Observable.deferred {
             return self.realm.rx.add(item, update: update)
         }
@@ -39,7 +39,7 @@ internal final class Repository<Item: RealmRepresentable>: RxRepositoryProtocol 
         return Observable.deferred {
             guard let itemObejct = self.realm.object(ofType: Item.RMObject.self,
                                                      forPrimaryKey: primaryKey) else {
-                                                        return Observable.just(nil)
+                                                        return .empty()
             }
             return Observable.from(object: itemObejct)
                 .map { $0.asDomain() }

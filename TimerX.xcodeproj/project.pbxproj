@@ -30,7 +30,11 @@
 		FC1887A0227D3D8200D78D48 /* BehaviorRelay+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */; };
 		FC1887A2227D54CC00D78D48 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1887A1227D54CC00D78D48 /* TableView.swift */; };
 		FC190F88228BC14000860A03 /* NSEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F87228BC14000860A03 /* NSEvent.swift */; };
-		FC190F8C228BC46D00860A03 /* RxEventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F8B228BC46D00860A03 /* RxEventCombinationUseCase.swift */; };
+		FC190F8C228BC46D00860A03 /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F8B228BC46D00860A03 /* EventCombinationUseCase.swift */; };
+		FC190F91229249DB00860A03 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC190F90229249DB00860A03 /* RxRealm.framework */; };
+		FC190F92229249E900860A03 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC190F90229249DB00860A03 /* RxRealm.framework */; };
+		FC190F9422924ADB00860A03 /* RxRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9322924ADB00860A03 /* RxRepositoryProtocol.swift */; };
+		FC190F9722924DD400860A03 /* Realm+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9622924DD400860A03 /* Realm+Rx.swift */; };
 		FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */; };
 		FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */; };
 		FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */; };
@@ -81,7 +85,6 @@
 		FC74DA8E226C0E6E00AFDE25 /* SimpleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA86226C0E6E00AFDE25 /* SimpleEvent.swift */; };
 		FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA87226C0E6E00AFDE25 /* CountingType.swift */; };
 		FC74DA90226C0E6E00AFDE25 /* CountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */; };
-		FC74DA92226C0E6E00AFDE25 /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA8B226C0E6E00AFDE25 /* EventCombinationUseCase.swift */; };
 		FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA94226C0E8100AFDE25 /* RepositoryProtocol.swift */; };
 		FC74DA9D226C0E8100AFDE25 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA95226C0E8100AFDE25 /* Repository.swift */; };
 		FC74DA9F226C0E8100AFDE25 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA99226C0E8100AFDE25 /* RealmRepresentable.swift */; };
@@ -275,7 +278,10 @@
 		FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BehaviorRelay+.swift"; sourceTree = "<group>"; };
 		FC1887A1227D54CC00D78D48 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		FC190F87228BC14000860A03 /* NSEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEvent.swift; sourceTree = "<group>"; };
-		FC190F8B228BC46D00860A03 /* RxEventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxEventCombinationUseCase.swift; sourceTree = "<group>"; };
+		FC190F8B228BC46D00860A03 /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
+		FC190F90229249DB00860A03 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
+		FC190F9322924ADB00860A03 /* RxRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FC190F9622924DD400860A03 /* Realm+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Rx.swift"; sourceTree = "<group>"; };
 		FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -333,7 +339,6 @@
 		FC74DA86226C0E6E00AFDE25 /* SimpleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleEvent.swift; sourceTree = "<group>"; };
 		FC74DA87226C0E6E00AFDE25 /* CountingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingType.swift; sourceTree = "<group>"; };
 		FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEvent.swift; sourceTree = "<group>"; };
-		FC74DA8B226C0E6E00AFDE25 /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
 		FC74DA94226C0E8100AFDE25 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		FC74DA95226C0E8100AFDE25 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		FC74DA99226C0E8100AFDE25 /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
@@ -396,6 +401,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC190F92229249E900860A03 /* RxRealm.framework in Frameworks */,
 				FC188777227C01ED00D78D48 /* SnapKit.framework in Frameworks */,
 				FC188778227C01ED00D78D48 /* RxDataSources.framework in Frameworks */,
 				FC188779227C01ED00D78D48 /* Differentiator.framework in Frameworks */,
@@ -436,6 +442,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC190F91229249DB00860A03 /* RxRealm.framework in Frameworks */,
 				FC424D992276A27C00F22FFC /* RealmSwift.framework in Frameworks */,
 				FC424D9A2276A27C00F22FFC /* Realm.framework in Frameworks */,
 				FC74DADF226FCD9100AFDE25 /* Domain.framework in Frameworks */,
@@ -527,6 +534,14 @@
 				FC169EC4228115B800AECA24 /* CountingEventSection.swift */,
 			);
 			path = Section;
+			sourceTree = "<group>";
+		};
+		FC190F9522924DC600860A03 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FC190F9622924DD400860A03 /* Realm+Rx.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FC1911EC22762EAD00D60479 /* Create */ = {
@@ -718,6 +733,7 @@
 		FC74DA67226C0E5800AFDE25 /* RealmPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				FC190F9522924DC600860A03 /* Extension */,
 				FCEDDAEF227120CF00525F5C /* Common */,
 				FC74DA96226C0E8100AFDE25 /* Entity */,
 				FC74DA93226C0E8100AFDE25 /* Repository */,
@@ -753,8 +769,7 @@
 		FC74DA89226C0E6E00AFDE25 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DA8B226C0E6E00AFDE25 /* EventCombinationUseCase.swift */,
-				FC190F8B228BC46D00860A03 /* RxEventCombinationUseCase.swift */,
+				FC190F8B228BC46D00860A03 /* EventCombinationUseCase.swift */,
 				FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */,
 			);
 			path = UseCase;
@@ -764,6 +779,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DA94226C0E8100AFDE25 /* RepositoryProtocol.swift */,
+				FC190F9322924ADB00860A03 /* RxRepositoryProtocol.swift */,
 				FC74DA95226C0E8100AFDE25 /* Repository.swift */,
 			);
 			path = Repository;
@@ -801,6 +817,7 @@
 		FC74DAA1226C0EAB00AFDE25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC190F90229249DB00860A03 /* RxRealm.framework */,
 				FC188776227C01ED00D78D48 /* Differentiator.framework */,
 				FC188775227C01ED00D78D48 /* RxDataSources.framework */,
 				FC188774227C01ED00D78D48 /* SnapKit.framework */,
@@ -1550,6 +1567,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -1575,6 +1593,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
 			);
 			name = "Run Script";
 			outputFileListPaths = (
@@ -1689,10 +1708,9 @@
 				FC74DA90226C0E6E00AFDE25 /* CountingEvent.swift in Sources */,
 				FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */,
 				FC74DA8E226C0E6E00AFDE25 /* SimpleEvent.swift in Sources */,
-				FC74DA92226C0E6E00AFDE25 /* EventCombinationUseCase.swift in Sources */,
 				FC1AC03B227BD8ED00A76DC7 /* EventType.swift in Sources */,
 				FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */,
-				FC190F8C228BC46D00860A03 /* RxEventCombinationUseCase.swift in Sources */,
+				FC190F8C228BC46D00860A03 /* EventCombinationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1711,9 +1729,11 @@
 				FCEDDAEE22711EEE00525F5C /* RMCountingEvent.swift in Sources */,
 				FCEDDAF32271268E00525F5C /* RMEventCombination.swift in Sources */,
 				FC74DA9F226C0E8100AFDE25 /* RealmRepresentable.swift in Sources */,
+				FC190F9422924ADB00860A03 /* RxRepositoryProtocol.swift in Sources */,
 				FC74DAA0226C0E8100AFDE25 /* DomainConvertible.swift in Sources */,
 				FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */,
 				FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */,
+				FC190F9722924DD400860A03 /* Realm+Rx.swift in Sources */,
 				FC169EC12281140A00AECA24 /* RMSimpleEvent.swift in Sources */,
 				FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */,
 				FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */,
