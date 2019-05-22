@@ -19,16 +19,12 @@ class NSEvent: NSObject {
         guard let object = object as? NSEvent else { return false }
         return self.uuid == object.uuid
     }
-}
-
-extension NSEvent {
-    func asEventProtocol() -> EventProtocol {
+    func asEventProtocol() -> EventProtocol? {
         if let simpleEvent = self as? NSSimpleEvent {
             return simpleEvent.asDomain()
-        } else if let coutingEvent = self as? NSCountingEvent {
-            return coutingEvent.asDomain()
-        } else {
-            fatalError("Event convert error")
+        } else if let countingEvent = self as? NSCountingEvent {
+            return countingEvent.asDomain()
         }
+        return nil
     }
 }

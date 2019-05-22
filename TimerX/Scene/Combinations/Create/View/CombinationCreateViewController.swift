@@ -52,7 +52,8 @@ extension CombinationCreateViewController: ViewProtocol {
         [output.sections.drive(eventTableView.rx.items(dataSource: dataSource)),
          output.addSimpleEvent.drive(),
          output.addCountingEvent.drive(),
-         output.deleteEvent.drive()].forEach {
+         output.deleteEvent.drive(),
+         output.saveCombination.drive()].forEach {
             $0.disposed(by: disposeBag)
         }
     }

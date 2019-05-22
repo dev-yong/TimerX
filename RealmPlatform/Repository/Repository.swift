@@ -22,6 +22,9 @@ internal final class Repository<Item: RealmRepresentable>: RxRepositoryProtocol 
     }
     internal init(configuration: Realm.Configuration) {
         self.configuration = configuration
+        #if DEBUG
+        print("Realm URL : ", configuration.fileURL?.absoluteString ?? "")
+        #endif
     }
     func save(_ item: Item, update: Bool) -> Observable<Void> {
         return Observable.deferred {

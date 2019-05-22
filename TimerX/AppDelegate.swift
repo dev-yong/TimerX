@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 @UIApplicationMain
- internal class AppDelegate: UIResponder, UIApplicationDelegate {
+internal class AppDelegate: UIResponder, UIApplicationDelegate {
     internal var window: UIWindow?
     private var coordinator: ApplicationCoordinator!
 

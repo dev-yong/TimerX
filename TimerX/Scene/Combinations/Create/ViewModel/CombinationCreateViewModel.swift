@@ -24,6 +24,7 @@ final class CombinationCreateViewModel: ViewModelProtocol {
         let addSimpleEvent: Driver<NSSimpleEvent>
         let addCountingEvent: Driver<NSCountingEvent>
         let deleteEvent: Driver<Void>
+        let saveCombination: Driver<Void>
 //        let dismiss: Driver<Void>
     }
     private var disposeBag = DisposeBag()
@@ -42,24 +43,36 @@ final class CombinationCreateViewModel: ViewModelProtocol {
             return NSCountingEvent(goal: 10, interval: 1, countingType: .up)
         }.do(onNext: { events.append($0) })
         let sections = events.asDriver().map {
-            $0.map { event -> CombinationRow in
+            $0.map { event -> CombinationRow? in
                 if let simpleEvent = event as? NSSimpleEvent {
                     return .simple(viewModel: SimpleEventCellViewModel(event: simpleEvent))
                 } else if let countingEvent = event as? NSCountingEvent {
                     return .counting(viewModel: CountingEventCellViewModel(event: countingEvent))
-                } else {
-                    fatalError("Event converting error")
                 }
-            }
+                return nil
+            }.compactMap { $0 }
         }.map {
             [CombinationSection(items: $0)]
         }
         let deleteEvent = input.deleteEventTrigger.do(onNext: {
             events.remove($0.event)
         }).mapToVoid()
+        let saveCombination = input.saveCombinationTrigger.withLatestFrom(events.asDriver())
+            .map {
+                $0.map { $0.asEventProtocol() }
+                    .compactMap { $0 }
+            }
+            .map {
+                EventCombination(title: "Title Test", events: $0)
+            }
+            .flatMapLatest { combiation -> Driver<Void> in
+                return self.useCase.add(combiation, update: true)
+                    .asDriverOnErrorJustNever()
+            }
         return Output(sections: sections,
                       addSimpleEvent: addSimpleEvent.asDriver(),
                       addCountingEvent: addCountingEvent.asDriver(),
-                      deleteEvent: deleteEvent)
+                      deleteEvent: deleteEvent,
+                      saveCombination: saveCombination)
     }
 }

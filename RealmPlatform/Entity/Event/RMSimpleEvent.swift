@@ -11,28 +11,28 @@ import Domain
 import RealmSwift
 
 @objcMembers
-internal final class RMSimpleEvent: Object, Domain.EventProtocol {
-    internal dynamic var index: Int = 0
-    internal dynamic var uuid: String = ""
-    internal dynamic var title: String = ""
-    internal dynamic var seconds: TimeInterval = 0.0
-    internal dynamic var _countingType = CountingType.up.rawValue
-    internal var countingType: CountingType {
+final class RMSimpleEvent: RMAbstractEvent {
+    dynamic var seconds: Double = 0.0
+    private dynamic var _countingType = CountingType.up.rawValue
+    var countingType: CountingType {
         get { return CountingType(rawValue: _countingType)! }
         set { _countingType = newValue.rawValue }
     }
-    internal var alarms = List<TimeInterval>()
+    var alarms = List<Double>()
+    override static func primaryKey() -> String? {
+        return "uuid"
+    }
 }
 
 extension RMSimpleEvent: DomainConvertible {
-    internal func asDomain() -> Domain.SimpleEvent {
+    func asDomain() -> Domain.SimpleEvent {
         return Domain.SimpleEvent(uuid: uuid,
                                 seconds: seconds,
                                 countingType: countingType)
     }
 }
 extension Domain.SimpleEvent: RealmRepresentable {
-    internal func asRealm() -> RMSimpleEvent {
+    func asRealm() -> RMSimpleEvent {
         return RMSimpleEvent.build {
             $0.uuid = uuid
             $0.seconds = seconds

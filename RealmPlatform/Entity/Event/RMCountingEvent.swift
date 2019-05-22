@@ -11,15 +11,16 @@ import Domain
 import RealmSwift
 
 @objcMembers
-internal final class RMCountingEvent: Object, Domain.EventProtocol {
-    internal dynamic var index: Int = 0
-    internal dynamic var uuid: String = ""
-    internal dynamic var goal: Int = 0
-    internal dynamic var interval: TimeInterval = 0.0
-    internal dynamic var _countingType = CountingType.up.rawValue
-    internal var countingType: CountingType {
+final class RMCountingEvent: RMAbstractEvent {
+    dynamic var goal: Int = 0
+    dynamic var interval: Double = 0.0
+    private dynamic var _countingType = CountingType.up.rawValue
+    var countingType: CountingType {
         get { return CountingType(rawValue: _countingType)! }
         set { _countingType = newValue.rawValue }
+    }
+    override static func primaryKey() -> String? {
+        return "uuid"
     }
 }
 

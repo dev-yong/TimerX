@@ -15,7 +15,6 @@
 		FC169EB9227F79EB00AECA24 /* DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EB8227F79EB00AECA24 /* DomainConvertible.swift */; };
 		FC169EBD22804E8C00AECA24 /* EventGoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EBC22804E8C00AECA24 /* EventGoalTableViewCell.swift */; };
 		FC169EBF22804EC300AECA24 /* EventGoalCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EBE22804EC300AECA24 /* EventGoalCellViewModel.swift */; };
-		FC169EC12281140A00AECA24 /* RMSimpleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC02281140A00AECA24 /* RMSimpleEvent.swift */; };
 		FC169EC32281149D00AECA24 /* SimpleEventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC22281149D00AECA24 /* SimpleEventSection.swift */; };
 		FC169EC5228115B800AECA24 /* CountingEventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC4228115B800AECA24 /* CountingEventSection.swift */; };
 		FC169EC72281166500AECA24 /* SimpleEventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC62281166500AECA24 /* SimpleEventCellViewModel.swift */; };
@@ -35,6 +34,9 @@
 		FC190F92229249E900860A03 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC190F90229249DB00860A03 /* RxRealm.framework */; };
 		FC190F9422924ADB00860A03 /* RxRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9322924ADB00860A03 /* RxRepositoryProtocol.swift */; };
 		FC190F9722924DD400860A03 /* Realm+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9622924DD400860A03 /* Realm+Rx.swift */; };
+		FC190F9B22941F8C00860A03 /* RMAbstractEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9A22941F8C00860A03 /* RMAbstractEvent.swift */; };
+		FC190FA12294CAF300860A03 /* RMAnyObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA02294CAF300860A03 /* RMAnyObjectProtocol.swift */; };
+		FC190FA42294CBE300860A03 /* RMSimpleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA32294CBE300860A03 /* RMSimpleEvent.swift */; };
 		FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */; };
 		FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */; };
 		FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */; };
@@ -263,7 +265,6 @@
 		FC169EB8227F79EB00AECA24 /* DomainConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertible.swift; sourceTree = "<group>"; };
 		FC169EBC22804E8C00AECA24 /* EventGoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventGoalTableViewCell.swift; sourceTree = "<group>"; };
 		FC169EBE22804EC300AECA24 /* EventGoalCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventGoalCellViewModel.swift; sourceTree = "<group>"; };
-		FC169EC02281140A00AECA24 /* RMSimpleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSimpleEvent.swift; sourceTree = "<group>"; };
 		FC169EC22281149D00AECA24 /* SimpleEventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEventSection.swift; sourceTree = "<group>"; };
 		FC169EC4228115B800AECA24 /* CountingEventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingEventSection.swift; sourceTree = "<group>"; };
 		FC169EC62281166500AECA24 /* SimpleEventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEventCellViewModel.swift; sourceTree = "<group>"; };
@@ -282,6 +283,9 @@
 		FC190F90229249DB00860A03 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
 		FC190F9322924ADB00860A03 /* RxRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRepositoryProtocol.swift; sourceTree = "<group>"; };
 		FC190F9622924DD400860A03 /* Realm+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Rx.swift"; sourceTree = "<group>"; };
+		FC190F9A22941F8C00860A03 /* RMAbstractEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMAbstractEvent.swift; sourceTree = "<group>"; };
+		FC190FA02294CAF300860A03 /* RMAnyObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAnyObjectProtocol.swift; sourceTree = "<group>"; };
+		FC190FA32294CBE300860A03 /* RMSimpleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSimpleEvent.swift; sourceTree = "<group>"; };
 		FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -539,9 +543,20 @@
 		FC190F9522924DC600860A03 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FCEDDAF0227120D700525F5C /* Realm+.swift */,
 				FC190F9622924DD400860A03 /* Realm+Rx.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FC190FA22294CB7C00860A03 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				FC190F9A22941F8C00860A03 /* RMAbstractEvent.swift */,
+				FC190FA32294CBE300860A03 /* RMSimpleEvent.swift */,
+				FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		FC1911EC22762EAD00D60479 /* Create */ = {
@@ -790,8 +805,7 @@
 			children = (
 				FC74DA98226C0E8100AFDE25 /* Convert */,
 				FCEDDAF22271268D00525F5C /* RMEventCombination.swift */,
-				FC169EC02281140A00AECA24 /* RMSimpleEvent.swift */,
-				FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */,
+				FC190FA22294CB7C00860A03 /* Event */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1150,7 +1164,7 @@
 		FCEDDAEF227120CF00525F5C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				FCEDDAF0227120D700525F5C /* Realm+.swift */,
+				FC190FA02294CAF300860A03 /* RMAnyObjectProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1733,9 +1747,11 @@
 				FC74DAA0226C0E8100AFDE25 /* DomainConvertible.swift in Sources */,
 				FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */,
 				FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */,
+				FC190FA42294CBE300860A03 /* RMSimpleEvent.swift in Sources */,
 				FC190F9722924DD400860A03 /* Realm+Rx.swift in Sources */,
-				FC169EC12281140A00AECA24 /* RMSimpleEvent.swift in Sources */,
+				FC190F9B22941F8C00860A03 /* RMAbstractEvent.swift in Sources */,
 				FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */,
+				FC190FA12294CAF300860A03 /* RMAnyObjectProtocol.swift in Sources */,
 				FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */,
 				FC74DA9D226C0E8100AFDE25 /* Repository.swift in Sources */,
 			);
