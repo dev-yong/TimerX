@@ -8,7 +8,9 @@
 
 import Foundation
 
-public protocol EventProtocol {
-    var uuid: String { get }
-    var countingType: CountingType { get }
+public class AbstractEvent: NSObject {
+    public let uuid: String
+    public init(uuid: String) {
+        self.uuid = uuid
+    }
 }

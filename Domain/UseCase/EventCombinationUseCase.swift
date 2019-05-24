@@ -11,7 +11,8 @@ import RxSwift
 import RxCocoa
 
 public protocol EventCombinationUseCase {
-    func add(_ eventCombination: EventCombination, update: Bool) -> Observable<Void>
+    func add(_ eventCombination: EventCombination,
+             update: Bool) -> Observable<Void>
     func eventCombinations() -> Observable<[EventCombination]>
     func eventCombination(of uuid: String) -> Observable<EventCombination?>
     func delete(_ eventCombination: EventCombination) -> Observable<Void>

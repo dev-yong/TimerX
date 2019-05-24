@@ -8,8 +8,7 @@
 
 import Foundation
 
-public struct CountingEvent: EventProtocol {
-    public let uuid: String
+public class CountingEvent: AbstractEvent {
     public let goal: Int
     public let interval: TimeInterval
     public var countingType: CountingType
@@ -17,14 +16,14 @@ public struct CountingEvent: EventProtocol {
                 goal: Int,
                 interval: TimeInterval,
                 countingType: CountingType) {
-        self.uuid = uuid
         self.goal = goal
         self.interval = interval
         self.countingType = countingType
+        super.init(uuid: uuid)
     }
 }
 
-extension CountingEvent: Equatable {
+extension CountingEvent {
     public static func == (lhs: CountingEvent,
                            rhs: CountingEvent) -> Bool {
         return lhs.uuid == rhs.uuid &&

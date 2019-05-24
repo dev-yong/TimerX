@@ -8,20 +8,19 @@
 
 import Foundation
 
-public struct SimpleEvent: EventProtocol {
-    public let uuid: String
+public class SimpleEvent: AbstractEvent {
     public let seconds: TimeInterval
     public var countingType: CountingType
     public init(uuid: String = UUID().uuidString,
                 seconds: TimeInterval,
                 countingType: CountingType) {
-        self.uuid = uuid
         self.seconds = seconds
         self.countingType = countingType
+        super.init(uuid: uuid)
     }
 }
 
-extension SimpleEvent: Equatable {
+extension SimpleEvent {
     public static func == (lhs: SimpleEvent,
                            rhs: SimpleEvent) -> Bool {
         return lhs.uuid == rhs.uuid &&

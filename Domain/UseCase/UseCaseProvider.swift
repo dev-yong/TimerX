@@ -10,4 +10,5 @@ import Foundation
 
 public protocol UseCaseProvider {
     func makeEventCombinationUseCase() -> EventCombinationUseCase
+    func makeEventUseCase() -> EventUseCase
 }

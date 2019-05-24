@@ -9,13 +9,12 @@
 import Foundation
 
 public struct EventCombination {
-    public typealias Event = EventProtocol
     public let uuid: String
     public let title: String
-    public var events: [EventProtocol]
+    public var events: [AbstractEvent]
     public init(uuid: String = UUID().uuidString,
                 title: String,
-                events: [EventProtocol]) {
+                events: [AbstractEvent]) {
         self.uuid = uuid
         self.title = title
         self.events = events
