@@ -14,6 +14,7 @@ enum Configuration {
     }
     enum Dimension {
         static let inset: CGFloat = 10.0
+        // swiftlint:disable nesting
         enum TableView {
             static let titleHeight: CGFloat = 44.0
             static let rowHeight: CGFloat = 44.0

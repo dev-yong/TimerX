@@ -9,7 +9,7 @@
 import Foundation
 import Domain
 
-internal protocol ViewModelProtocol {
+protocol ViewModelProtocol {
     associatedtype Input
     associatedtype Output
     func transform(_ input: Input) -> Output

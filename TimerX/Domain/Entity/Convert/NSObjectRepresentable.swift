@@ -7,7 +7,7 @@
 //
 
 import Foundation
-internal protocol NSObjectRepresentable {
+protocol NSObjectRepresentable {
     associatedtype Object: DomainConvertible & NSObject
     var uuid: String { get }
     func asNSObject() -> Object

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-internal protocol DomainConvertible {
+protocol DomainConvertible {
     associatedtype DomainObject
     func asDomain() -> DomainObject
 }

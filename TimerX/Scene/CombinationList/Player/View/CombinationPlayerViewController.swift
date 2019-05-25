@@ -1,5 +1,5 @@
 //
-//  CombinationEditViewController.swift
+//  CombinationPlayerViewController.swift
 //  TimerX
 //
 //  Created by 이광용 on 28/04/2019.
@@ -8,5 +8,5 @@
 
 import UIKit
 
-internal class CombinationEditViewController: UIViewController {
+class CombinationPlayerViewController: UIViewController {
 }

@@ -10,36 +10,36 @@ import UIKit
 import Domain
 import Coordinator
 
-internal enum HomeTabRoute: Route {
+enum HomeTabRoute: Route {
     case combinations
-//    case logs
+    //    case logs
     case more
 }
-internal final class HomeTabCoordinator: TabBarCoordinator<HomeTabRoute> {
+final class HomeTabCoordinator: TabBarCoordinator<HomeTabRoute> {
     private let useCaseProvider: Domain.UseCaseProvider
     private let combinationCoordinator: CombinationCoordinator
     private let moreCoordinator: MoreCoordinator
-    internal convenience init(useCaseProvider: Domain.UseCaseProvider) {
+    convenience init(useCaseProvider: Domain.UseCaseProvider) {
         self.init(useCaseProvider: useCaseProvider,
                   combinationCoordinator: CombinationCoordinator(useCaseProvider: useCaseProvider),
                   moreCoordinator: MoreCoordinator())
     }
-    internal init(useCaseProvider: Domain.UseCaseProvider,
-                  combinationCoordinator: CombinationCoordinator,
-                  moreCoordinator: MoreCoordinator) {
+    init(useCaseProvider: Domain.UseCaseProvider,
+         combinationCoordinator: CombinationCoordinator,
+         moreCoordinator: MoreCoordinator) {
         self.useCaseProvider = useCaseProvider
         self.combinationCoordinator = combinationCoordinator
         self.moreCoordinator = moreCoordinator
         super.init(tabBarItems: [HomeTabBarItem.combinations(self.combinationCoordinator),
                                  HomeTabBarItem.more(self.moreCoordinator)])
     }
-    internal override func coordinate(_ route: HomeTabRoute) {
+    override func coordinate(_ route: HomeTabRoute) {
         switch route {
         case .combinations: select(tab: combinationCoordinator)
         case .more: select(tab: moreCoordinator)
         }
     }
-    internal override func makeRootViewController() -> UITabBarController {
+    override func makeRootViewController() -> UITabBarController {
         return Storyboard.home.instance.instantiate(viewController: HomeTabBarViewController.self)
     }
 }

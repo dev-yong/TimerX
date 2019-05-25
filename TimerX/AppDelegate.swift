@@ -10,12 +10,11 @@ import UIKit
 import SnapKit
 
 @UIApplicationMain
-internal class AppDelegate: UIResponder, UIApplicationDelegate {
-    internal var window: UIWindow?
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
     private var coordinator: ApplicationCoordinator!
-
-    internal func application(_ application: UIApplication,
-                              didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if let window = window {
             coordinator = ApplicationCoordinator(window: window)
         }

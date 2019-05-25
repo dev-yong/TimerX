@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-internal class CombinationCreateViewController: UIViewController, CellHeightCachable {
+class CombinationCreateViewController: UIViewController, CellHeightCachable {
     fileprivate let addSimpleEventBarButtonitem = UIBarButtonItem(title: "Simple",
                                                                   style: .plain,
                                                                   target: nil,
@@ -27,7 +27,7 @@ internal class CombinationCreateViewController: UIViewController, CellHeightCach
     fileprivate var disposeBag = DisposeBag()
     fileprivate var dataSource: RxTableViewSectionedAnimatedDataSource<CombinationSection>?
     private let deleteEventTrigger = PublishSubject<CombinationRow>()
-    override internal func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setRightBarButtonItems([addSimpleEventBarButtonitem,
                                                addCountingEventBarButtonitem,
@@ -41,7 +41,7 @@ internal class CombinationCreateViewController: UIViewController, CellHeightCach
     }
 }
 extension CombinationCreateViewController: ViewProtocol {
-    internal func bind(_ viewModel: CombinationCreateViewModel) {
+    func bind(_ viewModel: CombinationCreateViewModel) {
         dataSource = makeDataSource()
         guard let dataSource = self.dataSource else { return }
         let input = CombinationCreateViewModel.Input(addSimpleEventTrigger: addSimpleEventBarButtonitem.rx.tap.asDriver(),

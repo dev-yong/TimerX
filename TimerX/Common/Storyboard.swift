@@ -9,9 +9,9 @@
 import UIKit
 import Coordinator
 
-internal enum Storyboard: StoryboardProtocol {
+enum Storyboard: StoryboardProtocol {
     case home, combination, timeLog, more
-    internal var name: String {
+    var name: String {
         switch self {
         case .home: return "Home"
         case .combination: return "Combination"
@@ -19,7 +19,7 @@ internal enum Storyboard: StoryboardProtocol {
         case .more: return "More"
         }
     }
-    internal var bundle: Bundle? {
+    var bundle: Bundle? {
         return nil
     }
 }

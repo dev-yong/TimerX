@@ -9,18 +9,18 @@
 import UIKit
 import Coordinator
 
-internal enum MoreRoute: Route {
+enum MoreRoute: Route {
     case more
 }
 
-internal class MoreCoordinator: NaivgationCoordinator<MoreRoute> {
+class MoreCoordinator: NaivgationCoordinator<MoreRoute> {
     private var storyboard: UIStoryboard {
         return Storyboard.more.instance
     }
-    internal convenience init() {
+    convenience init() {
         self.init(root: .more)
     }
-    internal override func coordinate(_ route: MoreRoute) {
+    override func coordinate(_ route: MoreRoute) {
         switch route {
         case .more:
             let viewController = storyboard.instantiate(viewController: MoreViewController.self)

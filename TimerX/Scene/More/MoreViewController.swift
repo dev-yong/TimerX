@@ -8,6 +8,6 @@
 
 import UIKit
 
-internal class MoreViewController: UIViewController {
+class MoreViewController: UIViewController {
     @IBOutlet private weak var moreTableView: UITableView!
 }

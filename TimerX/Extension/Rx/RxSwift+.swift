@@ -9,13 +9,13 @@
 import RxSwift
 import RxCocoa
 
-internal extension SharedSequenceConvertibleType {
+extension SharedSequenceConvertibleType {
     func mapToVoid() -> SharedSequence<SharingStrategy, Void> {
         return map { _ in }
     }
 }
 
-internal extension ObservableType {
+extension ObservableType {
     func unwrap<T>() -> Observable<T> where Element == T? {
         return self.filter { $0 != nil }.map { $0! }
     }

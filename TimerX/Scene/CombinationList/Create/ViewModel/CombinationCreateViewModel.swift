@@ -28,10 +28,14 @@ final class CombinationCreateViewModel: ViewModelProtocol {
 //        let dismiss: Driver<Void>
     }
     private var disposeBag = DisposeBag()
-    private var useCase: EventCombinationUseCase
-    private var coordinator: CombinationCoordinator
-    init(useCase: EventCombinationUseCase, coordinator: CombinationCoordinator) {
-        self.useCase = useCase
+    private let combinationUseCase: EventCombinationUseCase
+    private let eventUseCase: EventUseCase
+    private let coordinator: CombinationCoordinator
+    init(combinationUseCase: EventCombinationUseCase,
+         eventUseCase: EventUseCase,
+         coordinator: CombinationCoordinator) {
+        self.combinationUseCase = combinationUseCase
+        self.eventUseCase = eventUseCase
         self.coordinator = coordinator
     }
     func transform(_ input: CombinationCreateViewModel.Input) -> CombinationCreateViewModel.Output {
@@ -57,18 +61,22 @@ final class CombinationCreateViewModel: ViewModelProtocol {
         let deleteEvent = input.deleteEventTrigger.do(onNext: {
             events.remove($0.event)
         }).mapToVoid()
-        let saveCombination = input.saveCombinationTrigger.withLatestFrom(events.asDriver())
+        let saveCombination = input.saveCombinationTrigger.asObservable()
+            .withLatestFrom(events.asDriver())
             .map {
-                $0.map { $0.asEventProtocol() }
+                $0.map { $0.asAbstractEvent() }
                     .compactMap { $0 }
+            }
+            .flatMapLatest { events -> Observable<[AbstractEvent]> in
+                Observable.combineLatest(events.map { self.eventUseCase.add($0, update: true) })
+                    .map { _ in events }
             }
             .map {
                 EventCombination(title: "Title Test", events: $0)
             }
-            .flatMapLatest { combiation -> Driver<Void> in
-                return self.useCase.add(combiation, update: true)
-                    .asDriverOnErrorJustNever()
-            }
+            .flatMapLatest { combiation -> Observable<Void> in
+                return self.combinationUseCase.add(combiation, update: true)
+            }.asDriverOnErrorJustNever()
         return Output(sections: sections,
                       addSimpleEvent: addSimpleEvent.asDriver(),
                       addCountingEvent: addCountingEvent.asDriver(),
