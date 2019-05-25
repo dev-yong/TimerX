@@ -10,7 +10,7 @@ import Foundation
 
 // Repository Pattern
 // https://medium.com/@frederikjacques/repository-design-pattern-in-swift-952061485aa
-internal protocol RepositoryProtocol {
+protocol RepositoryProtocol {
     associatedtype Item
     func save(_ item: Item,
               update: Bool,
@@ -21,4 +21,3 @@ internal protocol RepositoryProtocol {
     func delete(_ item: Item,
                 completion: @escaping (Result<Void, Error>) -> Void)
 }
-

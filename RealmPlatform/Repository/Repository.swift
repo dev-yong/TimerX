@@ -11,7 +11,7 @@ import RxSwift
 import RealmSwift
 import RxRealm
 
-internal final class Repository<Item: RealmRepresentable>: RxRepositoryProtocol where Item.RMObject.DomainObject == Item {
+final class Repository<Item: RealmRepresentable>: RxRepositoryProtocol where Item.RMObject.DomainObject == Item {
     private let configuration: Realm.Configuration
     private var realm: Realm {
         do {
@@ -20,7 +20,7 @@ internal final class Repository<Item: RealmRepresentable>: RxRepositoryProtocol 
             fatalError(error.localizedDescription)
         }
     }
-    internal init(configuration: Realm.Configuration) {
+    init(configuration: Realm.Configuration) {
         self.configuration = configuration
         #if DEBUG
         print("Realm URL : ", configuration.fileURL?.absoluteString ?? "")

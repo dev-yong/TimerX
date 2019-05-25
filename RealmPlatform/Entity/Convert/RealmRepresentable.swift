@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-internal protocol RealmRepresentable {
+protocol RealmRepresentable {
     associatedtype RMObject: DomainConvertible & Object
     var uuid: String { get }
     func asRealm() -> RMObject

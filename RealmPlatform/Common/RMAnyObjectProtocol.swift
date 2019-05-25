@@ -15,7 +15,8 @@ protocol RMAnyObjectProtocol: AnyObject {
     associatedtype AbstractObject: RMAbstractObjectProtocol
     var typeName: String { get set }
     var primaryKey: String { get set }
-    static var supportedClasses: [AbstractObject.Type] { get }}
+    static var supportedClasses: [AbstractObject.Type] { get }
+}
 
 extension RMAnyObjectProtocol where Self: Object, AbstractObject: Object {
     static var objectDictionary: [String: AbstractObject.Type] {
@@ -39,11 +40,11 @@ extension RMAnyObjectProtocol where Self: Object, AbstractObject: Object {
     }
     var value: AbstractObject {
         guard let type = Self.objectDictionary[typeName] else {
-            fatalError("Unknown method `\(typeName)`")
+            fatalError("Unknown object `\(typeName)`")
         }
         do {
-            guard let value = try Realm().object(ofType: type, forPrimaryKey: primaryKey) else {
-                fatalError("Unknown method `\(typeName)`")
+            guard let value = try Realm().object(ofType: type.self, forPrimaryKey: primaryKey) else {
+                fatalError("Unknown object `\(typeName)`")
             }
             return value
         } catch {

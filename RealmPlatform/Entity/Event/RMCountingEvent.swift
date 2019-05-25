@@ -19,13 +19,10 @@ final class RMCountingEvent: RMAbstractEvent {
         get { return CountingType(rawValue: _countingType)! }
         set { _countingType = newValue.rawValue }
     }
-    override static func primaryKey() -> String? {
-        return "uuid"
-    }
 }
 
-extension Domain.CountingEvent: RealmRepresentable {
-    internal func asRealm() -> RMCountingEvent {
+extension Domain.CountingEvent {
+    override func asRealm() -> RMCountingEvent {
         return RMCountingEvent.build {
             $0.uuid = uuid
             $0.goal = goal
@@ -35,8 +32,8 @@ extension Domain.CountingEvent: RealmRepresentable {
     }
 }
 
-extension RMCountingEvent: DomainConvertible {
-    internal func asDomain() -> Domain.CountingEvent {
+extension RMCountingEvent {
+    override func asDomain() -> Domain.CountingEvent {
         return Domain.CountingEvent(uuid: uuid,
                                     goal: goal,
                                     interval: interval,

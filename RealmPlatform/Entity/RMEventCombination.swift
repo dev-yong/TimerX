@@ -10,18 +10,18 @@ import Domain
 import RealmSwift
 
 @objcMembers
-internal final class RMEventCombination: Object {
-    internal dynamic var uuid: String = ""
-    internal dynamic var title: String = ""
+final class RMEventCombination: Object {
+    dynamic var uuid: String = ""
+    dynamic var title: String = ""
     override static func primaryKey() -> String? {
         return "uuid"
     }
-    internal var events = List<RMAnyEvent>()
+    var events = List<RMAnyEvent>()
 }
 extension RMEventCombination: DomainConvertible {
-    internal func asDomain() -> Domain.EventCombination {
+    func asDomain() -> Domain.EventCombination {
         let eventArray = Array(events.map { $0.value })
-            .map { object -> Domain.EventProtocol? in
+            .map { object -> AbstractEvent? in
                 if let timeEvent = (object as? RMSimpleEvent)?.asDomain() {
                     return timeEvent
                 } else if let countingEvent = (object as? RMCountingEvent)?.asDomain() {

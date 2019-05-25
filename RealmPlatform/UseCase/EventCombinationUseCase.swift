@@ -13,7 +13,7 @@ import RxSwift
 final class EventCombinationUseCase<Repository>: Domain.EventCombinationUseCase
 where Repository: RxRepositoryProtocol, Repository.Item == Domain.EventCombination {
     private let repository: Repository
-    internal init(repository: Repository) {
+    init(repository: Repository) {
         self.repository = repository
     }
     func add(_ eventCombination: EventCombination, update: Bool = true) -> Observable<Void> {
@@ -27,4 +27,5 @@ where Repository: RxRepositoryProtocol, Repository.Item == Domain.EventCombinati
     }
     func delete(_ eventCombination: EventCombination) -> Observable<Void> {
         return repository.delete(eventCombination)
-    }}
+    }
+}

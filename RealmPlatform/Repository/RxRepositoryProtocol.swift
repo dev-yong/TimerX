@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-internal protocol RxRepositoryProtocol {
+protocol RxRepositoryProtocol {
     associatedtype Item
     func save(_ item: Item,
               update: Bool) -> Observable<Void>

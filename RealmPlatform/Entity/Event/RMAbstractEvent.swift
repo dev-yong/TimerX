@@ -7,17 +7,39 @@
 //
 
 import Foundation
+import Domain
 import RealmSwift
-
-@objcMembers
-class RMAbstractEvent: Object, RMAbstractObjectProtocol {
-    dynamic var uuid: String = ""
-}
 
 @objcMembers
 final class RMAnyEvent: Object, RMAnyObjectProtocol {
     dynamic var typeName: String = ""
     dynamic var primaryKey: String = ""
-    static var supportedClasses: [RMAbstractEvent.Type] = [RMSimpleEvent.self,
-                                                           RMCountingEvent.self]
+    static var supportedClasses: [RMAbstractEvent.Type] {
+        return [RMSimpleEvent.self,
+                RMCountingEvent.self]
+    }
+}
+
+@objcMembers
+class RMAbstractEvent: Object, RMAbstractObjectProtocol {
+    dynamic var uuid: String = ""
+    override static func primaryKey() -> String? {
+        return "uuid"
+    }
+}
+
+extension RMAbstractEvent: DomainConvertible {
+    @objc
+    func asDomain() -> AbstractEvent {
+        return AbstractEvent(uuid: uuid)
+    }
+}
+
+extension Domain.AbstractEvent: RealmRepresentable {
+    @objc
+    func asRealm() -> RMAbstractEvent {
+        return RMSimpleEvent.build {
+            $0.uuid = uuid
+        }
+    }
 }

@@ -8,14 +8,14 @@
 
 import RealmSwift
 
-internal extension Realm {
+extension Realm {
     func objects<Element: RealmRepresentable>(_ type: Element.Type) -> [Element]
         where Element.RMObject.DomainObject == Element {
             return objects(type.RMObject.self).map { $0.asDomain() }
     }
 }
 
-internal extension Object {
+extension Object {
     static func build<O: Object>(_ builder: (O) -> Void ) -> O {
         let object = O()
         builder(object)
@@ -23,13 +23,13 @@ internal extension Object {
     }
 }
 
-internal extension List {
+extension List {
     func asArray() -> [Element] {
         return Array(self)
     }
 }
 
-internal extension Array where Element: RealmCollectionValue {
+extension Array where Element: RealmCollectionValue {
     func asList() -> List<Element> {
         let list = List<Element>()
         list.append(objectsIn: self)

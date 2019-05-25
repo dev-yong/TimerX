@@ -19,4 +19,8 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
         let repository = Repository<EventCombination>(configuration: configuration)
         return EventCombinationUseCase(repository: repository)
     }
+    public func makeEventUseCase() -> Domain.EventUseCase {
+        let repository = Repository<AbstractEvent>(configuration: configuration)
+        return EventUseCase(repository: repository)
+    }
 }
