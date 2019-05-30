@@ -29,10 +29,18 @@ extension List {
     }
 }
 
-extension Array where Element: RealmCollectionValue {
-    func asList() -> List<Element> {
-        let list = List<Element>()
-        list.append(objectsIn: self)
+extension List where Element: DomainConvertible {
+    func asDomainArray() -> [Element.DomainObject] {
+        return asArray().map {
+            $0.asDomain()
+        }
+    }
+}
+
+extension Array where Element: RealmRepresentable {
+    func asList() -> List<Element.RMObject> {
+        let list = List<Element.RMObject>()
+        list.append(objectsIn: map { $0.asRealm() })
         return list
     }
 }

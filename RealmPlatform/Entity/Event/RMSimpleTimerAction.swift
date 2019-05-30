@@ -11,7 +11,7 @@ import Domain
 import RealmSwift
 
 @objcMembers
-final class RMSimpleEvent: RMAbstractEvent {
+final class RMSimpleTimerAction: RMAbstractTimerAction {
     dynamic var seconds: Double = 0.0
     private dynamic var _countingType = CountingType.up.rawValue
     var countingType: CountingType {
@@ -21,17 +21,19 @@ final class RMSimpleEvent: RMAbstractEvent {
     var alarms = List<Double>()
 }
 
-extension RMSimpleEvent {
-    override func asDomain() -> Domain.SimpleEvent {
-        return Domain.SimpleEvent(uuid: uuid,
-                                seconds: seconds,
-                                countingType: countingType)
+extension RMSimpleTimerAction {
+    override func asDomain() -> Domain.SimpleTimerAction {
+        return Domain.SimpleTimerAction(uuid: uuid,
+                                        title: title,
+                                        seconds: seconds,
+                                        countingType: countingType)
     }
 }
-extension Domain.SimpleEvent {
-    override func asRealm() -> RMSimpleEvent {
-        return RMSimpleEvent.build {
+extension Domain.SimpleTimerAction {
+    override func asRealm() -> RMSimpleTimerAction {
+        return RMSimpleTimerAction.build {
             $0.uuid = uuid
+            $0.title = title
             $0.seconds = seconds
             $0.countingType = countingType
         }

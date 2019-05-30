@@ -11,35 +11,36 @@ import Domain
 import RealmSwift
 
 @objcMembers
-final class RMAnyEvent: Object, RMAnyObjectProtocol {
+class RMAnyAction: Object, RMAnyObjectProtocol {
     dynamic var typeName: String = ""
     dynamic var primaryKey: String = ""
-    static var supportedClasses: [RMAbstractEvent.Type] {
-        return [RMSimpleEvent.self,
-                RMCountingEvent.self]
+    static var supportedClasses: [RMAbstractAction.Type] {
+        return []
     }
 }
 
 @objcMembers
-class RMAbstractEvent: Object, RMAbstractObjectProtocol {
+class RMAbstractAction: Object, RMAbstractObjectProtocol {
     dynamic var uuid: String = ""
+    dynamic var title: String = ""
     override static func primaryKey() -> String? {
         return "uuid"
     }
 }
 
-extension RMAbstractEvent: DomainConvertible {
+extension RMAbstractAction: DomainConvertible {
     @objc
-    func asDomain() -> AbstractEvent {
-        return AbstractEvent(uuid: uuid)
+    func asDomain() -> Action {
+        return Action(uuid: uuid, title: title)
     }
 }
 
-extension Domain.AbstractEvent: RealmRepresentable {
+extension Action: RealmRepresentable {
     @objc
-    func asRealm() -> RMAbstractEvent {
-        return RMSimpleEvent.build {
+    func asRealm() -> RMAbstractAction {
+        return RMAbstractAction.build {
             $0.uuid = uuid
+            $0.title = title
         }
     }
 }

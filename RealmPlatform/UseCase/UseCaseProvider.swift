@@ -15,12 +15,12 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
     public init(configuration: Realm.Configuration = Realm.Configuration()) {
         self.configuration = configuration
     }
-    public func makeEventCombinationUseCase() -> Domain.EventCombinationUseCase {
-        let repository = Repository<EventCombination>(configuration: configuration)
-        return EventCombinationUseCase(repository: repository)
+    public func makeActionCombinationUseCase() -> Domain.ActionCombinationUseCase {
+        let repository = Repository<ActionCombination>(configuration: configuration)
+        return ActionCombinationUseCase(repository: repository)
     }
-    public func makeEventUseCase() -> Domain.EventUseCase {
-        let repository = Repository<AbstractEvent>(configuration: configuration)
-        return EventUseCase(repository: repository)
+    public func makeActionUseCase() -> Domain.ActionUseCase {
+        let repository = Repository<Action>(configuration: configuration)
+        return ActionUseCase(repository: repository)
     }
 }

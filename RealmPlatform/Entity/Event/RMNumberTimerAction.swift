@@ -11,7 +11,7 @@ import Domain
 import RealmSwift
 
 @objcMembers
-final class RMCountingEvent: RMAbstractEvent {
+final class RMNumberingTimerAction: RMAbstractTimerAction {
     dynamic var goal: Int = 0
     dynamic var interval: Double = 0.0
     private dynamic var _countingType = CountingType.up.rawValue
@@ -20,23 +20,23 @@ final class RMCountingEvent: RMAbstractEvent {
         set { _countingType = newValue.rawValue }
     }
 }
-
-extension Domain.CountingEvent {
-    override func asRealm() -> RMCountingEvent {
-        return RMCountingEvent.build {
+extension RMNumberingTimerAction {
+    override func asDomain() -> Domain.NumberingTimerAction {
+        return Domain.NumberingTimerAction(uuid: uuid,
+                                           title: title,
+                                           goal: goal,
+                                           interval: interval,
+                                           countingType: countingType)
+    }
+}
+extension Domain.NumberingTimerAction {
+    override func asRealm() -> RMNumberingTimerAction {
+        return RMNumberingTimerAction.build {
             $0.uuid = uuid
+            $0.title = title
             $0.goal = goal
             $0.interval = interval
             $0.countingType = countingType
         }
-    }
-}
-
-extension RMCountingEvent {
-    override func asDomain() -> Domain.CountingEvent {
-        return Domain.CountingEvent(uuid: uuid,
-                                    goal: goal,
-                                    interval: interval,
-                                    countingType: countingType)
     }
 }
