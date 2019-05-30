@@ -9,15 +9,11 @@
 /* Begin PBXBuildFile section */
 		FC169EA8227F558500AECA24 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EA7227F558500AECA24 /* Array+.swift */; };
 		FC169EAC227F6D5000AECA24 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EAB227F6D4F00AECA24 /* Configuration.swift */; };
-		FC169EB1227F788900AECA24 /* NSSimpleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EB0227F788900AECA24 /* NSSimpleEvent.swift */; };
-		FC169EB4227F797400AECA24 /* NSCountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EB3227F797400AECA24 /* NSCountingEvent.swift */; };
-		FC169EB7227F79A600AECA24 /* NSObjectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EB6227F79A600AECA24 /* NSObjectRepresentable.swift */; };
-		FC169EB9227F79EB00AECA24 /* DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EB8227F79EB00AECA24 /* DomainConvertible.swift */; };
 		FC169EBD22804E8C00AECA24 /* EventGoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EBC22804E8C00AECA24 /* EventGoalTableViewCell.swift */; };
 		FC169EBF22804EC300AECA24 /* EventGoalCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EBE22804EC300AECA24 /* EventGoalCellViewModel.swift */; };
-		FC169EC32281149D00AECA24 /* SimpleEventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC22281149D00AECA24 /* SimpleEventSection.swift */; };
-		FC169EC5228115B800AECA24 /* CountingEventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC4228115B800AECA24 /* CountingEventSection.swift */; };
-		FC169EC72281166500AECA24 /* SimpleEventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC62281166500AECA24 /* SimpleEventCellViewModel.swift */; };
+		FC169EC32281149D00AECA24 /* SimpleTimerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC22281149D00AECA24 /* SimpleTimerSection.swift */; };
+		FC169EC5228115B800AECA24 /* NumberingTimerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC4228115B800AECA24 /* NumberingTimerSection.swift */; };
+		FC169EC72281166500AECA24 /* SimpleTimerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC169EC62281166500AECA24 /* SimpleTimerCellViewModel.swift */; };
 		FC188777227C01ED00D78D48 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC188774227C01ED00D78D48 /* SnapKit.framework */; };
 		FC188778227C01ED00D78D48 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC188775227C01ED00D78D48 /* RxDataSources.framework */; };
 		FC188779227C01ED00D78D48 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC188776227C01ED00D78D48 /* Differentiator.framework */; };
@@ -25,32 +21,26 @@
 		FC188781227C045300D78D48 /* EventCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC188780227C045300D78D48 /* EventCountTableViewCell.swift */; };
 		FC188783227C07A600D78D48 /* EventCountTypeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC188782227C07A600D78D48 /* EventCountTypeCellViewModel.swift */; };
 		FC188785227C084500D78D48 /* EventTimePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC188784227C084500D78D48 /* EventTimePickerTableViewCell.swift */; };
-		FC18879E227D38CB00D78D48 /* CombinationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18879D227D38CB00D78D48 /* CombinationSection.swift */; };
+		FC18879E227D38CB00D78D48 /* RoadMapSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18879D227D38CB00D78D48 /* RoadMapSection.swift */; };
 		FC1887A0227D3D8200D78D48 /* BehaviorRelay+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */; };
 		FC1887A2227D54CC00D78D48 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1887A1227D54CC00D78D48 /* TableView.swift */; };
-		FC190F88228BC14000860A03 /* NSEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F87228BC14000860A03 /* NSEvent.swift */; };
-		FC190F8C228BC46D00860A03 /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F8B228BC46D00860A03 /* EventCombinationUseCase.swift */; };
+		FC190F8C228BC46D00860A03 /* RoadMapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F8B228BC46D00860A03 /* RoadMapUseCase.swift */; };
 		FC190F91229249DB00860A03 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC190F90229249DB00860A03 /* RxRealm.framework */; };
 		FC190F92229249E900860A03 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC190F90229249DB00860A03 /* RxRealm.framework */; };
-		FC190F9422924ADB00860A03 /* RxRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9322924ADB00860A03 /* RxRepositoryProtocol.swift */; };
-		FC190F9722924DD400860A03 /* Realm+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9622924DD400860A03 /* Realm+Rx.swift */; };
-		FC190F9B22941F8C00860A03 /* RMAbstractEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190F9A22941F8C00860A03 /* RMAbstractEvent.swift */; };
-		FC190FA12294CAF300860A03 /* RMAnyObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA02294CAF300860A03 /* RMAnyObjectProtocol.swift */; };
-		FC190FA42294CBE300860A03 /* RMSimpleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA32294CBE300860A03 /* RMSimpleEvent.swift */; };
-		FC190FA72296278300860A03 /* CombinationListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA62296278300860A03 /* CombinationListSection.swift */; };
-		FC190FA92296295E00860A03 /* CombinationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA82296295E00860A03 /* CombinationCellViewModel.swift */; };
-		FC190FAB22962C0E00860A03 /* CombinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FAA22962C0E00860A03 /* CombinationTableViewCell.swift */; };
+		FC190FA72296278300860A03 /* RoadMapsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA62296278300860A03 /* RoadMapsSection.swift */; };
+		FC190FA92296295E00860A03 /* RoadMapCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FA82296295E00860A03 /* RoadMapCellViewModel.swift */; };
+		FC190FAB22962C0E00860A03 /* RoadMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC190FAA22962C0E00860A03 /* RoadMapTableViewCell.swift */; };
 		FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */; };
-		FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */; };
+		FC1911F6227642DC00D60479 /* RoadMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F5227642DC00D60479 /* RoadMapCoordinator.swift */; };
 		FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */; };
 		FC1911FB227662A000D60479 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911FA227662A000D60479 /* CoordinatorProtocol.swift */; };
 		FC1911FD227662A800D60479 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911FC227662A800D60479 /* BaseCoordinator.swift */; };
 		FC1911FF227662D300D60479 /* BasicCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1911FE227662D300D60479 /* BasicCoordinator.swift */; };
 		FC191201227662EF00D60479 /* NavigationCooridnator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC191200227662EF00D60479 /* NavigationCooridnator.swift */; };
 		FC1912032276630400D60479 /* TabBarCoordiantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912022276630400D60479 /* TabBarCoordiantor.swift */; };
-		FC1912072276656300D60479 /* CombinationPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912062276656300D60479 /* CombinationPlayerViewController.swift */; };
-		FC1912092276662500D60479 /* CombinationCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912082276662500D60479 /* CombinationCreateViewController.swift */; };
-		FC19120B2276663F00D60479 /* CombinationEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19120A2276663F00D60479 /* CombinationEditViewController.swift */; };
+		FC1912072276656300D60479 /* RoadMapPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912062276656300D60479 /* RoadMapPlayerViewController.swift */; };
+		FC1912092276662500D60479 /* RoadMapCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912082276662500D60479 /* RoadMapCreateViewController.swift */; };
+		FC19120B2276663F00D60479 /* RoadMapEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19120A2276663F00D60479 /* RoadMapEditViewController.swift */; };
 		FC19120D2276670500D60479 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19120C2276670500D60479 /* MoreViewController.swift */; };
 		FC19120F2276671500D60479 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC19120E2276671500D60479 /* More.storyboard */; };
 		FC1912112276677000D60479 /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1912102276677000D60479 /* MoreCoordinator.swift */; };
@@ -62,17 +52,24 @@
 		FC1AC030227AA95400A76DC7 /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC02F227AA95400A76DC7 /* SegmentTableViewCell.swift */; };
 		FC1AC036227BC89800A76DC7 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1AC035227BC89800A76DC7 /* RxRelay.framework */; };
 		FC1AC039227BD6F800A76DC7 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC038227BD6F800A76DC7 /* SegmentControl.swift */; };
-		FC1AC03B227BD8ED00A76DC7 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC03A227BD8ED00A76DC7 /* EventType.swift */; };
 		FC1AC041227BE78400A76DC7 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC03F227BDF7600A76DC7 /* Time.swift */; };
 		FC1AC045227BE9AB00A76DC7 /* EventTimeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC044227BE9AB00A76DC7 /* EventTimeCellViewModel.swift */; };
 		FC1AC047227BEA4D00A76DC7 /* EventTimePickerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC046227BEA4D00A76DC7 /* EventTimePickerCellViewModel.swift */; };
 		FC219265227E6E2B00B12EC4 /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC219264227E6E2B00B12EC4 /* DynamicHeightTableView.swift */; };
 		FC219268227E762900B12EC4 /* IndexPath+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC219267227E762900B12EC4 /* IndexPath+.swift */; };
-		FC31AC9222962D8D009F0573 /* CombinationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC31AC9122962D8D009F0573 /* CombinationListViewController.swift */; };
-		FC31ACC822978514009F0573 /* EventUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC31ACC722978514009F0573 /* EventUseCase.swift */; };
-		FC31ACCA229785C4009F0573 /* EventUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC31ACC9229785C4009F0573 /* EventUseCase.swift */; };
+		FC31AC9222962D8D009F0573 /* RoadMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC31AC9122962D8D009F0573 /* RoadMapsViewController.swift */; };
+		FC31ACC822978514009F0573 /* ActionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC31ACC722978514009F0573 /* ActionUseCase.swift */; };
 		FC424D992276A27C00F22FFC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D972276A27C00F22FFC /* RealmSwift.framework */; };
 		FC424D9A2276A27C00F22FFC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D982276A27C00F22FFC /* Realm.framework */; };
+		FC469A3F2298D47D00BC022D /* LoopActionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A3E2298D47D00BC022D /* LoopActionGroup.swift */; };
+		FC469A452298DA5D00BC022D /* SimpleTimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A442298DA5D00BC022D /* SimpleTimerAction.swift */; };
+		FC469A472298E6C100BC022D /* NumberingTimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A462298E6C100BC022D /* NumberingTimerAction.swift */; };
+		FC469A492298EF1400BC022D /* TimerActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A482298EF1400BC022D /* TimerActionable.swift */; };
+		FC469A55229E09F300BC022D /* RoadMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A54229E09F300BC022D /* RoadMap.swift */; };
+		FC469A57229E0A4400BC022D /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A56229E0A4400BC022D /* Actionable.swift */; };
+		FC469A59229E0A6D00BC022D /* ActionGroupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A58229E0A6D00BC022D /* ActionGroupable.swift */; };
+		FC469A60229E0C9100BC022D /* TimerXIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A5F229E0C9100BC022D /* TimerXIdentifier.swift */; };
+		FC469A66229E10DF00BC022D /* RoadMapComponentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A65229E10DF00BC022D /* RoadMapComponentable.swift */; };
 		FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */; };
 		FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA22226C0DBD00AFDE25 /* Home.storyboard */; };
 		FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */; };
@@ -87,18 +84,12 @@
 		FC74DA78226C0E5800AFDE25 /* RealmPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = FC74DA68226C0E5800AFDE25 /* RealmPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC74DA7B226C0E5800AFDE25 /* RealmPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA66226C0E5800AFDE25 /* RealmPlatform.framework */; };
 		FC74DA7C226C0E5800AFDE25 /* RealmPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA66226C0E5800AFDE25 /* RealmPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FC74DA8C226C0E6E00AFDE25 /* AbstractEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA84226C0E6E00AFDE25 /* AbstractEvent.swift */; };
-		FC74DA8D226C0E6E00AFDE25 /* EventCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA85226C0E6E00AFDE25 /* EventCombination.swift */; };
-		FC74DA8E226C0E6E00AFDE25 /* SimpleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA86226C0E6E00AFDE25 /* SimpleEvent.swift */; };
 		FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA87226C0E6E00AFDE25 /* CountingType.swift */; };
-		FC74DA90226C0E6E00AFDE25 /* CountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */; };
-		FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA94226C0E8100AFDE25 /* RepositoryProtocol.swift */; };
-		FC74DA9D226C0E8100AFDE25 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA95226C0E8100AFDE25 /* Repository.swift */; };
 		FC74DA9F226C0E8100AFDE25 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA99226C0E8100AFDE25 /* RealmRepresentable.swift */; };
 		FC74DAA0226C0E8100AFDE25 /* DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA9A226C0E8100AFDE25 /* DomainConvertible.swift */; };
 		FC74DAAA226C0F9E00AFDE25 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */; };
 		FC74DADF226FCD9100AFDE25 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DA43226C0E4A00AFDE25 /* Domain.framework */; };
-		FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */; };
+		FC74DAEF226FD7B200AFDE25 /* RoadMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAEE226FD7B200AFDE25 /* RoadMap.storyboard */; };
 		FC74DAF1226FD7BC00AFDE25 /* TimeLog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */; };
 		FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */; };
 		FC74DB08226FDB9F00AFDE25 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74DAFF226FDB9F00AFDE25 /* Coordinator.framework */; };
@@ -122,31 +113,26 @@
 		FCCC6F5A22772229008FE51B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F5722772229008FE51B /* RxCocoa.framework */; };
 		FCCC6F5B22772229008FE51B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F5822772229008FE51B /* RxSwift.framework */; };
 		FCCC6F5E227722C0008FE51B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F5D227722C0008FE51B /* ViewModel.swift */; };
-		FCCC6F6022777255008FE51B /* CombinationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */; };
-		FCCC6F642277D7F1008FE51B /* CombinationCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */; };
+		FCCC6F6022777255008FE51B /* RoadMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F5F22777255008FE51B /* RoadMapsViewModel.swift */; };
+		FCCC6F642277D7F1008FE51B /* RoadMapCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F632277D7F1008FE51B /* RoadMapCreateViewModel.swift */; };
 		FCCC6F662277D8B2008FE51B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F652277D8B2008FE51B /* View.swift */; };
 		FCCC6F6A2277DC78008FE51B /* RxSwift+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F692277DC78008FE51B /* RxSwift+.swift */; };
-		FCD44DF32281209E00EEB745 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF22281209E00EEB745 /* EventTableViewCell.swift */; };
-		FCD44DF72281243E00EEB745 /* SimpleEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF62281243E00EEB745 /* SimpleEventTableViewCell.swift */; };
-		FCD44DF92281278300EEB745 /* EventCellViewMdoelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF82281278300EEB745 /* EventCellViewMdoelProtocol.swift */; };
-		FCD44DFB22826CDD00EEB745 /* CountingEventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFA22826CDD00EEB745 /* CountingEventCellViewModel.swift */; };
-		FCD44DFD22826DC500EEB745 /* CountingEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFC22826DC500EEB745 /* CountingEventTableViewCell.swift */; };
+		FCD44DF32281209E00EEB745 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF22281209E00EEB745 /* ActionTableViewCell.swift */; };
+		FCD44DF72281243E00EEB745 /* SimpleTimerTableVeiwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF62281243E00EEB745 /* SimpleTimerTableVeiwCell.swift */; };
+		FCD44DF92281278300EEB745 /* ActionCellViewMdoelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DF82281278300EEB745 /* ActionCellViewMdoelProtocol.swift */; };
+		FCD44DFB22826CDD00EEB745 /* NumberingTimerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFA22826CDD00EEB745 /* NumberingTimerCellViewModel.swift */; };
+		FCD44DFD22826DC500EEB745 /* NumberingTimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFC22826DC500EEB745 /* NumberingTimerTableViewCell.swift */; };
 		FCD44DFF228288C100EEB745 /* CellHeightCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44DFE228288C100EEB745 /* CellHeightCachable.swift */; };
 		FCD44E042286442300EEB745 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44E032286442300EEB745 /* TimerPickerView.swift */; };
 		FCD44E062286444200EEB745 /* TimerPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44E052286444200EEB745 /* TimerPickerTableViewCell.swift */; };
 		FCD44E0922866AD700EEB745 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD44E0822866AD700EEB745 /* TimeUnit.swift */; };
 		FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */; };
-		FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */; };
-		FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */; };
 		FCDED2252286749C00CAB0F5 /* TimeValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED2242286749C00CAB0F5 /* TimeValueCell.swift */; };
 		FCDED227228674B100CAB0F5 /* TimeUnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED226228674B100CAB0F5 /* TimeUnitCell.swift */; };
 		FCDED229228674E100CAB0F5 /* TimerPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED228228674E100CAB0F5 /* TimerPickerViewDelegate.swift */; };
 		FCDED22B22874D9300CAB0F5 /* TwoWayBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED22A22874D9300CAB0F5 /* TwoWayBinding.swift */; };
 		FCDED22D228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED22C228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift */; };
 		FCDED22F2287706200CAB0F5 /* TimerPickerView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDED22E2287706200CAB0F5 /* TimerPickerView+Rx.swift */; };
-		FCEDDAEE22711EEE00525F5C /* RMCountingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */; };
-		FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF0227120D700525F5C /* Realm+.swift */; };
-		FCEDDAF32271268E00525F5C /* RMEventCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF22271268D00525F5C /* RMEventCombination.swift */; };
 		FCEDDAFA2271720B00525F5C /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEDDAF92271720B00525F5C /* UIStoryboard+.swift */; };
 /* End PBXBuildFile section */
 
@@ -264,15 +250,11 @@
 /* Begin PBXFileReference section */
 		FC169EA7227F558500AECA24 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		FC169EAB227F6D4F00AECA24 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		FC169EB0227F788900AECA24 /* NSSimpleEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSimpleEvent.swift; sourceTree = "<group>"; };
-		FC169EB3227F797400AECA24 /* NSCountingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCountingEvent.swift; sourceTree = "<group>"; };
-		FC169EB6227F79A600AECA24 /* NSObjectRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectRepresentable.swift; sourceTree = "<group>"; };
-		FC169EB8227F79EB00AECA24 /* DomainConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertible.swift; sourceTree = "<group>"; };
 		FC169EBC22804E8C00AECA24 /* EventGoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventGoalTableViewCell.swift; sourceTree = "<group>"; };
 		FC169EBE22804EC300AECA24 /* EventGoalCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventGoalCellViewModel.swift; sourceTree = "<group>"; };
-		FC169EC22281149D00AECA24 /* SimpleEventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEventSection.swift; sourceTree = "<group>"; };
-		FC169EC4228115B800AECA24 /* CountingEventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingEventSection.swift; sourceTree = "<group>"; };
-		FC169EC62281166500AECA24 /* SimpleEventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEventCellViewModel.swift; sourceTree = "<group>"; };
+		FC169EC22281149D00AECA24 /* SimpleTimerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTimerSection.swift; sourceTree = "<group>"; };
+		FC169EC4228115B800AECA24 /* NumberingTimerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberingTimerSection.swift; sourceTree = "<group>"; };
+		FC169EC62281166500AECA24 /* SimpleTimerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTimerCellViewModel.swift; sourceTree = "<group>"; };
 		FC188774227C01ED00D78D48 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		FC188775227C01ED00D78D48 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		FC188776227C01ED00D78D48 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
@@ -280,31 +262,30 @@
 		FC188780227C045300D78D48 /* EventCountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCountTableViewCell.swift; sourceTree = "<group>"; };
 		FC188782227C07A600D78D48 /* EventCountTypeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCountTypeCellViewModel.swift; sourceTree = "<group>"; };
 		FC188784227C084500D78D48 /* EventTimePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimePickerTableViewCell.swift; sourceTree = "<group>"; };
-		FC18879D227D38CB00D78D48 /* CombinationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationSection.swift; sourceTree = "<group>"; };
+		FC18879D227D38CB00D78D48 /* RoadMapSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapSection.swift; sourceTree = "<group>"; };
 		FC18879F227D3D8200D78D48 /* BehaviorRelay+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BehaviorRelay+.swift"; sourceTree = "<group>"; };
 		FC1887A1227D54CC00D78D48 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
-		FC190F87228BC14000860A03 /* NSEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEvent.swift; sourceTree = "<group>"; };
-		FC190F8B228BC46D00860A03 /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
+		FC190F8B228BC46D00860A03 /* RoadMapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapUseCase.swift; sourceTree = "<group>"; };
 		FC190F90229249DB00860A03 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
 		FC190F9322924ADB00860A03 /* RxRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRepositoryProtocol.swift; sourceTree = "<group>"; };
 		FC190F9622924DD400860A03 /* Realm+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Rx.swift"; sourceTree = "<group>"; };
-		FC190F9A22941F8C00860A03 /* RMAbstractEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMAbstractEvent.swift; sourceTree = "<group>"; };
+		FC190F9A22941F8C00860A03 /* RMAbstractAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMAbstractAction.swift; sourceTree = "<group>"; };
 		FC190FA02294CAF300860A03 /* RMAnyObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAnyObjectProtocol.swift; sourceTree = "<group>"; };
-		FC190FA32294CBE300860A03 /* RMSimpleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSimpleEvent.swift; sourceTree = "<group>"; };
-		FC190FA62296278300860A03 /* CombinationListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationListSection.swift; sourceTree = "<group>"; };
-		FC190FA82296295E00860A03 /* CombinationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCellViewModel.swift; sourceTree = "<group>"; };
-		FC190FAA22962C0E00860A03 /* CombinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationTableViewCell.swift; sourceTree = "<group>"; };
+		FC190FA32294CBE300860A03 /* RMSimpleTimerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSimpleTimerAction.swift; sourceTree = "<group>"; };
+		FC190FA62296278300860A03 /* RoadMapsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapsSection.swift; sourceTree = "<group>"; };
+		FC190FA82296295E00860A03 /* RoadMapCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapCellViewModel.swift; sourceTree = "<group>"; };
+		FC190FAA22962C0E00860A03 /* RoadMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapTableViewCell.swift; sourceTree = "<group>"; };
 		FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
-		FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCoordinator.swift; sourceTree = "<group>"; };
+		FC1911F5227642DC00D60479 /* RoadMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapCoordinator.swift; sourceTree = "<group>"; };
 		FC1911F82276612C00D60479 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		FC1911FA227662A000D60479 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		FC1911FC227662A800D60479 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		FC1911FE227662D300D60479 /* BasicCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoordinator.swift; sourceTree = "<group>"; };
 		FC191200227662EF00D60479 /* NavigationCooridnator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCooridnator.swift; sourceTree = "<group>"; };
 		FC1912022276630400D60479 /* TabBarCoordiantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordiantor.swift; sourceTree = "<group>"; };
-		FC1912062276656300D60479 /* CombinationPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationPlayerViewController.swift; sourceTree = "<group>"; };
-		FC1912082276662500D60479 /* CombinationCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCreateViewController.swift; sourceTree = "<group>"; };
-		FC19120A2276663F00D60479 /* CombinationEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationEditViewController.swift; sourceTree = "<group>"; };
+		FC1912062276656300D60479 /* RoadMapPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapPlayerViewController.swift; sourceTree = "<group>"; };
+		FC1912082276662500D60479 /* RoadMapCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapCreateViewController.swift; sourceTree = "<group>"; };
+		FC19120A2276663F00D60479 /* RoadMapEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapEditViewController.swift; sourceTree = "<group>"; };
 		FC19120C2276670500D60479 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		FC19120E2276671500D60479 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		FC1912102276677000D60479 /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
@@ -316,17 +297,28 @@
 		FC1AC02F227AA95400A76DC7 /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
 		FC1AC035227BC89800A76DC7 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		FC1AC038227BD6F800A76DC7 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
-		FC1AC03A227BD8ED00A76DC7 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
 		FC1AC03F227BDF7600A76DC7 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		FC1AC044227BE9AB00A76DC7 /* EventTimeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimeCellViewModel.swift; sourceTree = "<group>"; };
 		FC1AC046227BEA4D00A76DC7 /* EventTimePickerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimePickerCellViewModel.swift; sourceTree = "<group>"; };
 		FC219264227E6E2B00B12EC4 /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		FC219267227E762900B12EC4 /* IndexPath+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+.swift"; sourceTree = "<group>"; };
-		FC31AC9122962D8D009F0573 /* CombinationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationListViewController.swift; sourceTree = "<group>"; };
-		FC31ACC722978514009F0573 /* EventUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUseCase.swift; sourceTree = "<group>"; };
-		FC31ACC9229785C4009F0573 /* EventUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUseCase.swift; sourceTree = "<group>"; };
+		FC31AC9122962D8D009F0573 /* RoadMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapsViewController.swift; sourceTree = "<group>"; };
+		FC31ACC722978514009F0573 /* ActionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionUseCase.swift; sourceTree = "<group>"; };
+		FC31ACC9229785C4009F0573 /* ActionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionUseCase.swift; sourceTree = "<group>"; };
 		FC424D972276A27C00F22FFC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FC424D982276A27C00F22FFC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		FC469A3E2298D47D00BC022D /* LoopActionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopActionGroup.swift; sourceTree = "<group>"; };
+		FC469A442298DA5D00BC022D /* SimpleTimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTimerAction.swift; sourceTree = "<group>"; };
+		FC469A462298E6C100BC022D /* NumberingTimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberingTimerAction.swift; sourceTree = "<group>"; };
+		FC469A482298EF1400BC022D /* TimerActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActionable.swift; sourceTree = "<group>"; };
+		FC469A4A229CCDFE00BC022D /* RMAbstractTimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAbstractTimerAction.swift; sourceTree = "<group>"; };
+		FC469A4C229CD4E900BC022D /* RMAbstractActionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAbstractActionGroup.swift; sourceTree = "<group>"; };
+		FC469A4E229CDFC600BC022D /* RMActionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMActionGroup.swift; sourceTree = "<group>"; };
+		FC469A54229E09F300BC022D /* RoadMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadMap.swift; sourceTree = "<group>"; };
+		FC469A56229E0A4400BC022D /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
+		FC469A58229E0A6D00BC022D /* ActionGroupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionGroupable.swift; sourceTree = "<group>"; };
+		FC469A5F229E0C9100BC022D /* TimerXIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerXIdentifier.swift; sourceTree = "<group>"; };
+		FC469A65229E10DF00BC022D /* RoadMapComponentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapComponentable.swift; sourceTree = "<group>"; };
 		FC74DA1B226C0DBD00AFDE25 /* TimerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC74DA23226C0DBD00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -348,17 +340,13 @@
 		FC74DA6E226C0E5800AFDE25 /* RealmPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DA75226C0E5800AFDE25 /* RealmPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPlatformTests.swift; sourceTree = "<group>"; };
 		FC74DA77226C0E5800AFDE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC74DA84226C0E6E00AFDE25 /* AbstractEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractEvent.swift; sourceTree = "<group>"; };
-		FC74DA85226C0E6E00AFDE25 /* EventCombination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCombination.swift; sourceTree = "<group>"; };
-		FC74DA86226C0E6E00AFDE25 /* SimpleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleEvent.swift; sourceTree = "<group>"; };
 		FC74DA87226C0E6E00AFDE25 /* CountingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingType.swift; sourceTree = "<group>"; };
-		FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEvent.swift; sourceTree = "<group>"; };
 		FC74DA94226C0E8100AFDE25 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		FC74DA95226C0E8100AFDE25 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		FC74DA99226C0E8100AFDE25 /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		FC74DA9A226C0E8100AFDE25 /* DomainConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertible.swift; sourceTree = "<group>"; };
 		FC74DAA9226C0F9E00AFDE25 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Combination.storyboard; sourceTree = "<group>"; };
+		FC74DAEE226FD7B200AFDE25 /* RoadMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoadMap.storyboard; sourceTree = "<group>"; };
 		FC74DAF0226FD7BC00AFDE25 /* TimeLog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLog.storyboard; sourceTree = "<group>"; };
 		FC74DAF6226FDA5F00AFDE25 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
@@ -382,31 +370,31 @@
 		FCCC6F5722772229008FE51B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FCCC6F5822772229008FE51B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		FCCC6F5D227722C0008FE51B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationListViewModel.swift; sourceTree = "<group>"; };
-		FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationCreateViewModel.swift; sourceTree = "<group>"; };
+		FCCC6F5F22777255008FE51B /* RoadMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapsViewModel.swift; sourceTree = "<group>"; };
+		FCCC6F632277D7F1008FE51B /* RoadMapCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapCreateViewModel.swift; sourceTree = "<group>"; };
 		FCCC6F652277D8B2008FE51B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		FCCC6F692277DC78008FE51B /* RxSwift+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+.swift"; sourceTree = "<group>"; };
-		FCD44DF22281209E00EEB745 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
-		FCD44DF62281243E00EEB745 /* SimpleEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEventTableViewCell.swift; sourceTree = "<group>"; };
-		FCD44DF82281278300EEB745 /* EventCellViewMdoelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewMdoelProtocol.swift; sourceTree = "<group>"; };
-		FCD44DFA22826CDD00EEB745 /* CountingEventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingEventCellViewModel.swift; sourceTree = "<group>"; };
-		FCD44DFC22826DC500EEB745 /* CountingEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingEventTableViewCell.swift; sourceTree = "<group>"; };
+		FCD44DF22281209E00EEB745 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
+		FCD44DF62281243E00EEB745 /* SimpleTimerTableVeiwCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTimerTableVeiwCell.swift; sourceTree = "<group>"; };
+		FCD44DF82281278300EEB745 /* ActionCellViewMdoelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCellViewMdoelProtocol.swift; sourceTree = "<group>"; };
+		FCD44DFA22826CDD00EEB745 /* NumberingTimerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberingTimerCellViewModel.swift; sourceTree = "<group>"; };
+		FCD44DFC22826DC500EEB745 /* NumberingTimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberingTimerTableViewCell.swift; sourceTree = "<group>"; };
 		FCD44DFE228288C100EEB745 /* CellHeightCachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeightCachable.swift; sourceTree = "<group>"; };
 		FCD44E032286442300EEB745 /* TimerPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		FCD44E052286444200EEB745 /* TimerPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPickerTableViewCell.swift; sourceTree = "<group>"; };
 		FCD44E0822866AD700EEB745 /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
 		FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
-		FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCombinationUseCase.swift; sourceTree = "<group>"; };
+		FCD6CC2E22701AED00694EAD /* ActionCombinationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCombinationUseCase.swift; sourceTree = "<group>"; };
 		FCDED2242286749C00CAB0F5 /* TimeValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValueCell.swift; sourceTree = "<group>"; };
 		FCDED226228674B100CAB0F5 /* TimeUnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnitCell.swift; sourceTree = "<group>"; };
 		FCDED228228674E100CAB0F5 /* TimerPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerViewDelegate.swift; sourceTree = "<group>"; };
 		FCDED22A22874D9300CAB0F5 /* TwoWayBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayBinding.swift; sourceTree = "<group>"; };
 		FCDED22C228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTimePickerViewDelegateProxy.swift; sourceTree = "<group>"; };
 		FCDED22E2287706200CAB0F5 /* TimerPickerView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerPickerView+Rx.swift"; sourceTree = "<group>"; };
-		FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCountingEvent.swift; sourceTree = "<group>"; };
+		FCEDDAED22711EEE00525F5C /* RMNumberTimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMNumberTimerAction.swift; sourceTree = "<group>"; };
 		FCEDDAF0227120D700525F5C /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
-		FCEDDAF22271268D00525F5C /* RMEventCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEventCombination.swift; sourceTree = "<group>"; };
+		FCEDDAF22271268D00525F5C /* RMActionCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMActionCombination.swift; sourceTree = "<group>"; };
 		FCEDDAF92271720B00525F5C /* UIStoryboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -512,40 +500,12 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		FC169EAF227F787C00AECA24 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				FC169EB2227F791B00AECA24 /* Entity */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		FC169EB2227F791B00AECA24 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				FC169EB5227F799800AECA24 /* Convert */,
-				FC190F87228BC14000860A03 /* NSEvent.swift */,
-				FC169EB0227F788900AECA24 /* NSSimpleEvent.swift */,
-				FC169EB3227F797400AECA24 /* NSCountingEvent.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		FC169EB5227F799800AECA24 /* Convert */ = {
-			isa = PBXGroup;
-			children = (
-				FC169EB6227F79A600AECA24 /* NSObjectRepresentable.swift */,
-				FC169EB8227F79EB00AECA24 /* DomainConvertible.swift */,
-			);
-			path = Convert;
-			sourceTree = "<group>";
-		};
 		FC18877A227C02F100D78D48 /* Section */ = {
 			isa = PBXGroup;
 			children = (
-				FC18879D227D38CB00D78D48 /* CombinationSection.swift */,
-				FC169EC22281149D00AECA24 /* SimpleEventSection.swift */,
-				FC169EC4228115B800AECA24 /* CountingEventSection.swift */,
+				FC18879D227D38CB00D78D48 /* RoadMapSection.swift */,
+				FC169EC22281149D00AECA24 /* SimpleTimerSection.swift */,
+				FC169EC4228115B800AECA24 /* NumberingTimerSection.swift */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -562,9 +522,12 @@
 		FC190FA22294CB7C00860A03 /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				FC190F9A22941F8C00860A03 /* RMAbstractEvent.swift */,
-				FC190FA32294CBE300860A03 /* RMSimpleEvent.swift */,
-				FCEDDAED22711EEE00525F5C /* RMCountingEvent.swift */,
+				FC190F9A22941F8C00860A03 /* RMAbstractAction.swift */,
+				FC469A4C229CD4E900BC022D /* RMAbstractActionGroup.swift */,
+				FC469A4E229CDFC600BC022D /* RMActionGroup.swift */,
+				FC469A4A229CCDFE00BC022D /* RMAbstractTimerAction.swift */,
+				FC190FA32294CBE300860A03 /* RMSimpleTimerAction.swift */,
+				FCEDDAED22711EEE00525F5C /* RMNumberTimerAction.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -572,7 +535,7 @@
 		FC190FA52296277900860A03 /* Section */ = {
 			isa = PBXGroup;
 			children = (
-				FC190FA62296278300860A03 /* CombinationListSection.swift */,
+				FC190FA62296278300860A03 /* RoadMapsSection.swift */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -636,6 +599,7 @@
 		FC19123B22769A6A00D60479 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */,
 				FC1AC03F227BDF7600A76DC7 /* Time.swift */,
 				FC74DAF8226FDB1500AFDE25 /* Storyboard.swift */,
 				FCCC6F7A22794518008FE51B /* UIVIew */,
@@ -683,6 +647,52 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		FC469A5A229E0C2200BC022D /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				FC469A58229E0A6D00BC022D /* ActionGroupable.swift */,
+				FC469A3E2298D47D00BC022D /* LoopActionGroup.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		FC469A5B229E0C2B00BC022D /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				FC469A56229E0A4400BC022D /* Actionable.swift */,
+				FC469A5C229E0C3500BC022D /* TimerAction */,
+				FC469A5A229E0C2200BC022D /* Group */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		FC469A5C229E0C3500BC022D /* TimerAction */ = {
+			isa = PBXGroup;
+			children = (
+				FC469A482298EF1400BC022D /* TimerActionable.swift */,
+				FC469A442298DA5D00BC022D /* SimpleTimerAction.swift */,
+				FC469A462298E6C100BC022D /* NumberingTimerAction.swift */,
+			);
+			path = TimerAction;
+			sourceTree = "<group>";
+		};
+		FC469A5D229E0C5800BC022D /* RoadMap */ = {
+			isa = PBXGroup;
+			children = (
+				FC469A65229E10DF00BC022D /* RoadMapComponentable.swift */,
+				FC469A54229E09F300BC022D /* RoadMap.swift */,
+			);
+			path = RoadMap;
+			sourceTree = "<group>";
+		};
+		FC469A5E229E0C7E00BC022D /* Identifier */ = {
+			isa = PBXGroup;
+			children = (
+				FC469A5F229E0C9100BC022D /* TimerXIdentifier.swift */,
+			);
+			path = Identifier;
+			sourceTree = "<group>";
+		};
 		FC74DA12226C0DBD00AFDE25 = {
 			isa = PBXGroup;
 			children = (
@@ -723,7 +733,6 @@
 			isa = PBXGroup;
 			children = (
 				FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */,
-				FC169EAF227F787C00AECA24 /* Domain */,
 				FC169EAA227F6D4600AECA24 /* Configuration */,
 				FCCC6F672277DC6E008FE51B /* Extension */,
 				FC19123B22769A6A00D60479 /* Common */,
@@ -790,12 +799,10 @@
 		FC74DA83226C0E6E00AFDE25 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DA85226C0E6E00AFDE25 /* EventCombination.swift */,
 				FC74DA87226C0E6E00AFDE25 /* CountingType.swift */,
-				FC1AC03A227BD8ED00A76DC7 /* EventType.swift */,
-				FC74DA84226C0E6E00AFDE25 /* AbstractEvent.swift */,
-				FC74DA86226C0E6E00AFDE25 /* SimpleEvent.swift */,
-				FC74DA88226C0E6E00AFDE25 /* CountingEvent.swift */,
+				FC469A5E229E0C7E00BC022D /* Identifier */,
+				FC469A5D229E0C5800BC022D /* RoadMap */,
+				FC469A5B229E0C2B00BC022D /* Action */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -803,8 +810,8 @@
 		FC74DA89226C0E6E00AFDE25 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				FC190F8B228BC46D00860A03 /* EventCombinationUseCase.swift */,
-				FC31ACC722978514009F0573 /* EventUseCase.swift */,
+				FC190F8B228BC46D00860A03 /* RoadMapUseCase.swift */,
+				FC31ACC722978514009F0573 /* ActionUseCase.swift */,
 				FCD6CC2A22701A1D00694EAD /* UseCaseProvider.swift */,
 			);
 			path = UseCase;
@@ -824,7 +831,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DA98226C0E8100AFDE25 /* Convert */,
-				FCEDDAF22271268D00525F5C /* RMEventCombination.swift */,
+				FCEDDAF22271268D00525F5C /* RMActionCombination.swift */,
 				FC190FA22294CB7C00860A03 /* Event */,
 			);
 			path = Entity;
@@ -843,8 +850,8 @@
 			isa = PBXGroup;
 			children = (
 				FCD6CC2C22701A5D00694EAD /* UseCaseProvider.swift */,
-				FCD6CC2E22701AED00694EAD /* EventCombinationUseCase.swift */,
-				FC31ACC9229785C4009F0573 /* EventUseCase.swift */,
+				FCD6CC2E22701AED00694EAD /* ActionCombinationUseCase.swift */,
+				FC31ACC9229785C4009F0573 /* ActionUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -875,16 +882,16 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		FC74DAE8226FD59000AFDE25 /* CombinationList */ = {
+		FC74DAE8226FD59000AFDE25 /* RoadMap */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DAEE226FD7B200AFDE25 /* Combination.storyboard */,
+				FC74DAEE226FD7B200AFDE25 /* RoadMap.storyboard */,
 				FC1911EE22762EB500D60479 /* List */,
 				FC1911EF22762EBD00D60479 /* Player */,
 				FC1911EC22762EAD00D60479 /* Create */,
 				FC1911ED22762EB000D60479 /* Edit */,
 			);
-			path = CombinationList;
+			path = RoadMap;
 			sourceTree = "<group>";
 		};
 		FC74DAEC226FD62000AFDE25 /* TimeLog */ = {
@@ -898,9 +905,8 @@
 		FC74DAF3226FD8E500AFDE25 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */,
 				FC1911F322762F2100D60479 /* HomeTabCoordinator.swift */,
-				FC1911F5227642DC00D60479 /* CombinationCoordinator.swift */,
+				FC1911F5227642DC00D60479 /* RoadMapCoordinator.swift */,
 				FC1912102276677000D60479 /* MoreCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -917,7 +923,7 @@
 			isa = PBXGroup;
 			children = (
 				FC1911F72276611A00D60479 /* Home */,
-				FC74DAE8226FD59000AFDE25 /* CombinationList */,
+				FC74DAE8226FD59000AFDE25 /* RoadMap */,
 				FC74DAEC226FD62000AFDE25 /* TimeLog */,
 				FC1911F022762ECC00D60479 /* More */,
 			);
@@ -1053,8 +1059,8 @@
 		FCCC6F6F22793FA8008FE51B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC31AC9122962D8D009F0573 /* CombinationListViewController.swift */,
-				FC190FAA22962C0E00860A03 /* CombinationTableViewCell.swift */,
+				FC31AC9122962D8D009F0573 /* RoadMapsViewController.swift */,
+				FC190FAA22962C0E00860A03 /* RoadMapTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1062,8 +1068,8 @@
 		FCCC6F7022793FA9008FE51B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FCCC6F5F22777255008FE51B /* CombinationListViewModel.swift */,
-				FC190FA82296295E00860A03 /* CombinationCellViewModel.swift */,
+				FCCC6F5F22777255008FE51B /* RoadMapsViewModel.swift */,
+				FC190FA82296295E00860A03 /* RoadMapCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1071,7 +1077,7 @@
 		FCCC6F7122793FB4008FE51B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC1912062276656300D60479 /* CombinationPlayerViewController.swift */,
+				FC1912062276656300D60479 /* RoadMapPlayerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1086,7 +1092,7 @@
 		FCCC6F7322793FC0008FE51B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC1912082276662500D60479 /* CombinationCreateViewController.swift */,
+				FC1912082276662500D60479 /* RoadMapCreateViewController.swift */,
 				FCD44DF4228123EA00EEB745 /* EventCell */,
 			);
 			path = View;
@@ -1095,7 +1101,7 @@
 		FCCC6F7422793FC1008FE51B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FCCC6F632277D7F1008FE51B /* CombinationCreateViewModel.swift */,
+				FCCC6F632277D7F1008FE51B /* RoadMapCreateViewModel.swift */,
 				FCD44DF022811FCA00EEB745 /* EventCell */,
 			);
 			path = ViewModel;
@@ -1104,7 +1110,7 @@
 		FCCC6F7522793FCB008FE51B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC19120A2276663F00D60479 /* CombinationEditViewController.swift */,
+				FC19120A2276663F00D60479 /* RoadMapEditViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1140,9 +1146,9 @@
 		FCD44DF022811FCA00EEB745 /* EventCell */ = {
 			isa = PBXGroup;
 			children = (
-				FCD44DF82281278300EEB745 /* EventCellViewMdoelProtocol.swift */,
-				FC169EC62281166500AECA24 /* SimpleEventCellViewModel.swift */,
-				FCD44DFA22826CDD00EEB745 /* CountingEventCellViewModel.swift */,
+				FCD44DF82281278300EEB745 /* ActionCellViewMdoelProtocol.swift */,
+				FC169EC62281166500AECA24 /* SimpleTimerCellViewModel.swift */,
+				FCD44DFA22826CDD00EEB745 /* NumberingTimerCellViewModel.swift */,
 				FCD44DEE22811F6900EEB745 /* Common */,
 			);
 			path = EventCell;
@@ -1151,9 +1157,9 @@
 		FCD44DF4228123EA00EEB745 /* EventCell */ = {
 			isa = PBXGroup;
 			children = (
-				FCD44DF22281209E00EEB745 /* EventTableViewCell.swift */,
-				FCD44DF62281243E00EEB745 /* SimpleEventTableViewCell.swift */,
-				FCD44DFC22826DC500EEB745 /* CountingEventTableViewCell.swift */,
+				FCD44DF22281209E00EEB745 /* ActionTableViewCell.swift */,
+				FCD44DF62281243E00EEB745 /* SimpleTimerTableVeiwCell.swift */,
+				FCD44DFC22826DC500EEB745 /* NumberingTimerTableViewCell.swift */,
 				FCD44DF5228123F200EEB745 /* Common */,
 			);
 			path = EventCell;
@@ -1518,7 +1524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC74DAEF226FD7B200AFDE25 /* Combination.storyboard in Resources */,
+				FC74DAEF226FD7B200AFDE25 /* RoadMap.storyboard in Resources */,
 				FC19120F2276671500D60479 /* More.storyboard in Resources */,
 				FC74DA29226C0DBF00AFDE25 /* LaunchScreen.storyboard in Resources */,
 				FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */,
@@ -1667,44 +1673,39 @@
 			files = (
 				FCCC6F662277D8B2008FE51B /* View.swift in Sources */,
 				FCDED22F2287706200CAB0F5 /* TimerPickerView+Rx.swift in Sources */,
-				FC169EB4227F797400AECA24 /* NSCountingEvent.swift in Sources */,
 				FCD44E062286444200EEB745 /* TimerPickerTableViewCell.swift in Sources */,
-				FC190FA72296278300860A03 /* CombinationListSection.swift in Sources */,
+				FC190FA72296278300860A03 /* RoadMapsSection.swift in Sources */,
 				FC1AC039227BD6F800A76DC7 /* SegmentControl.swift in Sources */,
-				FCD44DFD22826DC500EEB745 /* CountingEventTableViewCell.swift in Sources */,
+				FCD44DFD22826DC500EEB745 /* NumberingTimerTableViewCell.swift in Sources */,
 				FC1911F92276612C00D60479 /* HomeTabBarViewController.swift in Sources */,
-				FC169EC72281166500AECA24 /* SimpleEventCellViewModel.swift in Sources */,
+				FC169EC72281166500AECA24 /* SimpleTimerCellViewModel.swift in Sources */,
 				FC1911F422762F2100D60479 /* HomeTabCoordinator.swift in Sources */,
 				FC188783227C07A600D78D48 /* EventCountTypeCellViewModel.swift in Sources */,
-				FC169EB7227F79A600AECA24 /* NSObjectRepresentable.swift in Sources */,
-				FCD44DF32281209E00EEB745 /* EventTableViewCell.swift in Sources */,
-				FC1911F6227642DC00D60479 /* CombinationCoordinator.swift in Sources */,
+				FCD44DF32281209E00EEB745 /* ActionTableViewCell.swift in Sources */,
+				FC1911F6227642DC00D60479 /* RoadMapCoordinator.swift in Sources */,
 				FC219268227E762900B12EC4 /* IndexPath+.swift in Sources */,
 				FCD44E0922866AD700EEB745 /* TimeUnit.swift in Sources */,
 				FCCC6F5E227722C0008FE51B /* ViewModel.swift in Sources */,
 				FC18877F227C042D00D78D48 /* EventTimeTableViewCell.swift in Sources */,
 				FC1AC030227AA95400A76DC7 /* SegmentTableViewCell.swift in Sources */,
 				FCDED227228674B100CAB0F5 /* TimeUnitCell.swift in Sources */,
-				FC31AC9222962D8D009F0573 /* CombinationListViewController.swift in Sources */,
+				FC31AC9222962D8D009F0573 /* RoadMapsViewController.swift in Sources */,
 				FCDED22D228764A400CAB0F5 /* RxTimePickerViewDelegateProxy.swift in Sources */,
-				FC190F88228BC14000860A03 /* NSEvent.swift in Sources */,
-				FCD44DF92281278300EEB745 /* EventCellViewMdoelProtocol.swift in Sources */,
+				FCD44DF92281278300EEB745 /* ActionCellViewMdoelProtocol.swift in Sources */,
 				FC169EA8227F558500AECA24 /* Array+.swift in Sources */,
 				FC19120D2276670500D60479 /* MoreViewController.swift in Sources */,
-				FC18879E227D38CB00D78D48 /* CombinationSection.swift in Sources */,
-				FC1912092276662500D60479 /* CombinationCreateViewController.swift in Sources */,
-				FC169EC32281149D00AECA24 /* SimpleEventSection.swift in Sources */,
+				FC18879E227D38CB00D78D48 /* RoadMapSection.swift in Sources */,
+				FC1912092276662500D60479 /* RoadMapCreateViewController.swift in Sources */,
+				FC169EC32281149D00AECA24 /* SimpleTimerSection.swift in Sources */,
 				FC1AC047227BEA4D00A76DC7 /* EventTimePickerCellViewModel.swift in Sources */,
 				FC169EBD22804E8C00AECA24 /* EventGoalTableViewCell.swift in Sources */,
-				FC169EB9227F79EB00AECA24 /* DomainConvertible.swift in Sources */,
 				FCDED229228674E100CAB0F5 /* TimerPickerViewDelegate.swift in Sources */,
 				FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */,
 				FC1AC045227BE9AB00A76DC7 /* EventTimeCellViewModel.swift in Sources */,
-				FC169EB1227F788900AECA24 /* NSSimpleEvent.swift in Sources */,
 				FCDED2252286749C00CAB0F5 /* TimeValueCell.swift in Sources */,
 				FC1AC041227BE78400A76DC7 /* Time.swift in Sources */,
 				FC1AC02E227AA8EA00A76DC7 /* TableViewCell.swift in Sources */,
-				FC169EC5228115B800AECA24 /* CountingEventSection.swift in Sources */,
+				FC169EC5228115B800AECA24 /* NumberingTimerSection.swift in Sources */,
 				FC1887A0227D3D8200D78D48 /* BehaviorRelay+.swift in Sources */,
 				FC219265227E6E2B00B12EC4 /* DynamicHeightTableView.swift in Sources */,
 				FCD44E042286442300EEB745 /* TimerPickerView.swift in Sources */,
@@ -1713,20 +1714,20 @@
 				FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */,
 				FCCC6F6A2277DC78008FE51B /* RxSwift+.swift in Sources */,
 				FCD44DFF228288C100EEB745 /* CellHeightCachable.swift in Sources */,
-				FC190FA92296295E00860A03 /* CombinationCellViewModel.swift in Sources */,
-				FCCC6F6022777255008FE51B /* CombinationListViewModel.swift in Sources */,
+				FC190FA92296295E00860A03 /* RoadMapCellViewModel.swift in Sources */,
+				FCCC6F6022777255008FE51B /* RoadMapsViewModel.swift in Sources */,
 				FC188785227C084500D78D48 /* EventTimePickerTableViewCell.swift in Sources */,
 				FC169EBF22804EC300AECA24 /* EventGoalCellViewModel.swift in Sources */,
-				FCD44DF72281243E00EEB745 /* SimpleEventTableViewCell.swift in Sources */,
+				FCD44DF72281243E00EEB745 /* SimpleTimerTableVeiwCell.swift in Sources */,
 				FCDED22B22874D9300CAB0F5 /* TwoWayBinding.swift in Sources */,
 				FC188781227C045300D78D48 /* EventCountTableViewCell.swift in Sources */,
-				FC190FAB22962C0E00860A03 /* CombinationTableViewCell.swift in Sources */,
-				FCCC6F642277D7F1008FE51B /* CombinationCreateViewModel.swift in Sources */,
-				FCD44DFB22826CDD00EEB745 /* CountingEventCellViewModel.swift in Sources */,
+				FC190FAB22962C0E00860A03 /* RoadMapTableViewCell.swift in Sources */,
+				FCCC6F642277D7F1008FE51B /* RoadMapCreateViewModel.swift in Sources */,
+				FCD44DFB22826CDD00EEB745 /* NumberingTimerCellViewModel.swift in Sources */,
 				FC74DAF9226FDB1500AFDE25 /* Storyboard.swift in Sources */,
 				FC1AC026227A883B00A76DC7 /* SwitchTableViewCell.swift in Sources */,
-				FC19120B2276663F00D60479 /* CombinationEditViewController.swift in Sources */,
-				FC1912072276656300D60479 /* CombinationPlayerViewController.swift in Sources */,
+				FC19120B2276663F00D60479 /* RoadMapEditViewController.swift in Sources */,
+				FC1912072276656300D60479 /* RoadMapPlayerViewController.swift in Sources */,
 				FC1887A2227D54CC00D78D48 /* TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1743,15 +1744,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC74DA8D226C0E6E00AFDE25 /* EventCombination.swift in Sources */,
-				FC31ACC822978514009F0573 /* EventUseCase.swift in Sources */,
-				FC74DA8C226C0E6E00AFDE25 /* AbstractEvent.swift in Sources */,
-				FC74DA90226C0E6E00AFDE25 /* CountingEvent.swift in Sources */,
+				FC469A3F2298D47D00BC022D /* LoopActionGroup.swift in Sources */,
+				FC469A57229E0A4400BC022D /* Actionable.swift in Sources */,
+				FC469A66229E10DF00BC022D /* RoadMapComponentable.swift in Sources */,
+				FC31ACC822978514009F0573 /* ActionUseCase.swift in Sources */,
+				FC469A452298DA5D00BC022D /* SimpleTimerAction.swift in Sources */,
+				FC469A59229E0A6D00BC022D /* ActionGroupable.swift in Sources */,
+				FC469A55229E09F300BC022D /* RoadMap.swift in Sources */,
 				FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */,
-				FC74DA8E226C0E6E00AFDE25 /* SimpleEvent.swift in Sources */,
-				FC1AC03B227BD8ED00A76DC7 /* EventType.swift in Sources */,
+				FC469A472298E6C100BC022D /* NumberingTimerAction.swift in Sources */,
+				FC469A60229E0C9100BC022D /* TimerXIdentifier.swift in Sources */,
+				FC469A492298EF1400BC022D /* TimerActionable.swift in Sources */,
 				FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */,
-				FC190F8C228BC46D00860A03 /* EventCombinationUseCase.swift in Sources */,
+				FC190F8C228BC46D00860A03 /* RoadMapUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1767,21 +1772,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCEDDAEE22711EEE00525F5C /* RMCountingEvent.swift in Sources */,
-				FCEDDAF32271268E00525F5C /* RMEventCombination.swift in Sources */,
 				FC74DA9F226C0E8100AFDE25 /* RealmRepresentable.swift in Sources */,
-				FC190F9422924ADB00860A03 /* RxRepositoryProtocol.swift in Sources */,
 				FC74DAA0226C0E8100AFDE25 /* DomainConvertible.swift in Sources */,
-				FC74DA9C226C0E8100AFDE25 /* RepositoryProtocol.swift in Sources */,
-				FCEDDAF1227120D700525F5C /* Realm+.swift in Sources */,
-				FC190FA42294CBE300860A03 /* RMSimpleEvent.swift in Sources */,
-				FC190F9722924DD400860A03 /* Realm+Rx.swift in Sources */,
-				FC190F9B22941F8C00860A03 /* RMAbstractEvent.swift in Sources */,
-				FC31ACCA229785C4009F0573 /* EventUseCase.swift in Sources */,
-				FCD6CC2D22701A5D00694EAD /* UseCaseProvider.swift in Sources */,
-				FC190FA12294CAF300860A03 /* RMAnyObjectProtocol.swift in Sources */,
-				FCD6CC2F22701AED00694EAD /* EventCombinationUseCase.swift in Sources */,
-				FC74DA9D226C0E8100AFDE25 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,15 +17,15 @@ enum HomeTabRoute: Route {
 }
 final class HomeTabCoordinator: TabBarCoordinator<HomeTabRoute> {
     private let useCaseProvider: Domain.UseCaseProvider
-    private let combinationCoordinator: CombinationCoordinator
+    private let combinationCoordinator: RoadMapCoordinator
     private let moreCoordinator: MoreCoordinator
     convenience init(useCaseProvider: Domain.UseCaseProvider) {
         self.init(useCaseProvider: useCaseProvider,
-                  combinationCoordinator: CombinationCoordinator(useCaseProvider: useCaseProvider),
+                  combinationCoordinator: RoadMapCoordinator(useCaseProvider: useCaseProvider),
                   moreCoordinator: MoreCoordinator())
     }
     init(useCaseProvider: Domain.UseCaseProvider,
-         combinationCoordinator: CombinationCoordinator,
+         combinationCoordinator: RoadMapCoordinator,
          moreCoordinator: MoreCoordinator) {
         self.useCaseProvider = useCaseProvider
         self.combinationCoordinator = combinationCoordinator
@@ -45,7 +45,7 @@ final class HomeTabCoordinator: TabBarCoordinator<HomeTabRoute> {
 }
 extension HomeTabCoordinator {
     fileprivate enum HomeTabBarItem: TabBarItem {
-        case combinations(CombinationCoordinator)
+        case combinations(RoadMapCoordinator)
         case more(MoreCoordinator)
         fileprivate var title: String {
             switch self {

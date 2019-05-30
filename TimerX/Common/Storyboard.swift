@@ -10,11 +10,11 @@ import UIKit
 import Coordinator
 
 enum Storyboard: StoryboardProtocol {
-    case home, combination, timeLog, more
+    case home, roadMap, timeLog, more
     var name: String {
         switch self {
         case .home: return "Home"
-        case .combination: return "Combination"
+        case .roadMap: return "RoadMap"
         case .timeLog: return "TimeLog"
         case .more: return "More"
         }
