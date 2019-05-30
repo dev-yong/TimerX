@@ -9,6 +9,6 @@
 import Foundation
 
 public protocol UseCaseProvider {
-    func makeActionCombinationUseCase() -> ActionCombinationUseCase
+    func makeRoadMapUseCase() -> RoadMapUseCase
     func makeActionUseCase() -> ActionUseCase
 }

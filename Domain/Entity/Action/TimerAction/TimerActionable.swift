@@ -1,5 +1,5 @@
 //
-//  Identifierable.swift
+//  TimerActionable.swift
 //  Domain
 //
 //  Created by 이광용 on 24/05/2019.
@@ -8,6 +8,5 @@
 
 import Foundation
 
-public protocol Identifierable {
-    static var identifier: String { get }
+protocol TimerActionable: Actionable {
 }
