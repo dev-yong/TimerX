@@ -37,36 +37,37 @@ final class NumberingTimerCellViewModel: ActionCellViewMdoelProtocol {
         let countSegmentSelection = input.countSegmentSelectionTrigger
             .map { CountingType(rawValue: $0) ?? .up }
             .do(onNext: { [weak self] in
-                self?.event.countingType = $0
+//                self?.action.countingType = $0
             }).mapToVoid()
         return Output(title: Driver.just("Counting"),
                       sections: sections.asDriver(),
                       countSegmentSelection: countSegmentSelection)
     }
     private func makeEventCellSections() -> [NumberingTimerSection] {
-        // Goal
-        let goal = event.rx.observe(Int.self, "goal")
-            .asDriverOnErrorJustComplete()
-            .unwrap()
-            .distinctUntilChanged()
-        let eventGoalCellViewModel = EventGoalCellViewModel(goal: goal)
-        let goalRow: NumberingTimerRow = .goal(viewModel: eventGoalCellViewModel)
-        // Time or Interval
-        let interval = event.rx.observe(TimeInterval.self, "interval")
-            .asDriverOnErrorJustComplete()
-            .unwrap()
-        let description = interval
-            .map { Time(timeInterval: $0) }
-            .map { String(format: "%0.2d:%0.2d:%0.2d", $0.hours, $0.minutes, $0.seconds) }
-        let eventTimeCellViewModel = EventTimeCellViewModel(title: "Interval",
-                                                            description: description)
-        let timeRow: NumberingTimerRow = .time(viewModel: eventTimeCellViewModel)
-        // Count Up/Down Segment
-        let countingType = event.rx.observe(CountingType.self, "countingType")
-            .asDriverOnErrorJustComplete()
-            .unwrap()
-        let eventCountTypeCellViewModel = EventCountTypeCellViewModel(selectedCountType: countingType)
-        let countTypeRow: NumberingTimerRow = .countType(viewModel: eventCountTypeCellViewModel)
-        return [NumberingTimerSection(items: [goalRow, timeRow, countTypeRow])]
+        return []
+//        // Goal
+//        let goal = action.rx.observe(Int.self, "goal")
+//            .asDriverOnErrorJustComplete()
+//            .unwrap()
+//            .distinctUntilChanged()
+//        let eventGoalCellViewModel = EventGoalCellViewModel(goal: goal)
+//        let goalRow: NumberingTimerRow = .goal(viewModel: eventGoalCellViewModel)
+//        // Time or Interval
+//        let interval = event.rx.observe(TimeInterval.self, "interval")
+//            .asDriverOnErrorJustComplete()
+//            .unwrap()
+//        let description = interval
+//            .map { Time(timeInterval: $0) }
+//            .map { String(format: "%0.2d:%0.2d:%0.2d", $0.hours, $0.minutes, $0.seconds) }
+//        let eventTimeCellViewModel = EventTimeCellViewModel(title: "Interval",
+//                                                            description: description)
+//        let timeRow: NumberingTimerRow = .time(viewModel: eventTimeCellViewModel)
+//        // Count Up/Down Segment
+//        let countingType = event.rx.observe(CountingType.self, "countingType")
+//            .asDriverOnErrorJustComplete()
+//            .unwrap()
+//        let eventCountTypeCellViewModel = EventCountTypeCellViewModel(selectedCountType: countingType)
+//        let countTypeRow: NumberingTimerRow = .countType(viewModel: eventCountTypeCellViewModel)
+//        return [NumberingTimerSection(items: [goalRow, timeRow, countTypeRow])]
     }
 }

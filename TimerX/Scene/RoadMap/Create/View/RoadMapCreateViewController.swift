@@ -50,10 +50,10 @@ extension RoadMapCreateViewController: ViewProtocol {
                                                      saveRoadMapTrigger: saveBarButtonitem.rx.tap.asDriver())
         let output = viewModel.transform(input)
         [output.sections.drive(eventTableView.rx.items(dataSource: dataSource)),
-         output.addSimpleEvent.drive(),
-         output.addCountingEvent.drive(),
-         output.deleteEvent.drive(),
-         output.saveCombination.drive()].forEach {
+         output.addSimpleTimer.drive(),
+         output.addNumberingTimer.drive(),
+         output.deleteAction.drive(),
+         output.saveRoadMap.drive()].forEach {
             $0.disposed(by: disposeBag)
         }
     }

@@ -11,6 +11,7 @@ import Designable
 import RxSwift
 import RxCocoa
 import RxDataSources
+import Domain
 
 class RoadMapsViewController: UIViewController {
     @IBOutlet private weak var roadMapTableView: TableView!
@@ -22,6 +23,16 @@ class RoadMapsViewController: UIViewController {
         super.viewDidLoad()
         roadMapTableView.register(class: RoadMapTableViewCell.self)
         bind(viewModel)
+        
+        if let url = Bundle.main.url(forResource: "RoadMap", withExtension: "json") {
+            do {
+                let jsonData = try Data(contentsOf: url, options: .mappedIfSafe)
+                let roadMap = try JSONDecoder().decode(RoadMap.self, from: jsonData)
+                print(roadMap)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 extension RoadMapsViewController: ViewProtocol {

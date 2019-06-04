@@ -37,29 +37,30 @@ final class SimpleTimerCellViewModel: ActionCellViewMdoelProtocol {
         let countSegmentSelection = input.countSegmentSelectionTrigger
             .map { CountingType(rawValue: $0) ?? .up }
             .do(onNext: { [weak self] in
-                self?.event.countingType = $0
+//                self?.event.countingType = $0
             }).mapToVoid()
         return Output(title: Driver.just("Simple"),
                       sections: Driver.just(makeEventCellSections()),
                       countSegmentSelection: countSegmentSelection)
     }
     private func makeEventCellSections() -> [SimpleTimerSection] {
-        // Time or Interval
-        let seconds = event.rx.observe(TimeInterval.self, "seconds")
-            .asDriverOnErrorJustComplete()
-            .unwrap()
-        let description = seconds
-            .map { Time(timeInterval: $0) }
-            .map { $0.description }
-        let eventTimeCellViewModel = EventTimeCellViewModel(title: "Time",
-                                                            description: description)
-        let timeRow: SimpleTimerRow = .time(viewModel: eventTimeCellViewModel)
-        // Count Up/Down Segment
-        let countingType = event.rx.observe(CountingType.self, "countingType")
-            .asDriverOnErrorJustComplete()
-            .unwrap()
-        let eventCountTypeCellViewModel = EventCountTypeCellViewModel(selectedCountType: countingType)
-        let countTypeRow: SimpleTimerRow = .countType(viewModel: eventCountTypeCellViewModel)
-        return [SimpleTimerSection(items: [timeRow, countTypeRow])]
+        return []
+//        // Time or Interval
+//        let seconds = action.rx.observe(TimeInterval.self, "seconds")
+//            .asDriverOnErrorJustComplete()
+//            .unwrap()
+//        let description = seconds
+//            .map { Time(timeInterval: $0) }
+//            .map { $0.description }
+//        let eventTimeCellViewModel = EventTimeCellViewModel(title: "Time",
+//                                                            description: description)
+//        let timeRow: SimpleTimerRow = .time(viewModel: eventTimeCellViewModel)
+//        // Count Up/Down Segment
+//        let countingType = event.rx.observe(CountingType.self, "countingType")
+//            .asDriverOnErrorJustComplete()
+//            .unwrap()
+//        let eventCountTypeCellViewModel = EventCountTypeCellViewModel(selectedCountType: countingType)
+//        let countTypeRow: SimpleTimerRow = .countType(viewModel: eventCountTypeCellViewModel)
+//        return [SimpleTimerSection(items: [timeRow, countTypeRow])]
     }
 }

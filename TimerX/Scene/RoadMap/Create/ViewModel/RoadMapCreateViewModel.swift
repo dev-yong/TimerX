@@ -39,14 +39,20 @@ final class RoadMapCreateViewModel: ViewModelProtocol {
         self.coordinator = coordinator
     }
     func transform(_ input: RoadMapCreateViewModel.Input) -> RoadMapCreateViewModel.Output {
-        let actions = BehaviorRelay(value: [Actionable]())
+        let roadMap = BehaviorRelay(value: RoadMap(title: "", actions: []))
         let addSimpleEvent = input.addSimpleTimerTrigger.map { _ in
             return SimpleTimerAction()
-        }.do(onNext: { actions.append($0) })
+        }.do(onNext: {
+//            actions.append($0)
+        })
         let addNumberingTimer = input.addNumberingTimerTrigger.map { _ in
             return NumberingTimerAction()
-        }.do(onNext: { actions.append($0) })
-        let sections = actions.asDriver().map {
+        }.do(onNext: {
+//            actions.append($0)
+        })
+        let sections = roadMap.asDriver().map { _ in
+            return [RoadMapSection]()
+        }
 //            $0.map { event -> RoadMapRow? in
 //                if let simpleEvent = event as? NSSimpleEvent {
 //                    return .simple(viewModel: SimpleEventCellViewModel(event: simpleEvent))
@@ -55,26 +61,27 @@ final class RoadMapCreateViewModel: ViewModelProtocol {
 //                }
 //                return nil
 //            }.compactMap { $0 }
-        }.map {
-            [RoadMapSection(items: $0)]
-        }
+//        }.map {
+//            [RoadMapSection(items: $0)]
+//        }
         let deleteEvent = input.deleteActionTrigger
             .map { $0.action }
             .unwrap()
             .do(onNext: { action in
-                var newValue = actions.value
-                newValue.removeAll { $0.uuid == action.uuid }
-                actions.accept(newValue)
+//                var newValue = actions.value
+//                newValue.removeAll { $0.uuid == action.uuid }
+//                actions.accept(newValue)
             }).mapToVoid()
-        let saveCombination = input.saveRoadMapTrigger.asObservable()
-            .withLatestFrom(actions.asDriver())
-            .map {
-                RoadMap(title: "TITLE", actions: $0)
-            }
+        let saveRoadMap = input.saveRoadMapTrigger.asDriver()
+            .withLatestFrom(roadMap.asDriver())
+            .mapToVoid()
+//            .map {
+//                RoadMap(title: "TITLE", actions: $0)
+//            }
         return Output(sections: sections,
-                      addSimpleEvent: addSimpleEvent.asDriver(),
-                      addCountingEvent: addNumberingTimer.asDriver(),
-                      deleteEvent: deleteEvent,
-                      saveCombination: saveCombination)
+                      addSimpleTimer: addSimpleEvent.asDriver(),
+                      addNumberingTimer: addNumberingTimer.asDriver(),
+                      deleteAction: deleteEvent,
+                      saveRoadMap: saveRoadMap)
     }
 }

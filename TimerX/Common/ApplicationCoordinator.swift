@@ -18,7 +18,7 @@ final class ApplicationCoordinator: BaseCoordinator<ApplicationRoute> {
     private let useCaseProvider: Domain.UseCaseProvider!
     init(window: UIWindow) {
         self.window = window
-//        useCaseProvider = RealmPlatform.UseCaseProvider()
+        useCaseProvider = TestUseCaseProvider()
         super.init()
         coordinate(.homeTab)
     }
