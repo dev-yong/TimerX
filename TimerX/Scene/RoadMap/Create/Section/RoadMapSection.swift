@@ -31,7 +31,7 @@ enum RoadMapRow: IdentifiableType, Equatable {
     var identity: String {
         return action?.uuid ?? ""
     }
-    var action: Actionable? {
+    var action: Action? {
         switch self {
         case .loop:
             return nil

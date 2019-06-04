@@ -8,19 +8,19 @@
 
 import Foundation
 
-public class LoopActionGroup: ActionGroupable {
+public class LoopActionGroup: ActionGroup {
     public var identifier: TimerXIdentifier {
         return .loopActionGroup
     }
-    public weak var parent: ActionParantable?
+    public weak var owner: Action?
     public let uuid: String
     public let title: String
     public let iteration: Int
-    public let actions: [Actionable]
+    public let actions: [Action]
     public init(uuid: String,
                 title: String,
                 iteration: Int,
-                actions: [Actionable]) {
+                actions: [Action]) {
         self.uuid = uuid
         self.title = title
         self.iteration = iteration
@@ -39,5 +39,12 @@ public class LoopActionGroup: ActionGroupable {
         iteration = try container.decode(Int.self, forKey: .iteration)
         let actionWrappers = try container.decode([ActionWrapper].self, forKey: .actions)
         actions = actionWrappers.map { $0.action }
+    }
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(uuid, forKey: .uuid)
+        try container.encode(title, forKey: .title)
+        try container.encode(iteration, forKey: .iteration)
+        try container.encode(actions.map { ActionWrapper(action: $0) }, forKey: .actions)
     }
 }

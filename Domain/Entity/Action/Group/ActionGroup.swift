@@ -8,5 +8,5 @@
 
 import Foundation
 
-public protocol ActionGroupable: Actionable, ActionParantable {
+public protocol ActionGroup: Action, ActionOwner {
 }

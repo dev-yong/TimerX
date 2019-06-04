@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class RoadMap: RoadMapComponentable, ActionParantable {
+public class RoadMap: RoadMapComponent, ActionOwner {
     public let uuid: String
     public let title: String
-    public let actions: [Actionable]
+    public let actions: [Action]
     public init(uuid: String = UUID().uuidString,
                 title: String,
-                actions: [Actionable]) {
+                actions: [Action]) {
         self.uuid = uuid
         self.title = title
         self.actions = actions
@@ -30,5 +30,11 @@ public class RoadMap: RoadMapComponentable, ActionParantable {
         title = try container.decode(String.self, forKey: .title)
         let actionWrappers = try container.decode([ActionWrapper].self, forKey: .actions)
         actions = actionWrappers.map { $0.action }
+    }
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(uuid, forKey: .uuid)
+        try container.encode(title, forKey: .title)
+        try container.encode(actions.map { ActionWrapper(action: $0) }, forKey: .actions)
     }
 }

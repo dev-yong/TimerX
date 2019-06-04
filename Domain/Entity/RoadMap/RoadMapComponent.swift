@@ -1,5 +1,5 @@
 //
-//  RoadMapComponentable.swift
+//  RoadMapComponentProcotol.swift
 //  Domain
 //
 //  Created by 이광용 on 28/05/2019.
@@ -8,5 +8,5 @@
 
 import Foundation
 
-public protocol RoadMapComponentable: Decodable {
+public protocol RoadMapComponent: Codable {
 }

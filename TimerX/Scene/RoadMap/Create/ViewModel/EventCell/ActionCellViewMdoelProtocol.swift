@@ -16,9 +16,9 @@ protocol ActionCellViewMdoelProtocol: ViewModelProtocol
     where Input: ActionCellViewModelInputProtocol,
         Output: ActionCellViewModelOutputProtocool,
         Input.Row == Output.Section.Item {
-    associatedtype Action: Actionable
-    var action: Action { get }
-    init(action: Action)
+    associatedtype ConcreteAction: Action
+    var action: ConcreteAction { get }
+    init(action: ConcreteAction)
 }
 
 protocol ActionCellViewModelInputProtocol {

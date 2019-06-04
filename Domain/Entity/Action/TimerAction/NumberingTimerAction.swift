@@ -8,11 +8,11 @@
 
 import Foundation
 
-public class NumberingTimerAction: TimerActionable {
+public class NumberingTimerAction: TimerAction {
     public var identifier: TimerXIdentifier {
         return .numberingTimerAction
     }
-    public weak var parent: ActionParantable?
+    public weak var owner: Action?
     public let uuid: String
     public let title: String
     public let goal: Int

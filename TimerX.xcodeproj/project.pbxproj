@@ -64,12 +64,12 @@
 		FC469A3F2298D47D00BC022D /* LoopActionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A3E2298D47D00BC022D /* LoopActionGroup.swift */; };
 		FC469A452298DA5D00BC022D /* SimpleTimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A442298DA5D00BC022D /* SimpleTimerAction.swift */; };
 		FC469A472298E6C100BC022D /* NumberingTimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A462298E6C100BC022D /* NumberingTimerAction.swift */; };
-		FC469A492298EF1400BC022D /* TimerActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A482298EF1400BC022D /* TimerActionable.swift */; };
+		FC469A492298EF1400BC022D /* TimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A482298EF1400BC022D /* TimerAction.swift */; };
 		FC469A55229E09F300BC022D /* RoadMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A54229E09F300BC022D /* RoadMap.swift */; };
-		FC469A57229E0A4400BC022D /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A56229E0A4400BC022D /* Actionable.swift */; };
-		FC469A59229E0A6D00BC022D /* ActionGroupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A58229E0A6D00BC022D /* ActionGroupable.swift */; };
+		FC469A57229E0A4400BC022D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A56229E0A4400BC022D /* Action.swift */; };
+		FC469A59229E0A6D00BC022D /* ActionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A58229E0A6D00BC022D /* ActionGroup.swift */; };
 		FC469A60229E0C9100BC022D /* TimerXIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A5F229E0C9100BC022D /* TimerXIdentifier.swift */; };
-		FC469A66229E10DF00BC022D /* RoadMapComponentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A65229E10DF00BC022D /* RoadMapComponentable.swift */; };
+		FC469A66229E10DF00BC022D /* RoadMapComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC469A65229E10DF00BC022D /* RoadMapComponent.swift */; };
 		FC74DA1F226C0DBD00AFDE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */; };
 		FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA22226C0DBD00AFDE25 /* Home.storyboard */; };
 		FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */; };
@@ -313,15 +313,15 @@
 		FC469A3E2298D47D00BC022D /* LoopActionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopActionGroup.swift; sourceTree = "<group>"; };
 		FC469A442298DA5D00BC022D /* SimpleTimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTimerAction.swift; sourceTree = "<group>"; };
 		FC469A462298E6C100BC022D /* NumberingTimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberingTimerAction.swift; sourceTree = "<group>"; };
-		FC469A482298EF1400BC022D /* TimerActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActionable.swift; sourceTree = "<group>"; };
+		FC469A482298EF1400BC022D /* TimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAction.swift; sourceTree = "<group>"; };
 		FC469A4A229CCDFE00BC022D /* RMAbstractTimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAbstractTimerAction.swift; sourceTree = "<group>"; };
 		FC469A4C229CD4E900BC022D /* RMAbstractActionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAbstractActionGroup.swift; sourceTree = "<group>"; };
 		FC469A4E229CDFC600BC022D /* RMActionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMActionGroup.swift; sourceTree = "<group>"; };
 		FC469A54229E09F300BC022D /* RoadMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadMap.swift; sourceTree = "<group>"; };
-		FC469A56229E0A4400BC022D /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
-		FC469A58229E0A6D00BC022D /* ActionGroupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionGroupable.swift; sourceTree = "<group>"; };
+		FC469A56229E0A4400BC022D /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		FC469A58229E0A6D00BC022D /* ActionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionGroup.swift; sourceTree = "<group>"; };
 		FC469A5F229E0C9100BC022D /* TimerXIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerXIdentifier.swift; sourceTree = "<group>"; };
-		FC469A65229E10DF00BC022D /* RoadMapComponentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapComponentable.swift; sourceTree = "<group>"; };
+		FC469A65229E10DF00BC022D /* RoadMapComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapComponent.swift; sourceTree = "<group>"; };
 		FC74DA1B226C0DBD00AFDE25 /* TimerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC74DA23226C0DBD00AFDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -656,7 +656,7 @@
 		FC469A5A229E0C2200BC022D /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				FC469A58229E0A6D00BC022D /* ActionGroupable.swift */,
+				FC469A58229E0A6D00BC022D /* ActionGroup.swift */,
 				FC469A3E2298D47D00BC022D /* LoopActionGroup.swift */,
 			);
 			path = Group;
@@ -665,7 +665,7 @@
 		FC469A5B229E0C2B00BC022D /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				FC469A56229E0A4400BC022D /* Actionable.swift */,
+				FC469A56229E0A4400BC022D /* Action.swift */,
 				FC94A99322A5FDB6000CB6FE /* ActionWrapper.swift */,
 				FC469A5C229E0C3500BC022D /* TimerAction */,
 				FC469A5A229E0C2200BC022D /* Group */,
@@ -676,7 +676,7 @@
 		FC469A5C229E0C3500BC022D /* TimerAction */ = {
 			isa = PBXGroup;
 			children = (
-				FC469A482298EF1400BC022D /* TimerActionable.swift */,
+				FC469A482298EF1400BC022D /* TimerAction.swift */,
 				FC469A442298DA5D00BC022D /* SimpleTimerAction.swift */,
 				FC469A462298E6C100BC022D /* NumberingTimerAction.swift */,
 			);
@@ -686,7 +686,7 @@
 		FC469A5D229E0C5800BC022D /* RoadMap */ = {
 			isa = PBXGroup;
 			children = (
-				FC469A65229E10DF00BC022D /* RoadMapComponentable.swift */,
+				FC469A65229E10DF00BC022D /* RoadMapComponent.swift */,
 				FC469A54229E09F300BC022D /* RoadMap.swift */,
 			);
 			path = RoadMap;
@@ -1764,17 +1764,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC469A3F2298D47D00BC022D /* LoopActionGroup.swift in Sources */,
-				FC469A57229E0A4400BC022D /* Actionable.swift in Sources */,
-				FC469A66229E10DF00BC022D /* RoadMapComponentable.swift in Sources */,
+				FC469A57229E0A4400BC022D /* Action.swift in Sources */,
+				FC469A66229E10DF00BC022D /* RoadMapComponent.swift in Sources */,
 				FC31ACC822978514009F0573 /* ActionUseCase.swift in Sources */,
 				FC469A452298DA5D00BC022D /* SimpleTimerAction.swift in Sources */,
-				FC469A59229E0A6D00BC022D /* ActionGroupable.swift in Sources */,
+				FC469A59229E0A6D00BC022D /* ActionGroup.swift in Sources */,
 				FC469A55229E09F300BC022D /* RoadMap.swift in Sources */,
 				FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */,
 				FC469A472298E6C100BC022D /* NumberingTimerAction.swift in Sources */,
 				FC94A99422A5FDB6000CB6FE /* ActionWrapper.swift in Sources */,
 				FC469A60229E0C9100BC022D /* TimerXIdentifier.swift in Sources */,
-				FC469A492298EF1400BC022D /* TimerActionable.swift in Sources */,
+				FC469A492298EF1400BC022D /* TimerAction.swift in Sources */,
 				FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */,
 				FC190F8C228BC46D00860A03 /* RoadMapUseCase.swift in Sources */,
 			);

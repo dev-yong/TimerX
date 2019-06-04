@@ -28,7 +28,11 @@ class RoadMapsViewController: UIViewController {
             do {
                 let jsonData = try Data(contentsOf: url, options: .mappedIfSafe)
                 let roadMap = try JSONDecoder().decode(RoadMap.self, from: jsonData)
-                print(roadMap)
+                
+                let encodedRoadMap = try JSONEncoder().encode(roadMap)
+                if let jsonRoadMap = String(data: encodedRoadMap, encoding: .utf8) {
+                    print(jsonRoadMap)
+                }
             } catch {
                 print(error.localizedDescription)
             }

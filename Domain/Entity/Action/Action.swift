@@ -8,14 +8,13 @@
 
 import Foundation
 
-public protocol ActionParantable: AnyObject {
+public protocol ActionOwner: AnyObject {
+    var actions: [Action] { get }
 }
 
-public protocol Actionable: RoadMapComponentable, AnyObject {
+public protocol Action: RoadMapComponent, AnyObject {
     var identifier: TimerXIdentifier { get }
-    var parent: ActionParantable? { get set }
+    var owner: Action? { get set }
     var uuid: String { get }
     var title: String { get }
 }
-
-

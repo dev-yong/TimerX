@@ -11,9 +11,9 @@ import RxSwift
 import RxCocoa
 
 public protocol ActionUseCase {
-    func add(_ action: Actionable,
+    func add(_ action: Action,
              update: Bool) -> Observable<Void>
-    func actions() -> Observable<[Actionable]>
-    func action(of uuid: String) -> Observable<Actionable?>
-    func delete(_ action: Actionable) -> Observable<Void>
+    func actions() -> Observable<[Action]>
+    func action(of uuid: String) -> Observable<Action?>
+    func delete(_ action: Action) -> Observable<Void>
 }

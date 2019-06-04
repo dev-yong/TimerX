@@ -8,5 +8,5 @@
 
 import Foundation
 
-public protocol TimerActionable: Actionable {
+public protocol TimerAction: Action {
 }

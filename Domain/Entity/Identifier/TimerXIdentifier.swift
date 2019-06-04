@@ -15,7 +15,7 @@ public enum TimerXIdentifier: String, Codable {
     case timerAction = "timerX.action.timer"
     case simpleTimerAction = "timerX.action.timer.simple"
     case numberingTimerAction = "timerX.action.timer.numbering"
-    public var metaType: Actionable.Type! {
+    public var metaType: Action.Type! {
         switch self {
         case .action:
             return nil

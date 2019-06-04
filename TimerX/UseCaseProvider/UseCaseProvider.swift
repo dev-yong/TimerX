@@ -35,16 +35,16 @@ struct TestRoadMapUseCase: Domain.RoadMapUseCase {
 }
 
 struct TestActionUseCase: Domain.ActionUseCase {
-    func add(_ action: Actionable, update: Bool) -> Observable<Void> {
+    func add(_ action: Action, update: Bool) -> Observable<Void> {
         return .empty()
     }
-    func actions() -> Observable<[Actionable]> {
+    func actions() -> Observable<[Action]> {
         return .empty()
     }
-    func action(of uuid: String) -> Observable<Actionable?> {
+    func action(of uuid: String) -> Observable<Action?> {
         return .empty()
     }
-    func delete(_ action: Actionable) -> Observable<Void> {
+    func delete(_ action: Action) -> Observable<Void> {
         return .empty()
     }
 }
