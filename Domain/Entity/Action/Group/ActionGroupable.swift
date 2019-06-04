@@ -7,6 +7,6 @@
 //
 
 import Foundation
-protocol ActionGroupable: Actionable {
-    var actions: [Actionable] { get }
+
+public protocol ActionGroupable: Actionable, ActionParantable {
 }

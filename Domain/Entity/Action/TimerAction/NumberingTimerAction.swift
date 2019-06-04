@@ -8,7 +8,11 @@
 
 import Foundation
 
-public struct NumberingTimerAction: TimerActionable {
+public class NumberingTimerAction: TimerActionable {
+    public var identifier: TimerXIdentifier {
+        return .numberingTimerAction
+    }
+    public weak var parent: ActionParantable?
     public let uuid: String
     public let title: String
     public let goal: Int
@@ -24,5 +28,12 @@ public struct NumberingTimerAction: TimerActionable {
         self.goal = goal
         self.interval = interval
         self.countingType = countingType
+    }
+    private enum CodingKeys: CodingKey {
+        case uuid
+        case title
+        case goal
+        case interval
+        case countingType
     }
 }

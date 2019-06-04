@@ -8,7 +8,14 @@
 
 import Foundation
 
-public protocol Actionable: RoadMapComponentable {
-    var title: String { get }
-    var uuid: String { get }
+public protocol ActionParantable: AnyObject {
 }
+
+public protocol Actionable: RoadMapComponentable, AnyObject {
+    var identifier: TimerXIdentifier { get }
+    var parent: ActionParantable? { get set }
+    var uuid: String { get }
+    var title: String { get }
+}
+
+

@@ -9,7 +9,7 @@
 import Foundation
 
 @objc
-public enum CountingType: Int, CaseIterable {
+public enum CountingType: Int, CaseIterable, Codable {
     case up = 0, down = 1
 }
 

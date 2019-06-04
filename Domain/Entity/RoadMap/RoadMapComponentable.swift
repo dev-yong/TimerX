@@ -8,5 +8,5 @@
 
 import Foundation
 
-public protocol RoadMapComponentable {
+public protocol RoadMapComponentable: Decodable {
 }
