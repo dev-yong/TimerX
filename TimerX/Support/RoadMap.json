@@ -1,0 +1,73 @@
+{
+    "uuid": "21BCA798-BCB3-436F-B723-110A586114C3",
+    "title": "RoadMap",
+    "actions": [
+        {
+            "identifier": "timerX.action.timer.simple",
+            "parameter": {
+                "uuid": "8E809441-EE9A-4090-A2B5-D52348130B9C",
+                "title": "SimpleTimerAction1",
+                "countingType": 0,
+                "seconds": 60
+            }
+        },
+        {
+            "identifier": "timerX.action.timer.numbering",
+            "parameter": {
+                "uuid": "48993981-08DC-45CE-9D3F-272FE3B99AAE",
+                "title": "NumberTimerAction2",
+                "goal": 10,
+                "countingType": 0,
+                "interval": 10
+            }
+        },
+        {
+            "identifier": "timerX.action.group.loop",
+            "parameter": {
+                "uuid": "AB650E7C-3BA3-409B-924E-A12E120EF614",
+                "title": "Loop1",
+                "iteration": 5,
+                "actions": [
+                    {
+                        "identifier": "timerX.action.timer.simple",
+                        "parameter": {
+                            "uuid": "1FCD1649-F940-41C2-9613-F30F94F7D972",
+                            "title": "SimpleTimerAction3",
+                            "countingType": 0,
+                            "seconds": 50
+                        }
+                    },
+                    {
+                        "identifier": "timerX.action.group.loop",
+                        "parameter": {
+                            "uuid": "92881E3C-3A12-404E-ACE1-7A405113ECAA",
+                            "title": "Loop2",
+                            "iteration": 3,
+                            "actions": [
+                                {
+                                    "identifier": "timerX.action.timer.simple",
+                                    "parameter": {
+                                        "uuid": "D216D49C-C510-4BE7-908E-673EF533CEC8",
+                                        "title": "SimpleTimerAction4",
+                                        "countingType": 0,
+                                        "seconds": 50
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "identifier": "timerX.action.timer.numbering",
+            "parameter": {
+                "uuid": "0558755B-2B8A-435E-901B-7B527DC6E905",
+                "title": "NumberTimerAction5",
+                "goal": 10,
+                "countingType": 0,
+                "interval": 10
+            }
+        }
+    ]
+}

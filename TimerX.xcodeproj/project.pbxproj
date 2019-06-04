@@ -103,6 +103,9 @@
 		FC74DB2A226FF7BC00AFDE25 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */; };
 		FC775F5B2276A54600FE4007 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D982276A27C00F22FFC /* Realm.framework */; };
 		FC775F5C2276A54600FE4007 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC424D972276A27C00F22FFC /* RealmSwift.framework */; };
+		FC94A99422A5FDB6000CB6FE /* ActionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC94A99322A5FDB6000CB6FE /* ActionWrapper.swift */; };
+		FC94A99722A6038B000CB6FE /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC94A99622A6038B000CB6FE /* UseCaseProvider.swift */; };
+		FC94A99922A604F1000CB6FE /* RoadMap.json in Resources */ = {isa = PBXBuildFile; fileRef = FC94A99822A604F1000CB6FE /* RoadMap.json */; };
 		FCCC6F3D2276BC8F008FE51B /* Designable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC6F342276BC8E008FE51B /* Designable.framework */; };
 		FCCC6F442276BC8F008FE51B /* DesignableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC6F432276BC8F008FE51B /* DesignableTests.swift */; };
 		FCCC6F462276BC8F008FE51B /* Designable.h in Headers */ = {isa = PBXBuildFile; fileRef = FCCC6F362276BC8E008FE51B /* Designable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -359,6 +362,9 @@
 		FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		FC74DB25226FDF0A00AFDE25 /* UIViewController+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reusable.swift"; sourceTree = "<group>"; };
 		FC74DB29226FF7BC00AFDE25 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FC94A99322A5FDB6000CB6FE /* ActionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionWrapper.swift; sourceTree = "<group>"; };
+		FC94A99622A6038B000CB6FE /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		FC94A99822A604F1000CB6FE /* RoadMap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RoadMap.json; sourceTree = "<group>"; };
 		FCCC6F342276BC8E008FE51B /* Designable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Designable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCC6F362276BC8E008FE51B /* Designable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Designable.h; sourceTree = "<group>"; };
 		FCCC6F372276BC8E008FE51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -660,6 +666,7 @@
 			isa = PBXGroup;
 			children = (
 				FC469A56229E0A4400BC022D /* Actionable.swift */,
+				FC94A99322A5FDB6000CB6FE /* ActionWrapper.swift */,
 				FC469A5C229E0C3500BC022D /* TimerAction */,
 				FC469A5A229E0C2200BC022D /* Group */,
 			);
@@ -733,6 +740,7 @@
 			isa = PBXGroup;
 			children = (
 				FC74DA1E226C0DBD00AFDE25 /* AppDelegate.swift */,
+				FC94A99522A6037F000CB6FE /* UseCaseProvider */,
 				FC169EAA227F6D4600AECA24 /* Configuration */,
 				FCCC6F672277DC6E008FE51B /* Extension */,
 				FC19123B22769A6A00D60479 /* Common */,
@@ -878,6 +886,7 @@
 				FC74DA25226C0DBF00AFDE25 /* Assets.xcassets */,
 				FC74DA27226C0DBF00AFDE25 /* LaunchScreen.storyboard */,
 				FC74DA2A226C0DBF00AFDE25 /* Info.plist */,
+				FC94A99822A604F1000CB6FE /* RoadMap.json */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -989,6 +998,14 @@
 				FC74DB20226FDBDB00AFDE25 /* StoryboardProtocol.swift */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FC94A99522A6037F000CB6FE /* UseCaseProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FC94A99622A6038B000CB6FE /* UseCaseProvider.swift */,
+			);
+			path = UseCaseProvider;
 			sourceTree = "<group>";
 		};
 		FCCC6F352276BC8E008FE51B /* Designable */ = {
@@ -1529,6 +1546,7 @@
 				FC74DA29226C0DBF00AFDE25 /* LaunchScreen.storyboard in Resources */,
 				FC74DA26226C0DBF00AFDE25 /* Assets.xcassets in Resources */,
 				FC74DA24226C0DBD00AFDE25 /* Home.storyboard in Resources */,
+				FC94A99922A604F1000CB6FE /* RoadMap.json in Resources */,
 				FC74DAF1226FD7BC00AFDE25 /* TimeLog.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1716,6 +1734,7 @@
 				FCD44DFF228288C100EEB745 /* CellHeightCachable.swift in Sources */,
 				FC190FA92296295E00860A03 /* RoadMapCellViewModel.swift in Sources */,
 				FCCC6F6022777255008FE51B /* RoadMapsViewModel.swift in Sources */,
+				FC94A99722A6038B000CB6FE /* UseCaseProvider.swift in Sources */,
 				FC188785227C084500D78D48 /* EventTimePickerTableViewCell.swift in Sources */,
 				FC169EBF22804EC300AECA24 /* EventGoalCellViewModel.swift in Sources */,
 				FCD44DF72281243E00EEB745 /* SimpleTimerTableVeiwCell.swift in Sources */,
@@ -1753,6 +1772,7 @@
 				FC469A55229E09F300BC022D /* RoadMap.swift in Sources */,
 				FC74DA8F226C0E6E00AFDE25 /* CountingType.swift in Sources */,
 				FC469A472298E6C100BC022D /* NumberingTimerAction.swift in Sources */,
+				FC94A99422A5FDB6000CB6FE /* ActionWrapper.swift in Sources */,
 				FC469A60229E0C9100BC022D /* TimerXIdentifier.swift in Sources */,
 				FC469A492298EF1400BC022D /* TimerActionable.swift in Sources */,
 				FCD6CC2B22701A1D00694EAD /* UseCaseProvider.swift in Sources */,
