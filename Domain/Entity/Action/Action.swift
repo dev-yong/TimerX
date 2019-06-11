@@ -8,13 +8,13 @@
 
 import Foundation
 
-public protocol ActionOwner: AnyObject {
+public protocol ActionOwner: RoadMapComponent, AnyObject {
     var actions: [Action] { get }
 }
 
 public protocol Action: RoadMapComponent, AnyObject {
     var identifier: TimerXIdentifier { get }
-    var owner: Action? { get set }
+    var owner: ActionOwner? { get set }
     var uuid: String { get }
     var title: String { get }
 }
